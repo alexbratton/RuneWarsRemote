@@ -34,6 +34,7 @@ struct AppView: View {
 
                     
                     TurnPlan()
+                    Text("version 1.0.0")
                 }
                 VStack
                 {
