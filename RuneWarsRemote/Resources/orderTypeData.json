@@ -1,0 +1,162 @@
+[
+    {
+        "name": "NONE",
+        "id": "none",
+        "imageName": "none"
+    },
+    {
+        "name": "Charge -1",
+        "id": "charge-1",
+        "imageName": "charge-1"
+    },
+    {
+        "name": "Charge & Turn -1",
+        "id": "charge-turn-1",
+        "imageName": "charge-turn-1"
+    },
+    {
+        "name": "Charge & Turn",
+        "id": "charge-turn",
+        "imageName": "charge-turn"
+    },
+    {
+        "name": "Charge",
+        "id": "charge",
+        "imageName": "charge"
+    },
+    {
+        "name": "Charge +1",
+        "id": "charge+1",
+        "imageName": "charge+1"
+    },
+    {
+        "name": "Defense +1",
+        "id": "defense+1",
+        "imageName": "defense+1"
+    },
+    {
+        "name": "Defense [Stable]",
+        "id": "defense+stable",
+        "imageName": "defense+stable"
+    },
+    {
+        "name": "Hit +2",
+        "id": "hit-2",
+        "imageName": "hit-2"
+    },
+    {
+        "name": "Hit +1",
+        "id": "hit",
+        "imageName": "hit"
+    },
+    {
+        "name": "March 1",
+        "id": "march-1",
+        "imageName": "march-1"
+    },
+    {
+        "name": "March 2",
+        "id": "march-2",
+        "imageName": "march-2"
+    },
+    {
+        "name": "March 3",
+        "id": "march-3",
+        "imageName": "march-3"
+    },
+    {
+        "name": "March 4",
+        "id": "march-4",
+        "imageName": "march-4"
+    },
+    {
+        "name": "March [Nature]",
+        "id": "march-nature",
+        "imageName": "march-nature"
+    },
+    {
+        "name": "March [Unstable]",
+        "id": "march-unstable",
+        "imageName": "march-unstable"
+    },
+    {
+        "name": "Melee",
+        "id": "melee",
+        "imageName": "melee"
+    },
+    {
+        "name": "Morale",
+        "id": "morale",
+        "imageName": "morale"
+    },
+    {
+        "name": "Mortal Hit",
+        "id": "mortal",
+        "imageName": "mortal"
+    },
+    {
+        "name": "Rally",
+        "id": "rally",
+        "imageName": "rally"
+    },
+    {
+        "name": "Ranged",
+        "id": "ranged",
+        "imageName": "ranged"
+    },
+    {
+        "name": "Reform",
+        "id": "reform",
+        "imageName": "reform"
+    },
+    {
+        "name": "Shift 1",
+        "id": "shift-1",
+        "imageName": "shift-1"
+    },
+    {
+        "name": "Shift 2",
+        "id": "shift-2",
+        "imageName": "shift-2"
+    },
+    {
+        "name": "Shift [Nature]",
+        "id": "shift-nature",
+        "imageName": "shift-nature"
+    },
+    {
+        "name": "Skill",
+        "id": "skill",
+        "imageName": "skill"
+    },
+    {
+        "name": "Surge",
+        "id": "surge",
+        "imageName": "surge"
+    },
+    {
+        "name": "Turn -1",
+        "id": "turn-1",
+        "imageName": "turn-1"
+    },
+    {
+        "name": "Turn",
+        "id": "turn",
+        "imageName": "turn"
+    },
+    {
+        "name": "Wheel -2",
+        "id": "wheel-2",
+        "imageName": "wheel-2"
+    },
+    {
+        "name": "Wheel -1",
+        "id": "wheel-1",
+        "imageName": "wheel-1"
+    },
+    {
+        "name": "Wheel",
+        "id": "wheel",
+        "imageName": "wheel"
+    }
+]

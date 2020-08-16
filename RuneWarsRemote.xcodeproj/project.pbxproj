@@ -7,12 +7,128 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B600182E24A7CB1B0041EB9D /* GameSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600182D24A7CB1B0041EB9D /* GameSelectView.swift */; };
+		B600183024A7CB5B0041EB9D /* FactionSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600182F24A7CB5B0041EB9D /* FactionSelect.swift */; };
+		B600183524A7CBD70041EB9D /* symbol-latari.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B600183124A7CBD70041EB9D /* symbol-latari.jpg */; };
+		B600183624A7CBD70041EB9D /* symbol-waiqar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B600183224A7CBD70041EB9D /* symbol-waiqar.jpg */; };
+		B600183724A7CBD70041EB9D /* symbol-uthuk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B600183324A7CBD70041EB9D /* symbol-uthuk.jpg */; };
+		B600183824A7CBD70041EB9D /* symbol-daqan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B600183424A7CBD70041EB9D /* symbol-daqan.jpg */; };
+		B600183A24A7CF0F0041EB9D /* BuildArmyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600183924A7CF0F0041EB9D /* BuildArmyView.swift */; };
+		B600183C24A7D4F70041EB9D /* runewars-banner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B600183B24A7D4F70041EB9D /* runewars-banner.jpg */; };
+		B600183E24A7D6700041EB9D /* ArmyUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600183D24A7D6700041EB9D /* ArmyUnit.swift */; };
+		B600184024A7D6E00041EB9D /* ArmyUnitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600183F24A7D6E00041EB9D /* ArmyUnitRow.swift */; };
+		B600184224A7D8770041EB9D /* ArmyUnitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600184124A7D8770041EB9D /* ArmyUnitList.swift */; };
+		B60DCE5E24A38F250055D771 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60DCE5D24A38F250055D771 /* OrderView.swift */; };
+		B60DCE6024A38FE50055D771 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60DCE5F24A38FE50055D771 /* OrderType.swift */; };
+		B60DCE6224A390700055D771 /* orderTypeData.json in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6124A390700055D771 /* orderTypeData.json */; };
+		B60DCE8824A390E50055D771 /* skill.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6424A390E30055D771 /* skill.png */; };
+		B60DCE8924A390E50055D771 /* hit.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6524A390E30055D771 /* hit.png */; };
+		B60DCE8A24A390E50055D771 /* charge-turn-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6624A390E30055D771 /* charge-turn-1.png */; };
+		B60DCE8B24A390E50055D771 /* march-nature.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6724A390E30055D771 /* march-nature.png */; };
+		B60DCE8C24A390E50055D771 /* stable.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6824A390E30055D771 /* stable.png */; };
+		B60DCE8D24A390E50055D771 /* march-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6924A390E30055D771 /* march-1.png */; };
+		B60DCE8E24A390E50055D771 /* turn.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6A24A390E30055D771 /* turn.png */; };
+		B60DCE8F24A390E50055D771 /* natural.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6B24A390E30055D771 /* natural.png */; };
+		B60DCE9024A390E50055D771 /* defense+1.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6C24A390E30055D771 /* defense+1.png */; };
+		B60DCE9124A390E50055D771 /* morale.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6D24A390E30055D771 /* morale.png */; };
+		B60DCE9224A390E50055D771 /* charge.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6E24A390E30055D771 /* charge.png */; };
+		B60DCE9324A390E50055D771 /* shift-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6F24A390E30055D771 /* shift-1.png */; };
+		B60DCE9424A390E50055D771 /* charge+1.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7024A390E30055D771 /* charge+1.png */; };
+		B60DCE9524A390E50055D771 /* surge.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7124A390E40055D771 /* surge.png */; };
+		B60DCE9624A390E50055D771 /* charge-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7224A390E40055D771 /* charge-1.png */; };
+		B60DCE9724A390E50055D771 /* march-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7324A390E40055D771 /* march-2.png */; };
+		B60DCE9824A390E50055D771 /* wheel.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7424A390E40055D771 /* wheel.png */; };
+		B60DCE9924A390E50055D771 /* defense+stable.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7524A390E40055D771 /* defense+stable.png */; };
+		B60DCE9A24A390E50055D771 /* mortal.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7624A390E40055D771 /* mortal.png */; };
+		B60DCE9B24A390E50055D771 /* rally.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7724A390E40055D771 /* rally.png */; };
+		B60DCE9C24A390E50055D771 /* reform.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7824A390E40055D771 /* reform.png */; };
+		B60DCE9D24A390E50055D771 /* wheel-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7924A390E40055D771 /* wheel-2.png */; };
+		B60DCE9E24A390E50055D771 /* march-unstable.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7A24A390E40055D771 /* march-unstable.png */; };
+		B60DCE9F24A390E50055D771 /* march-4.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7B24A390E40055D771 /* march-4.png */; };
+		B60DCEA024A390E50055D771 /* melee.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7C24A390E40055D771 /* melee.png */; };
+		B60DCEA124A390E50055D771 /* accuracy.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7D24A390E50055D771 /* accuracy.png */; };
+		B60DCEA224A390E50055D771 /* ranged.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7E24A390E50055D771 /* ranged.png */; };
+		B60DCEA324A390E50055D771 /* march-3.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE7F24A390E50055D771 /* march-3.png */; };
+		B60DCEA424A390E50055D771 /* shift-nature.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE8024A390E50055D771 /* shift-nature.png */; };
+		B60DCEA524A390E50055D771 /* wheel-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE8124A390E50055D771 /* wheel-1.png */; };
+		B60DCEA624A390E50055D771 /* turn-1.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE8224A390E50055D771 /* turn-1.png */; };
+		B60DCEA724A390E50055D771 /* shift-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE8324A390E50055D771 /* shift-2.png */; };
+		B60DCEA924A390E50055D771 /* charge-turn.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE8524A390E50055D771 /* charge-turn.png */; };
+		B60DCEAA24A390E50055D771 /* unstable.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE8624A390E50055D771 /* unstable.png */; };
+		B60DCEAB24A390E50055D771 /* hit-2.png in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE8724A390E50055D771 /* hit-2.png */; };
+		B60DCEAD24A3B45E0055D771 /* orderTypeBackup.json in Resources */ = {isa = PBXBuildFile; fileRef = B60DCEAC24A3B45E0055D771 /* orderTypeBackup.json */; };
+		B60DCEAF24A3B66E0055D771 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = B60DCEAE24A3B66E0055D771 /* TODO.txt */; };
+		B613956724E0598A00014273 /* newunit.png in Resources */ = {isa = PBXBuildFile; fileRef = B613956624E0598A00014273 /* newunit.png */; };
+		B643275E24C123AA001E7BF3 /* TurnPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B643275D24C123AA001E7BF3 /* TurnPlan.swift */; };
+		B6605A8524C1CC6F00A89277 /* TurnUnitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6605A8424C1CC6F00A89277 /* TurnUnitRow.swift */; };
+		B6605A8724C1D08100A89277 /* none.png in Resources */ = {isa = PBXBuildFile; fileRef = B6605A8624C1D08100A89277 /* none.png */; };
+		B6622C0124E2C6A1005CB76B /* myArmy.json in Resources */ = {isa = PBXBuildFile; fileRef = B6622C0024E2C6A1005CB76B /* myArmy.json */; };
+		B665C0AC24E5682800C87343 /* baron_zachareth.png in Resources */ = {isa = PBXBuildFile; fileRef = B665C0AB24E5682800C87343 /* baron_zachareth.png */; };
+		B69A1B8D24A41BDB005CAB3F /* OrderSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69A1B8C24A41BDB005CAB3F /* OrderSelector.swift */; };
 		B69FF9A024A2568D009427D3 /* RuneWarsRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FF99F24A2568D009427D3 /* RuneWarsRemoteApp.swift */; };
 		B69FF9A224A2568D009427D3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FF9A124A2568D009427D3 /* ContentView.swift */; };
 		B69FF9A424A2568E009427D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9A324A2568E009427D3 /* Assets.xcassets */; };
 		B69FF9A724A2568E009427D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9A624A2568E009427D3 /* Preview Assets.xcassets */; };
 		B69FF9B224A2568E009427D3 /* RuneWarsRemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FF9B124A2568E009427D3 /* RuneWarsRemoteTests.swift */; };
 		B69FF9BD24A2568E009427D3 /* RuneWarsRemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FF9BC24A2568E009427D3 /* RuneWarsRemoteUITests.swift */; };
+		B69FF9CC24A258E1009427D3 /* unit_spearmen.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9CB24A258E1009427D3 /* unit_spearmen.png */; };
+		B69FF9E124A2590C009427D3 /* unit_outland_scouts.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9CD24A2590B009427D3 /* unit_outland_scouts.png */; };
+		B69FF9E224A2590C009427D3 /* unit_baron_zachareth.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9CE24A2590B009427D3 /* unit_baron_zachareth.png */; };
+		B69FF9E324A2590C009427D3 /* spearmen.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9CF24A2590B009427D3 /* spearmen.png */; };
+		B69FF9E424A2590C009427D3 /* spearmen_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D024A2590B009427D3 /* spearmen_commandtool.png */; };
+		B69FF9E524A2590C009427D3 /* oathsworn_cavalry.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D124A2590B009427D3 /* oathsworn_cavalry.png */; };
+		B69FF9E624A2590C009427D3 /* kari_wraithstalker_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D224A2590B009427D3 /* kari_wraithstalker_commandtool.png */; };
+		B69FF9E724A2590C009427D3 /* unit_kari_wraithstalker.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D324A2590B009427D3 /* unit_kari_wraithstalker.png */; };
+		B69FF9E824A2590C009427D3 /* oathsworn_cavalry_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D424A2590B009427D3 /* oathsworn_cavalry_commandtool.png */; };
+		B69FF9E924A2590C009427D3 /* kari_wraithstalker.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D524A2590B009427D3 /* kari_wraithstalker.png */; };
+		B69FF9EA24A2590C009427D3 /* lord_hawthorne_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D624A2590C009427D3 /* lord_hawthorne_commandtool.png */; };
+		B69FF9EB24A2590C009427D3 /* unit_oathsworn_cavalry.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D724A2590C009427D3 /* unit_oathsworn_cavalry.png */; };
+		B69FF9EC24A2590C009427D3 /* outland_scouts_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D824A2590C009427D3 /* outland_scouts_commandtool.png */; };
+		B69FF9ED24A2590C009427D3 /* baron_zachareth_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9D924A2590C009427D3 /* baron_zachareth_commandtool.png */; };
+		B69FF9EE24A2590C009427D3 /* lord_hawthorne.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9DA24A2590C009427D3 /* lord_hawthorne.png */; };
+		B69FF9EF24A2590C009427D3 /* heavy_crossbowmen.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9DB24A2590C009427D3 /* heavy_crossbowmen.png */; };
+		B69FF9F024A2590C009427D3 /* rune_golems.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9DC24A2590C009427D3 /* rune_golems.png */; };
+		B69FF9F124A2590C009427D3 /* rune_golems_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9DD24A2590C009427D3 /* rune_golems_commandtool.png */; };
+		B69FF9F224A2590C009427D3 /* outland_scouts.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9DE24A2590C009427D3 /* outland_scouts.png */; };
+		B69FF9F324A2590C009427D3 /* unit_lord_hawthorne.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9DF24A2590C009427D3 /* unit_lord_hawthorne.png */; };
+		B69FF9F424A2590C009427D3 /* unit_rune_golems.png in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9E024A2590C009427D3 /* unit_rune_golems.png */; };
+		B69FF9F624A25937009427D3 /* UnitOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FF9F524A25937009427D3 /* UnitOverview.swift */; };
+		B69FF9F824A259BA009427D3 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FF9F724A259BA009427D3 /* Unit.swift */; };
+		B69FF9FB24A25B07009427D3 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FF9FA24A25B07009427D3 /* Data.swift */; };
+		B69FF9FD24A25C02009427D3 /* unitData.json in Resources */ = {isa = PBXBuildFile; fileRef = B69FF9FC24A25C02009427D3 /* unitData.json */; };
+		B69FFA0224A27234009427D3 /* UnitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FFA0124A27234009427D3 /* UnitList.swift */; };
+		B69FFA0424A28D22009427D3 /* UnitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FFA0324A28D22009427D3 /* UnitRow.swift */; };
+		B6A3C14124D1D608005272D8 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3C14024D1D608005272D8 /* AppView.swift */; };
+		B6A3C14324D1D663005272D8 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3C14224D1D663005272D8 /* ChatView.swift */; };
+		B6A3C14524D1D6B9005272D8 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A3C14424D1D6B8005272D8 /* DiceView.swift */; };
+		B6A3C14B24D1DD00005272D8 /* runewars-banner-thin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6A3C14A24D1DD00005272D8 /* runewars-banner-thin.jpg */; };
+		B6CE543C24C34C0A00B05F24 /* ArmyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CE543B24C34C0A00B05F24 /* ArmyStore.swift */; };
+		B6D347C624BA62420023B72A /* FactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D347C524BA62420023B72A /* FactionView.swift */; };
+		B6D347C824BA67790023B72A /* GameRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D347C724BA67790023B72A /* GameRoster.swift */; };
+		B6D347E124BA6DF50023B72A /* unit_carrion_lancers.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347CA24BA6DF50023B72A /* unit_carrion_lancers.png */; };
+		B6D347E224BA6DF50023B72A /* reanimate_archers.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347CB24BA6DF50023B72A /* reanimate_archers.png */; };
+		B6D347E324BA6DF50023B72A /* death_knights_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347CC24BA6DF50023B72A /* death_knights_commandtool.png */; };
+		B6D347E424BA6DF50023B72A /* unit_reanimate_archers.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347CD24BA6DF50023B72A /* unit_reanimate_archers.png */; };
+		B6D347E524BA6DF50023B72A /* unit_ardus_ixerebus.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347CE24BA6DF50023B72A /* unit_ardus_ixerebus.png */; };
+		B6D347E624BA6DF50023B72A /* ardus_ixerebus.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347CF24BA6DF50023B72A /* ardus_ixerebus.png */; };
+		B6D347E724BA6DF50023B72A /* reanimate_archers_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D024BA6DF50023B72A /* reanimate_archers_commandtool.png */; };
+		B6D347E824BA6DF50023B72A /* unit_reanimates.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D124BA6DF50023B72A /* unit_reanimates.png */; };
+		B6D347E924BA6DF50023B72A /* unit_death_knights.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D224BA6DF50023B72A /* unit_death_knights.png */; };
+		B6D347EA24BA6DF50023B72A /* wraiths.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D324BA6DF50023B72A /* wraiths.png */; };
+		B6D347EB24BA6DF50023B72A /* reanimates.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D424BA6DF50023B72A /* reanimates.png */; };
+		B6D347EC24BA6DF50023B72A /* wraiths_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D524BA6DF50023B72A /* wraiths_commandtool.png */; };
+		B6D347ED24BA6DF50023B72A /* lord_vorunthul_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D624BA6DF50023B72A /* lord_vorunthul_commandtool.png */; };
+		B6D347EE24BA6DF50023B72A /* unit_ankaur_maro.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D724BA6DF50023B72A /* unit_ankaur_maro.png */; };
+		B6D347EF24BA6DF50023B72A /* reanimates_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D824BA6DF50023B72A /* reanimates_commandtool.png */; };
+		B6D347F024BA6DF50023B72A /* unit_wraiths.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347D924BA6DF50023B72A /* unit_wraiths.png */; };
+		B6D347F124BA6DF50023B72A /* ardus_ixerebus_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347DA24BA6DF50023B72A /* ardus_ixerebus_commandtool.png */; };
+		B6D347F224BA6DF50023B72A /* carrion_lancers.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347DB24BA6DF50023B72A /* carrion_lancers.png */; };
+		B6D347F324BA6DF50023B72A /* ankaur_maro_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347DC24BA6DF50023B72A /* ankaur_maro_commandtool.png */; };
+		B6D347F424BA6DF50023B72A /* ankaur_maro.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347DD24BA6DF50023B72A /* ankaur_maro.png */; };
+		B6D347F524BA6DF50023B72A /* carrion_lancers_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347DE24BA6DF50023B72A /* carrion_lancers_commandtool.png */; };
+		B6D347F624BA6DF50023B72A /* death_knights.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347DF24BA6DF50023B72A /* death_knights.png */; };
+		B6D347F724BA6DF50023B72A /* unit_lord_vorunthul.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347E024BA6DF50023B72A /* unit_lord_vorunthul.png */; };
+		B6FB33E124DCD27900B43EAF /* EditUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FB33E024DCD27900B43EAF /* EditUnit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +149,64 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B600182D24A7CB1B0041EB9D /* GameSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectView.swift; sourceTree = "<group>"; };
+		B600182F24A7CB5B0041EB9D /* FactionSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionSelect.swift; sourceTree = "<group>"; };
+		B600183124A7CBD70041EB9D /* symbol-latari.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "symbol-latari.jpg"; sourceTree = "<group>"; };
+		B600183224A7CBD70041EB9D /* symbol-waiqar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "symbol-waiqar.jpg"; sourceTree = "<group>"; };
+		B600183324A7CBD70041EB9D /* symbol-uthuk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "symbol-uthuk.jpg"; sourceTree = "<group>"; };
+		B600183424A7CBD70041EB9D /* symbol-daqan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "symbol-daqan.jpg"; sourceTree = "<group>"; };
+		B600183924A7CF0F0041EB9D /* BuildArmyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildArmyView.swift; sourceTree = "<group>"; };
+		B600183B24A7D4F70041EB9D /* runewars-banner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "runewars-banner.jpg"; sourceTree = "<group>"; };
+		B600183D24A7D6700041EB9D /* ArmyUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyUnit.swift; sourceTree = "<group>"; };
+		B600183F24A7D6E00041EB9D /* ArmyUnitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyUnitRow.swift; sourceTree = "<group>"; };
+		B600184124A7D8770041EB9D /* ArmyUnitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyUnitList.swift; sourceTree = "<group>"; };
+		B60DCE5D24A38F250055D771 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		B60DCE5F24A38FE50055D771 /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
+		B60DCE6124A390700055D771 /* orderTypeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orderTypeData.json; sourceTree = "<group>"; };
+		B60DCE6424A390E30055D771 /* skill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skill.png; sourceTree = "<group>"; };
+		B60DCE6524A390E30055D771 /* hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hit.png; sourceTree = "<group>"; };
+		B60DCE6624A390E30055D771 /* charge-turn-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "charge-turn-1.png"; sourceTree = "<group>"; };
+		B60DCE6724A390E30055D771 /* march-nature.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "march-nature.png"; sourceTree = "<group>"; };
+		B60DCE6824A390E30055D771 /* stable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stable.png; sourceTree = "<group>"; };
+		B60DCE6924A390E30055D771 /* march-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "march-1.png"; sourceTree = "<group>"; };
+		B60DCE6A24A390E30055D771 /* turn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turn.png; sourceTree = "<group>"; };
+		B60DCE6B24A390E30055D771 /* natural.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = natural.png; sourceTree = "<group>"; };
+		B60DCE6C24A390E30055D771 /* defense+1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defense+1.png"; sourceTree = "<group>"; };
+		B60DCE6D24A390E30055D771 /* morale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morale.png; sourceTree = "<group>"; };
+		B60DCE6E24A390E30055D771 /* charge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charge.png; sourceTree = "<group>"; };
+		B60DCE6F24A390E30055D771 /* shift-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shift-1.png"; sourceTree = "<group>"; };
+		B60DCE7024A390E30055D771 /* charge+1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "charge+1.png"; sourceTree = "<group>"; };
+		B60DCE7124A390E40055D771 /* surge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surge.png; sourceTree = "<group>"; };
+		B60DCE7224A390E40055D771 /* charge-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "charge-1.png"; sourceTree = "<group>"; };
+		B60DCE7324A390E40055D771 /* march-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "march-2.png"; sourceTree = "<group>"; };
+		B60DCE7424A390E40055D771 /* wheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wheel.png; sourceTree = "<group>"; };
+		B60DCE7524A390E40055D771 /* defense+stable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defense+stable.png"; sourceTree = "<group>"; };
+		B60DCE7624A390E40055D771 /* mortal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mortal.png; sourceTree = "<group>"; };
+		B60DCE7724A390E40055D771 /* rally.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rally.png; sourceTree = "<group>"; };
+		B60DCE7824A390E40055D771 /* reform.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reform.png; sourceTree = "<group>"; };
+		B60DCE7924A390E40055D771 /* wheel-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheel-2.png"; sourceTree = "<group>"; };
+		B60DCE7A24A390E40055D771 /* march-unstable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "march-unstable.png"; sourceTree = "<group>"; };
+		B60DCE7B24A390E40055D771 /* march-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "march-4.png"; sourceTree = "<group>"; };
+		B60DCE7C24A390E40055D771 /* melee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melee.png; sourceTree = "<group>"; };
+		B60DCE7D24A390E50055D771 /* accuracy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accuracy.png; sourceTree = "<group>"; };
+		B60DCE7E24A390E50055D771 /* ranged.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ranged.png; sourceTree = "<group>"; };
+		B60DCE7F24A390E50055D771 /* march-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "march-3.png"; sourceTree = "<group>"; };
+		B60DCE8024A390E50055D771 /* shift-nature.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shift-nature.png"; sourceTree = "<group>"; };
+		B60DCE8124A390E50055D771 /* wheel-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wheel-1.png"; sourceTree = "<group>"; };
+		B60DCE8224A390E50055D771 /* turn-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turn-1.png"; sourceTree = "<group>"; };
+		B60DCE8324A390E50055D771 /* shift-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shift-2.png"; sourceTree = "<group>"; };
+		B60DCE8524A390E50055D771 /* charge-turn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "charge-turn.png"; sourceTree = "<group>"; };
+		B60DCE8624A390E50055D771 /* unstable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unstable.png; sourceTree = "<group>"; };
+		B60DCE8724A390E50055D771 /* hit-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hit-2.png"; sourceTree = "<group>"; };
+		B60DCEAC24A3B45E0055D771 /* orderTypeBackup.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orderTypeBackup.json; sourceTree = "<group>"; };
+		B60DCEAE24A3B66E0055D771 /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
+		B613956624E0598A00014273 /* newunit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newunit.png; sourceTree = "<group>"; };
+		B643275D24C123AA001E7BF3 /* TurnPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnPlan.swift; sourceTree = "<group>"; };
+		B6605A8424C1CC6F00A89277 /* TurnUnitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnUnitRow.swift; sourceTree = "<group>"; };
+		B6605A8624C1D08100A89277 /* none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = none.png; sourceTree = "<group>"; };
+		B6622C0024E2C6A1005CB76B /* myArmy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = myArmy.json; sourceTree = "<group>"; };
+		B665C0AB24E5682800C87343 /* baron_zachareth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baron_zachareth.png; sourceTree = "<group>"; };
+		B69A1B8C24A41BDB005CAB3F /* OrderSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSelector.swift; sourceTree = "<group>"; };
 		B69FF99C24A2568D009427D3 /* RuneWarsRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuneWarsRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69FF99F24A2568D009427D3 /* RuneWarsRemoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneWarsRemoteApp.swift; sourceTree = "<group>"; };
 		B69FF9A124A2568D009427D3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +219,64 @@
 		B69FF9B824A2568E009427D3 /* RuneWarsRemoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuneWarsRemoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69FF9BC24A2568E009427D3 /* RuneWarsRemoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuneWarsRemoteUITests.swift; sourceTree = "<group>"; };
 		B69FF9BE24A2568E009427D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B69FF9CB24A258E1009427D3 /* unit_spearmen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_spearmen.png; sourceTree = "<group>"; };
+		B69FF9CD24A2590B009427D3 /* unit_outland_scouts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_outland_scouts.png; sourceTree = "<group>"; };
+		B69FF9CE24A2590B009427D3 /* unit_baron_zachareth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_baron_zachareth.png; sourceTree = "<group>"; };
+		B69FF9CF24A2590B009427D3 /* spearmen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spearmen.png; sourceTree = "<group>"; };
+		B69FF9D024A2590B009427D3 /* spearmen_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spearmen_commandtool.png; sourceTree = "<group>"; };
+		B69FF9D124A2590B009427D3 /* oathsworn_cavalry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oathsworn_cavalry.png; sourceTree = "<group>"; };
+		B69FF9D224A2590B009427D3 /* kari_wraithstalker_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kari_wraithstalker_commandtool.png; sourceTree = "<group>"; };
+		B69FF9D324A2590B009427D3 /* unit_kari_wraithstalker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_kari_wraithstalker.png; sourceTree = "<group>"; };
+		B69FF9D424A2590B009427D3 /* oathsworn_cavalry_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oathsworn_cavalry_commandtool.png; sourceTree = "<group>"; };
+		B69FF9D524A2590B009427D3 /* kari_wraithstalker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kari_wraithstalker.png; sourceTree = "<group>"; };
+		B69FF9D624A2590C009427D3 /* lord_hawthorne_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lord_hawthorne_commandtool.png; sourceTree = "<group>"; };
+		B69FF9D724A2590C009427D3 /* unit_oathsworn_cavalry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_oathsworn_cavalry.png; sourceTree = "<group>"; };
+		B69FF9D824A2590C009427D3 /* outland_scouts_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outland_scouts_commandtool.png; sourceTree = "<group>"; };
+		B69FF9D924A2590C009427D3 /* baron_zachareth_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baron_zachareth_commandtool.png; sourceTree = "<group>"; };
+		B69FF9DA24A2590C009427D3 /* lord_hawthorne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lord_hawthorne.png; sourceTree = "<group>"; };
+		B69FF9DB24A2590C009427D3 /* heavy_crossbowmen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavy_crossbowmen.png; sourceTree = "<group>"; };
+		B69FF9DC24A2590C009427D3 /* rune_golems.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rune_golems.png; sourceTree = "<group>"; };
+		B69FF9DD24A2590C009427D3 /* rune_golems_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rune_golems_commandtool.png; sourceTree = "<group>"; };
+		B69FF9DE24A2590C009427D3 /* outland_scouts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outland_scouts.png; sourceTree = "<group>"; };
+		B69FF9DF24A2590C009427D3 /* unit_lord_hawthorne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_lord_hawthorne.png; sourceTree = "<group>"; };
+		B69FF9E024A2590C009427D3 /* unit_rune_golems.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_rune_golems.png; sourceTree = "<group>"; };
+		B69FF9F524A25937009427D3 /* UnitOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitOverview.swift; sourceTree = "<group>"; };
+		B69FF9F724A259BA009427D3 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
+		B69FF9FA24A25B07009427D3 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		B69FF9FC24A25C02009427D3 /* unitData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = unitData.json; sourceTree = "<group>"; };
+		B69FFA0124A27234009427D3 /* UnitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitList.swift; sourceTree = "<group>"; };
+		B69FFA0324A28D22009427D3 /* UnitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitRow.swift; sourceTree = "<group>"; };
+		B6A3C14024D1D608005272D8 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		B6A3C14224D1D663005272D8 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		B6A3C14424D1D6B8005272D8 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		B6A3C14A24D1DD00005272D8 /* runewars-banner-thin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "runewars-banner-thin.jpg"; sourceTree = "<group>"; };
+		B6CE543B24C34C0A00B05F24 /* ArmyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyStore.swift; sourceTree = "<group>"; };
+		B6D347C524BA62420023B72A /* FactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionView.swift; sourceTree = "<group>"; };
+		B6D347C724BA67790023B72A /* GameRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRoster.swift; sourceTree = "<group>"; };
+		B6D347CA24BA6DF50023B72A /* unit_carrion_lancers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_carrion_lancers.png; sourceTree = "<group>"; };
+		B6D347CB24BA6DF50023B72A /* reanimate_archers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reanimate_archers.png; sourceTree = "<group>"; };
+		B6D347CC24BA6DF50023B72A /* death_knights_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = death_knights_commandtool.png; sourceTree = "<group>"; };
+		B6D347CD24BA6DF50023B72A /* unit_reanimate_archers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_reanimate_archers.png; sourceTree = "<group>"; };
+		B6D347CE24BA6DF50023B72A /* unit_ardus_ixerebus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_ardus_ixerebus.png; sourceTree = "<group>"; };
+		B6D347CF24BA6DF50023B72A /* ardus_ixerebus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ardus_ixerebus.png; sourceTree = "<group>"; };
+		B6D347D024BA6DF50023B72A /* reanimate_archers_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reanimate_archers_commandtool.png; sourceTree = "<group>"; };
+		B6D347D124BA6DF50023B72A /* unit_reanimates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_reanimates.png; sourceTree = "<group>"; };
+		B6D347D224BA6DF50023B72A /* unit_death_knights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_death_knights.png; sourceTree = "<group>"; };
+		B6D347D324BA6DF50023B72A /* wraiths.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wraiths.png; sourceTree = "<group>"; };
+		B6D347D424BA6DF50023B72A /* reanimates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reanimates.png; sourceTree = "<group>"; };
+		B6D347D524BA6DF50023B72A /* wraiths_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wraiths_commandtool.png; sourceTree = "<group>"; };
+		B6D347D624BA6DF50023B72A /* lord_vorunthul_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lord_vorunthul_commandtool.png; sourceTree = "<group>"; };
+		B6D347D724BA6DF50023B72A /* unit_ankaur_maro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_ankaur_maro.png; sourceTree = "<group>"; };
+		B6D347D824BA6DF50023B72A /* reanimates_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reanimates_commandtool.png; sourceTree = "<group>"; };
+		B6D347D924BA6DF50023B72A /* unit_wraiths.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_wraiths.png; sourceTree = "<group>"; };
+		B6D347DA24BA6DF50023B72A /* ardus_ixerebus_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ardus_ixerebus_commandtool.png; sourceTree = "<group>"; };
+		B6D347DB24BA6DF50023B72A /* carrion_lancers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrion_lancers.png; sourceTree = "<group>"; };
+		B6D347DC24BA6DF50023B72A /* ankaur_maro_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ankaur_maro_commandtool.png; sourceTree = "<group>"; };
+		B6D347DD24BA6DF50023B72A /* ankaur_maro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ankaur_maro.png; sourceTree = "<group>"; };
+		B6D347DE24BA6DF50023B72A /* carrion_lancers_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrion_lancers_commandtool.png; sourceTree = "<group>"; };
+		B6D347DF24BA6DF50023B72A /* death_knights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = death_knights.png; sourceTree = "<group>"; };
+		B6D347E024BA6DF50023B72A /* unit_lord_vorunthul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_lord_vorunthul.png; sourceTree = "<group>"; };
+		B6FB33E024DCD27900B43EAF /* EditUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUnit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +304,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B60DCE6324A390B80055D771 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B6605A8624C1D08100A89277 /* none.png */,
+				B60DCE7D24A390E50055D771 /* accuracy.png */,
+				B60DCE7224A390E40055D771 /* charge-1.png */,
+				B60DCE6624A390E30055D771 /* charge-turn-1.png */,
+				B60DCE8524A390E50055D771 /* charge-turn.png */,
+				B60DCE6E24A390E30055D771 /* charge.png */,
+				B60DCE7024A390E30055D771 /* charge+1.png */,
+				B60DCE6C24A390E30055D771 /* defense+1.png */,
+				B60DCE7524A390E40055D771 /* defense+stable.png */,
+				B60DCE8724A390E50055D771 /* hit-2.png */,
+				B60DCE6524A390E30055D771 /* hit.png */,
+				B60DCE6924A390E30055D771 /* march-1.png */,
+				B60DCE7324A390E40055D771 /* march-2.png */,
+				B60DCE7F24A390E50055D771 /* march-3.png */,
+				B60DCE7B24A390E40055D771 /* march-4.png */,
+				B60DCE6724A390E30055D771 /* march-nature.png */,
+				B60DCE7A24A390E40055D771 /* march-unstable.png */,
+				B60DCE7C24A390E40055D771 /* melee.png */,
+				B60DCE6D24A390E30055D771 /* morale.png */,
+				B60DCE7624A390E40055D771 /* mortal.png */,
+				B60DCE6B24A390E30055D771 /* natural.png */,
+				B60DCE7724A390E40055D771 /* rally.png */,
+				B60DCE7E24A390E50055D771 /* ranged.png */,
+				B60DCE7824A390E40055D771 /* reform.png */,
+				B60DCE6F24A390E30055D771 /* shift-1.png */,
+				B60DCE8324A390E50055D771 /* shift-2.png */,
+				B60DCE8024A390E50055D771 /* shift-nature.png */,
+				B60DCE6424A390E30055D771 /* skill.png */,
+				B60DCE6824A390E30055D771 /* stable.png */,
+				B60DCE7124A390E40055D771 /* surge.png */,
+				B60DCE8224A390E50055D771 /* turn-1.png */,
+				B60DCE6A24A390E30055D771 /* turn.png */,
+				B60DCE8624A390E50055D771 /* unstable.png */,
+				B60DCE8124A390E50055D771 /* wheel-1.png */,
+				B60DCE7924A390E40055D771 /* wheel-2.png */,
+				B60DCE7424A390E40055D771 /* wheel.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		B69FF99324A2568D009427D3 = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +370,32 @@
 		B69FF99E24A2568D009427D3 /* RuneWarsRemote */ = {
 			isa = PBXGroup;
 			children = (
+				B69FF9F924A259D9009427D3 /* Models */,
+				B69FF9CA24A2585A009427D3 /* Resources */,
 				B69FF99F24A2568D009427D3 /* RuneWarsRemoteApp.swift */,
 				B69FF9A124A2568D009427D3 /* ContentView.swift */,
 				B69FF9A324A2568E009427D3 /* Assets.xcassets */,
 				B69FF9A824A2568E009427D3 /* Info.plist */,
 				B69FF9A524A2568E009427D3 /* Preview Content */,
+				B600182D24A7CB1B0041EB9D /* GameSelectView.swift */,
+				B600182F24A7CB5B0041EB9D /* FactionSelect.swift */,
+				B6D347C524BA62420023B72A /* FactionView.swift */,
+				B69A1B8C24A41BDB005CAB3F /* OrderSelector.swift */,
+				B60DCE5D24A38F250055D771 /* OrderView.swift */,
+				B69FFA0324A28D22009427D3 /* UnitRow.swift */,
+				B69FFA0124A27234009427D3 /* UnitList.swift */,
+				B6D347C724BA67790023B72A /* GameRoster.swift */,
+				B600183924A7CF0F0041EB9D /* BuildArmyView.swift */,
+				B600183F24A7D6E00041EB9D /* ArmyUnitRow.swift */,
+				B600184124A7D8770041EB9D /* ArmyUnitList.swift */,
+				B643275D24C123AA001E7BF3 /* TurnPlan.swift */,
+				B6FB33E024DCD27900B43EAF /* EditUnit.swift */,
+				B6A3C14024D1D608005272D8 /* AppView.swift */,
+				B6A3C14424D1D6B8005272D8 /* DiceView.swift */,
+				B6A3C14224D1D663005272D8 /* ChatView.swift */,
+				B6605A8424C1CC6F00A89277 /* TurnUnitRow.swift */,
+				B69FF9F524A25937009427D3 /* UnitOverview.swift */,
+				B60DCEAE24A3B66E0055D771 /* TODO.txt */,
 			);
 			path = RuneWarsRemote;
 			sourceTree = "<group>";
@@ -128,6 +424,98 @@
 				B69FF9BE24A2568E009427D3 /* Info.plist */,
 			);
 			path = RuneWarsRemoteUITests;
+			sourceTree = "<group>";
+		};
+		B69FF9CA24A2585A009427D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6D347C924BA6DF50023B72A /* waiqar */,
+				B60DCE6324A390B80055D771 /* Icons */,
+				B69FF9FE24A26865009427D3 /* Daqan images */,
+				B600183424A7CBD70041EB9D /* symbol-daqan.jpg */,
+				B600183124A7CBD70041EB9D /* symbol-latari.jpg */,
+				B600183324A7CBD70041EB9D /* symbol-uthuk.jpg */,
+				B600183224A7CBD70041EB9D /* symbol-waiqar.jpg */,
+				B600183B24A7D4F70041EB9D /* runewars-banner.jpg */,
+				B6A3C14A24D1DD00005272D8 /* runewars-banner-thin.jpg */,
+				B69FF9FC24A25C02009427D3 /* unitData.json */,
+				B6622C0024E2C6A1005CB76B /* myArmy.json */,
+				B60DCE6124A390700055D771 /* orderTypeData.json */,
+				B60DCEAC24A3B45E0055D771 /* orderTypeBackup.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B69FF9F924A259D9009427D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B69FF9F724A259BA009427D3 /* Unit.swift */,
+				B69FF9FA24A25B07009427D3 /* Data.swift */,
+				B60DCE5F24A38FE50055D771 /* OrderType.swift */,
+				B600183D24A7D6700041EB9D /* ArmyUnit.swift */,
+				B6CE543B24C34C0A00B05F24 /* ArmyStore.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B69FF9FE24A26865009427D3 /* Daqan images */ = {
+			isa = PBXGroup;
+			children = (
+				B613956624E0598A00014273 /* newunit.png */,
+				B665C0AB24E5682800C87343 /* baron_zachareth.png */,
+				B69FF9D924A2590C009427D3 /* baron_zachareth_commandtool.png */,
+				B69FF9DB24A2590C009427D3 /* heavy_crossbowmen.png */,
+				B69FF9D224A2590B009427D3 /* kari_wraithstalker_commandtool.png */,
+				B69FF9D524A2590B009427D3 /* kari_wraithstalker.png */,
+				B69FF9D624A2590C009427D3 /* lord_hawthorne_commandtool.png */,
+				B69FF9DA24A2590C009427D3 /* lord_hawthorne.png */,
+				B69FF9D424A2590B009427D3 /* oathsworn_cavalry_commandtool.png */,
+				B69FF9D124A2590B009427D3 /* oathsworn_cavalry.png */,
+				B69FF9D824A2590C009427D3 /* outland_scouts_commandtool.png */,
+				B69FF9DE24A2590C009427D3 /* outland_scouts.png */,
+				B69FF9DD24A2590C009427D3 /* rune_golems_commandtool.png */,
+				B69FF9DC24A2590C009427D3 /* rune_golems.png */,
+				B69FF9D024A2590B009427D3 /* spearmen_commandtool.png */,
+				B69FF9CF24A2590B009427D3 /* spearmen.png */,
+				B69FF9CE24A2590B009427D3 /* unit_baron_zachareth.png */,
+				B69FF9D324A2590B009427D3 /* unit_kari_wraithstalker.png */,
+				B69FF9DF24A2590C009427D3 /* unit_lord_hawthorne.png */,
+				B69FF9D724A2590C009427D3 /* unit_oathsworn_cavalry.png */,
+				B69FF9CD24A2590B009427D3 /* unit_outland_scouts.png */,
+				B69FF9E024A2590C009427D3 /* unit_rune_golems.png */,
+				B69FF9CB24A258E1009427D3 /* unit_spearmen.png */,
+			);
+			path = "Daqan images";
+			sourceTree = "<group>";
+		};
+		B6D347C924BA6DF50023B72A /* waiqar */ = {
+			isa = PBXGroup;
+			children = (
+				B6D347CA24BA6DF50023B72A /* unit_carrion_lancers.png */,
+				B6D347CB24BA6DF50023B72A /* reanimate_archers.png */,
+				B6D347CC24BA6DF50023B72A /* death_knights_commandtool.png */,
+				B6D347CD24BA6DF50023B72A /* unit_reanimate_archers.png */,
+				B6D347CE24BA6DF50023B72A /* unit_ardus_ixerebus.png */,
+				B6D347CF24BA6DF50023B72A /* ardus_ixerebus.png */,
+				B6D347D024BA6DF50023B72A /* reanimate_archers_commandtool.png */,
+				B6D347D124BA6DF50023B72A /* unit_reanimates.png */,
+				B6D347D224BA6DF50023B72A /* unit_death_knights.png */,
+				B6D347D324BA6DF50023B72A /* wraiths.png */,
+				B6D347D424BA6DF50023B72A /* reanimates.png */,
+				B6D347D524BA6DF50023B72A /* wraiths_commandtool.png */,
+				B6D347D624BA6DF50023B72A /* lord_vorunthul_commandtool.png */,
+				B6D347D724BA6DF50023B72A /* unit_ankaur_maro.png */,
+				B6D347D824BA6DF50023B72A /* reanimates_commandtool.png */,
+				B6D347D924BA6DF50023B72A /* unit_wraiths.png */,
+				B6D347DA24BA6DF50023B72A /* ardus_ixerebus_commandtool.png */,
+				B6D347DB24BA6DF50023B72A /* carrion_lancers.png */,
+				B6D347DC24BA6DF50023B72A /* ankaur_maro_commandtool.png */,
+				B6D347DD24BA6DF50023B72A /* ankaur_maro.png */,
+				B6D347DE24BA6DF50023B72A /* carrion_lancers_commandtool.png */,
+				B6D347DF24BA6DF50023B72A /* death_knights.png */,
+				B6D347E024BA6DF50023B72A /* unit_lord_vorunthul.png */,
+			);
+			path = waiqar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +621,100 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6D347E824BA6DF50023B72A /* unit_reanimates.png in Resources */,
+				B60DCE8924A390E50055D771 /* hit.png in Resources */,
+				B60DCE9B24A390E50055D771 /* rally.png in Resources */,
+				B60DCEA024A390E50055D771 /* melee.png in Resources */,
+				B69FF9E124A2590C009427D3 /* unit_outland_scouts.png in Resources */,
+				B6D347E424BA6DF50023B72A /* unit_reanimate_archers.png in Resources */,
+				B60DCEAF24A3B66E0055D771 /* TODO.txt in Resources */,
+				B60DCEA924A390E50055D771 /* charge-turn.png in Resources */,
+				B69FF9F424A2590C009427D3 /* unit_rune_golems.png in Resources */,
+				B613956724E0598A00014273 /* newunit.png in Resources */,
+				B60DCEA724A390E50055D771 /* shift-2.png in Resources */,
+				B600183624A7CBD70041EB9D /* symbol-waiqar.jpg in Resources */,
+				B69FF9E824A2590C009427D3 /* oathsworn_cavalry_commandtool.png in Resources */,
+				B6D347EC24BA6DF50023B72A /* wraiths_commandtool.png in Resources */,
+				B60DCE8E24A390E50055D771 /* turn.png in Resources */,
+				B60DCE9824A390E50055D771 /* wheel.png in Resources */,
+				B60DCEA524A390E50055D771 /* wheel-1.png in Resources */,
+				B6D347E524BA6DF50023B72A /* unit_ardus_ixerebus.png in Resources */,
+				B60DCE8C24A390E50055D771 /* stable.png in Resources */,
+				B60DCE9724A390E50055D771 /* march-2.png in Resources */,
 				B69FF9A724A2568E009427D3 /* Preview Assets.xcassets in Resources */,
+				B6D347ED24BA6DF50023B72A /* lord_vorunthul_commandtool.png in Resources */,
+				B6622C0124E2C6A1005CB76B /* myArmy.json in Resources */,
+				B6A3C14B24D1DD00005272D8 /* runewars-banner-thin.jpg in Resources */,
+				B60DCE9624A390E50055D771 /* charge-1.png in Resources */,
+				B60DCE9424A390E50055D771 /* charge+1.png in Resources */,
+				B60DCE9C24A390E50055D771 /* reform.png in Resources */,
+				B69FF9EC24A2590C009427D3 /* outland_scouts_commandtool.png in Resources */,
+				B60DCE9A24A390E50055D771 /* mortal.png in Resources */,
+				B69FF9E624A2590C009427D3 /* kari_wraithstalker_commandtool.png in Resources */,
+				B69FF9E324A2590C009427D3 /* spearmen.png in Resources */,
+				B6D347EF24BA6DF50023B72A /* reanimates_commandtool.png in Resources */,
+				B60DCEAD24A3B45E0055D771 /* orderTypeBackup.json in Resources */,
+				B69FF9F224A2590C009427D3 /* outland_scouts.png in Resources */,
+				B6D347F624BA6DF50023B72A /* death_knights.png in Resources */,
+				B69FF9E224A2590C009427D3 /* unit_baron_zachareth.png in Resources */,
+				B60DCE8A24A390E50055D771 /* charge-turn-1.png in Resources */,
+				B60DCE8824A390E50055D771 /* skill.png in Resources */,
+				B6D347F124BA6DF50023B72A /* ardus_ixerebus_commandtool.png in Resources */,
+				B69FF9EE24A2590C009427D3 /* lord_hawthorne.png in Resources */,
+				B60DCE9D24A390E50055D771 /* wheel-2.png in Resources */,
+				B600183524A7CBD70041EB9D /* symbol-latari.jpg in Resources */,
+				B6D347EB24BA6DF50023B72A /* reanimates.png in Resources */,
+				B69FF9F324A2590C009427D3 /* unit_lord_hawthorne.png in Resources */,
+				B60DCE9124A390E50055D771 /* morale.png in Resources */,
+				B60DCE9024A390E50055D771 /* defense+1.png in Resources */,
+				B6D347F024BA6DF50023B72A /* unit_wraiths.png in Resources */,
+				B60DCEA324A390E50055D771 /* march-3.png in Resources */,
+				B6D347F324BA6DF50023B72A /* ankaur_maro_commandtool.png in Resources */,
+				B6D347EE24BA6DF50023B72A /* unit_ankaur_maro.png in Resources */,
+				B60DCE9324A390E50055D771 /* shift-1.png in Resources */,
+				B6D347F424BA6DF50023B72A /* ankaur_maro.png in Resources */,
+				B69FF9E424A2590C009427D3 /* spearmen_commandtool.png in Resources */,
+				B6D347E624BA6DF50023B72A /* ardus_ixerebus.png in Resources */,
+				B600183824A7CBD70041EB9D /* symbol-daqan.jpg in Resources */,
+				B69FF9EA24A2590C009427D3 /* lord_hawthorne_commandtool.png in Resources */,
+				B60DCE9F24A390E50055D771 /* march-4.png in Resources */,
+				B69FF9F124A2590C009427D3 /* rune_golems_commandtool.png in Resources */,
+				B69FF9ED24A2590C009427D3 /* baron_zachareth_commandtool.png in Resources */,
+				B6D347E224BA6DF50023B72A /* reanimate_archers.png in Resources */,
+				B60DCE8B24A390E50055D771 /* march-nature.png in Resources */,
+				B69FF9FD24A25C02009427D3 /* unitData.json in Resources */,
+				B69FF9EB24A2590C009427D3 /* unit_oathsworn_cavalry.png in Resources */,
+				B69FF9F024A2590C009427D3 /* rune_golems.png in Resources */,
+				B69FF9CC24A258E1009427D3 /* unit_spearmen.png in Resources */,
+				B665C0AC24E5682800C87343 /* baron_zachareth.png in Resources */,
+				B69FF9E924A2590C009427D3 /* kari_wraithstalker.png in Resources */,
+				B60DCE9924A390E50055D771 /* defense+stable.png in Resources */,
+				B60DCEA424A390E50055D771 /* shift-nature.png in Resources */,
+				B6D347F224BA6DF50023B72A /* carrion_lancers.png in Resources */,
+				B69FF9E524A2590C009427D3 /* oathsworn_cavalry.png in Resources */,
+				B60DCEA624A390E50055D771 /* turn-1.png in Resources */,
+				B6D347F524BA6DF50023B72A /* carrion_lancers_commandtool.png in Resources */,
+				B6D347E924BA6DF50023B72A /* unit_death_knights.png in Resources */,
+				B60DCE8D24A390E50055D771 /* march-1.png in Resources */,
+				B600183C24A7D4F70041EB9D /* runewars-banner.jpg in Resources */,
+				B6D347E324BA6DF50023B72A /* death_knights_commandtool.png in Resources */,
+				B60DCEA224A390E50055D771 /* ranged.png in Resources */,
+				B60DCE8F24A390E50055D771 /* natural.png in Resources */,
+				B60DCE9224A390E50055D771 /* charge.png in Resources */,
+				B60DCE6224A390700055D771 /* orderTypeData.json in Resources */,
+				B6D347E724BA6DF50023B72A /* reanimate_archers_commandtool.png in Resources */,
+				B60DCEAB24A390E50055D771 /* hit-2.png in Resources */,
+				B600183724A7CBD70041EB9D /* symbol-uthuk.jpg in Resources */,
+				B60DCEAA24A390E50055D771 /* unstable.png in Resources */,
+				B60DCE9E24A390E50055D771 /* march-unstable.png in Resources */,
+				B6605A8724C1D08100A89277 /* none.png in Resources */,
+				B60DCEA124A390E50055D771 /* accuracy.png in Resources */,
+				B6D347EA24BA6DF50023B72A /* wraiths.png in Resources */,
+				B6D347F724BA6DF50023B72A /* unit_lord_vorunthul.png in Resources */,
+				B6D347E124BA6DF50023B72A /* unit_carrion_lancers.png in Resources */,
+				B69FF9E724A2590C009427D3 /* unit_kari_wraithstalker.png in Resources */,
+				B69FF9EF24A2590C009427D3 /* heavy_crossbowmen.png in Resources */,
+				B60DCE9524A390E50055D771 /* surge.png in Resources */,
 				B69FF9A424A2568E009427D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,6 +740,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60DCE6024A38FE50055D771 /* OrderType.swift in Sources */,
+				B6A3C14524D1D6B9005272D8 /* DiceView.swift in Sources */,
+				B69FFA0424A28D22009427D3 /* UnitRow.swift in Sources */,
+				B6A3C14324D1D663005272D8 /* ChatView.swift in Sources */,
+				B600184224A7D8770041EB9D /* ArmyUnitList.swift in Sources */,
+				B60DCE5E24A38F250055D771 /* OrderView.swift in Sources */,
+				B6A3C14124D1D608005272D8 /* AppView.swift in Sources */,
+				B69FF9F624A25937009427D3 /* UnitOverview.swift in Sources */,
+				B69FF9FB24A25B07009427D3 /* Data.swift in Sources */,
+				B69A1B8D24A41BDB005CAB3F /* OrderSelector.swift in Sources */,
+				B6D347C624BA62420023B72A /* FactionView.swift in Sources */,
+				B600183E24A7D6700041EB9D /* ArmyUnit.swift in Sources */,
+				B6605A8524C1CC6F00A89277 /* TurnUnitRow.swift in Sources */,
+				B600183024A7CB5B0041EB9D /* FactionSelect.swift in Sources */,
+				B69FF9F824A259BA009427D3 /* Unit.swift in Sources */,
+				B600184024A7D6E00041EB9D /* ArmyUnitRow.swift in Sources */,
+				B6CE543C24C34C0A00B05F24 /* ArmyStore.swift in Sources */,
+				B6D347C824BA67790023B72A /* GameRoster.swift in Sources */,
+				B600182E24A7CB1B0041EB9D /* GameSelectView.swift in Sources */,
+				B643275E24C123AA001E7BF3 /* TurnPlan.swift in Sources */,
+				B600183A24A7CF0F0041EB9D /* BuildArmyView.swift in Sources */,
+				B6FB33E124DCD27900B43EAF /* EditUnit.swift in Sources */,
+				B69FFA0224A27234009427D3 /* UnitList.swift in Sources */,
 				B69FF9A224A2568D009427D3 /* ContentView.swift in Sources */,
 				B69FF9A024A2568D009427D3 /* RuneWarsRemoteApp.swift in Sources */,
 			);

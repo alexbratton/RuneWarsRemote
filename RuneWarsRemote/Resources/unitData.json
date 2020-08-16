@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Spearmen",
+        "id": 1001,
+        "faction": "Daqan",
+        "imageName": "spearmen",
+        "leftDial": {
+            "order1": {
+                "order": "march-2",
+                "color": "Blue",
+                "initiative": "4"
+            },
+            "order2": {
+                "order": "march-3",
+                "color": "Red",
+                "initiative": "5"
+            }
+        },
+        "rightDial": {
+            "order1": {
+                "order": "???",
+                "color": "Yellow",
+                "initiative": ""
+            },
+            "order2": {
+                "order": "???",
+                "color": "White",
+                "initiative": ""
+            }
+        }
+    },
+    {
+        "name": "Oathsworn Cavalry",
+        "id": 1002,
+        "faction": "Daqan",
+        "imageName": "oathsworn_cavalry",
+        "leftDial": {
+            "order1": {
+                "order": "march-2",
+                "color": "Green",
+                "initiative": "4"
+            },
+            "order2": {
+                "order": "march-3",
+                "color": "Blue",
+                "initiative": "5"
+            }
+        },
+        "rightDial": {
+            "order1": {
+                "order": "???",
+                "color": "Blue",
+                "initiative": ""
+            },
+            "order2": {
+                "order": "???",
+                "color": "Blue",
+                "initiative": ""
+            }
+        }
+    }
+]
