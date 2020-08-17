@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E2C841C24EB2DEB00B04892 /* DiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C841B24EB2DEB00B04892 /* DiceModel.swift */; };
 		B600182E24A7CB1B0041EB9D /* GameSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600182D24A7CB1B0041EB9D /* GameSelectView.swift */; };
 		B600183024A7CB5B0041EB9D /* FactionSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600182F24A7CB5B0041EB9D /* FactionSelect.swift */; };
 		B600183524A7CBD70041EB9D /* symbol-latari.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B600183124A7CBD70041EB9D /* symbol-latari.jpg */; };
@@ -149,6 +150,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E2C841B24EB2DEB00B04892 /* DiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceModel.swift; sourceTree = "<group>"; };
 		B600182D24A7CB1B0041EB9D /* GameSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectView.swift; sourceTree = "<group>"; };
 		B600182F24A7CB5B0041EB9D /* FactionSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionSelect.swift; sourceTree = "<group>"; };
 		B600183124A7CBD70041EB9D /* symbol-latari.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "symbol-latari.jpg"; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 				B60DCE5F24A38FE50055D771 /* OrderType.swift */,
 				B600183D24A7D6700041EB9D /* ArmyUnit.swift */,
 				B6CE543B24C34C0A00B05F24 /* ArmyStore.swift */,
+				3E2C841B24EB2DEB00B04892 /* DiceModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -760,6 +763,7 @@
 				B6D347C824BA67790023B72A /* GameRoster.swift in Sources */,
 				B600182E24A7CB1B0041EB9D /* GameSelectView.swift in Sources */,
 				B643275E24C123AA001E7BF3 /* TurnPlan.swift in Sources */,
+				3E2C841C24EB2DEB00B04892 /* DiceModel.swift in Sources */,
 				B600183A24A7CF0F0041EB9D /* BuildArmyView.swift in Sources */,
 				B6FB33E124DCD27900B43EAF /* EditUnit.swift in Sources */,
 				B69FFA0224A27234009427D3 /* UnitList.swift in Sources */,
