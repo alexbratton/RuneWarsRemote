@@ -13,6 +13,7 @@ struct DiceResult {
     var mortal = 0
     var rally = 0
     var target = 0
+    var side = 0
 }
 
 class DiceModel: ObservableObject {
@@ -25,12 +26,21 @@ class DiceModel: ObservableObject {
     @Published var blueDiceCount : Int = 0
     @Published var whiteDiceCount : Int = 0
     
-    
+    var whiteDice: Array<DiceResult> = Array()
+    var blueDice: Array<DiceResult> = Array()
+    var redDice: Array<DiceResult> = Array()
+
     init() {
         redDiceCount = 0
         blueDiceCount = 0
         whiteDiceCount = 0
         diceResult = DiceResult()
+    }
+    
+    func ResetResults() {
+        whiteDice = Array()
+        redDice = Array()
+        blueDice = Array()
     }
     
     func AddRedDie() {
@@ -81,7 +91,7 @@ class DiceModel: ObservableObject {
     }
     
     func RollWhiteDie()  {
-        
+        var diceResult : DiceResult = DiceResult()
         let dieSide = Int(arc4random_uniform(UInt32(12))) + 1
         
         switch dieSide {
@@ -118,13 +128,14 @@ class DiceModel: ObservableObject {
             diceResult.hit = 0
         }
         
-        
-        
+        diceResult.side = dieSide
+
+        whiteDice.append(diceResult)
         
     }
     
     func RollRedDie() {
-        
+        var diceResult : DiceResult = DiceResult()
         let dieSide = Int(arc4random_uniform(UInt32(8))) + 1
         
         switch dieSide {
@@ -149,12 +160,13 @@ class DiceModel: ObservableObject {
         default:
             diceResult.hit = 0
         }
-        
-        
+        diceResult.side = dieSide
+
+        redDice.append(diceResult)
     }
     
     func RollBlueDie() {
-        
+        var diceResult : DiceResult = DiceResult()
         let dieSide = Int(arc4random_uniform(UInt32(8))) + 1
         
         switch dieSide {
@@ -180,6 +192,8 @@ class DiceModel: ObservableObject {
         default:
             diceResult.hit = 0
         }
+        diceResult.side = dieSide
+        blueDice.append(diceResult)
     }
     
     /**
@@ -230,9 +244,39 @@ class DiceModel: ObservableObject {
         
         
     }
+    func SumDice() {
+        // blank out dice result first
+        diceResult.hit = 0
+        diceResult.lightning = 0
+        diceResult.mortal = 0
+        diceResult.rally = 0
+        diceResult.side = 0
+        diceResult.target = 0
+        
+        for whiteDiceResult in whiteDice {
+            AddResult(rollResult : whiteDiceResult)
+        }
+        for redDiceResult in redDice {
+            AddResult(rollResult : redDiceResult)
+            
+        }
+        for blueDiceResult in blueDice {
+            AddResult(rollResult : blueDiceResult)
+        }
+    }
+    
+    func AddResult(rollResult : DiceResult) {
+        
+        diceResult.hit += rollResult.hit
+        diceResult.lightning += rollResult.lightning
+        diceResult.mortal += rollResult.mortal
+        diceResult.rally += rollResult.rally
+        diceResult.target += rollResult.target
+
+    }
     
     func Rolldice() {
-        
+        ResetResults()
         // Roll White Dice
         RollWhiteDice()
         // Roll Red Dice
@@ -240,6 +284,7 @@ class DiceModel: ObservableObject {
         // Roll Blue Dice
         RollBlueDice()
         
+        SumDice()
         PrintDie()
         
         rollResult = "Results:  Mortal: \(diceResult.mortal) Hit: \(diceResult.hit) Rally: \(diceResult.rally) Lightning: \(diceResult.lightning) Target: \(diceResult.target)"
@@ -247,11 +292,36 @@ class DiceModel: ObservableObject {
     
     func PrintDie()
     {
-        print("Hit       : \(diceResult.hit)")
-        print("Mortal    : \(diceResult.mortal)")
-        print("Lightning : \(diceResult.lightning)")
-        print("Rally     : \(diceResult.rally)")
-        print("Target    : \(diceResult.target)")
+        print("White Count: \(whiteDiceCount)")
+        print("Red Count  : \(redDiceCount)")
+        print("Blue Count : \(blueDiceCount)")
+        
+        
+        for whiteDiceResult in whiteDice {
+            print("White     : \(whiteDiceResult.side)")
+            print("  Hit       : \(whiteDiceResult.hit)")
+            print("  Mortal    : \(whiteDiceResult.mortal)")
+            print("  Lightning : \(whiteDiceResult.lightning)")
+            print("  Rally     : \(whiteDiceResult.rally)")
+            print("  Target    : \(whiteDiceResult.target)")
+        }
+        for redDiceResult in redDice {
+            print("Red       : \(redDiceResult.side)")
+            print("  Hit       : \(redDiceResult.hit)")
+            print("  Mortal    : \(redDiceResult.mortal)")
+            print("  Lightning : \(redDiceResult.lightning)")
+            print("  Rally     : \(redDiceResult.rally)")
+            print("  Target    : \(redDiceResult.target)")
+        }
+        for blueDiceResult in blueDice {
+            print("Blue      : \(blueDiceResult.side)")
+            print("  Hit       : \(blueDiceResult.hit)")
+            print("  Mortal    : \(blueDiceResult.mortal)")
+            print("  Lightning : \(blueDiceResult.lightning)")
+            print("  Rally     : \(blueDiceResult.rally)")
+            print("  Target    : \(blueDiceResult.target)")
+        }
+
     }
     
 }
