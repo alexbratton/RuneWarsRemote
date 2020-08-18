@@ -28,8 +28,9 @@ struct ArmyUnitRow: View {
         
         VStack (alignment: .leading)
         {
+            
             var armycount=store.army.count
-            if (armyIndex>(store.army.count+1))
+            if (armyIndex>=(armycount))
             {
                 Text("BLANK")
             }
