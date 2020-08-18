@@ -34,8 +34,15 @@ struct AppView: View {
 
                     
                     TurnPlan()
-                    Text("version 1.0.0")
+                    Text("version 1.0.1")
+                        .font(.footnote)
                 }
+                .padding()
+                .overlay(RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.gray, lineWidth:1))
+                
+                Spacer()
+                
                 VStack
                 {
                     ChatView()
@@ -44,6 +51,8 @@ struct AppView: View {
                 }
             }
         }
+       // .background(Color.yellow)
+        
     }
     
     func loadArmy()

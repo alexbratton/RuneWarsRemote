@@ -15,6 +15,9 @@ struct ChatView: View {
             Text("Chat Window!!!\n\nMore chat here!")
         }
         .frame(width:300)
+        .padding()
+        .overlay(RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.gray, lineWidth:1))
 
         
     }

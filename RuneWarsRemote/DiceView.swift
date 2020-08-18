@@ -105,7 +105,10 @@ struct DiceView: View {
             }
             Text(self.diceModel.rollResult)
         }
-        .border(Color.black)
+        //.border(Color.black)
+        .padding()
+        .overlay(RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.gray, lineWidth:1))
         .frame(height:200)
         
     }
