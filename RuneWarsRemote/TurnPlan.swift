@@ -17,18 +17,18 @@ struct TurnPlan: View {
             {
                 //EditButton()
                 /*
-                ForEach(Array(store.army.enumerated()),id: \.element) { offset, element in
-                    ArmyUnitRow(armyIndex: offset)
-                }
-                .onMove(perform: moveUnit)
-                .onDelete(perform: deleteUnit)
-*/
-
-
                 ForEach(store.army.indices, id:\.self)
                 {
                     i in
                     ArmyUnitRow(armyIndex: i)
+
+                }
+                */
+                
+                ForEach(store.army, id:\.self)
+                {
+                    unit in
+                    ArmyUnitRow(armyIndex: store.army.firstIndex(of: unit)!)
 
                 }
                 .onMove(perform: moveUnit)
