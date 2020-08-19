@@ -49,7 +49,7 @@ let orderTypeData: [OrderType] = load("orderTypeData.json")
  */
 
 let unitData: [Unit] = [
-    Unit(id: 111, name: "NEW", imageName: "newunit", faction: Unit.Faction.daqan,
+    Unit(id: 111, name: "?", imageName: "newunit", faction: Unit.Faction.daqan,
          leftDial: CommandDial(
             order1: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
             order2: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),

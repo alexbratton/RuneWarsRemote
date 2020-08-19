@@ -51,16 +51,12 @@ struct AppView: View {
                 }
             }
         }
-       // .background(Color.yellow)
-        
     }
     
     func loadArmy()
     {
-        //let orderTypeData: [OrderType] = load("orderTypeData.json")
-        //print("UUID \(UUID())")
+        //store.objectWillChange.send()
         //store.army.removeAll()
-        
         store.army =  load("myArmy.json")
     }
     
