@@ -86,17 +86,27 @@ struct DiceView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Die Area")
+                Image("red_side_1")
+                Image("red_side_2")
+                Image("red_side_3")
+                Image("red_side_4")
+                Image("red_side_5")
+                Image("red_side_6")
+                Image("red_side_7")
+                Image("red_side_8")
             }
+            .border(Color.black)
             HStack {
                 DiceResultsSummaryView(diceModel: diceModel)
             }
+            
             HStack {
                 RedDiceView(diceModel: diceModel)
                 BlueDiceView(diceModel: diceModel)
                 WhiteDiceView(diceModel: diceModel)
             }
             .border(Color.black)
+            
             
             Button(action : {
                 self.diceModel.Rolldice()
