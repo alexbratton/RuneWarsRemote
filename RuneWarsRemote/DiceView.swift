@@ -15,13 +15,18 @@ struct RedDiceView: View {
     
     //var diceValue: Int
     var body: some View {
-        Stepper(colorName, onIncrement: {
-            self.diceModel.AddDie(dieColor : self.colorName,amount: 1)
-        }, onDecrement: {
-            self.diceModel.AddDie(dieColor : self.colorName,amount: -1)
+        HStack {
+            Image("red_side_1")
+            Spacer()
+            Stepper("", onIncrement: {
+                self.diceModel.AddDie(dieColor : self.colorName,amount: 1)
+            }, onDecrement: {
+                self.diceModel.AddDie(dieColor : self.colorName,amount: -1)
+            }
+            )
+            .background(colorValue)
+            .cornerRadius(8)
         }
-        )
-        .background(colorValue)
         
     }
 }
@@ -33,14 +38,17 @@ struct BlueDiceView: View {
     
     //var diceValue: Int
     var body: some View {
-        Stepper(colorName, onIncrement: {
+        HStack {
+            Image("blue_side_1")
+            Spacer()
+        Stepper("", onIncrement: {
             self.diceModel.AddDie(dieColor : self.colorName,amount: 1)
         }, onDecrement: {
             self.diceModel.AddDie(dieColor : self.colorName,amount: -1)
         }
         )
         .background(colorValue)
-        
+        }
     }
 }
 
@@ -50,13 +58,20 @@ struct WhiteDiceView: View {
     @ObservedObject var diceModel: DiceModel
     
     var body: some View {
-        Stepper(colorName, onIncrement: {
+        HStack {
+            Image("white_side_1")
+            Spacer()
+
+        Stepper("", onIncrement: {
             self.diceModel.AddDie(dieColor : self.colorName,amount: 1)
         }, onDecrement: {
             self.diceModel.AddDie(dieColor : self.colorName,amount: -1)
         }
         )
         .background(colorValue)
+        .cornerRadius(8)
+        }
+        
     }
 }
 
@@ -86,17 +101,52 @@ struct DiceView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Die Area")
+                Image("red_side_1")
+                Image("red_side_2")
+                Image("red_side_3")
+                Image("red_side_4")
+                Image("red_side_5")
+                Image("red_side_6")
+                Image("red_side_7")
+                Image("red_side_8")
             }
+            HStack {
+                Image("white_side_1")
+                Image("white_side_2")
+                Image("white_side_3")
+                Image("white_side_4")
+                Image("white_side_5")
+                Image("white_side_6")
+            }
+            HStack {
+                Image("white_side_7")
+                Image("white_side_8")
+                Image("white_side_9")
+                Image("white_side_10")
+                Image("white_side_11")
+                Image("white_side_12")
+            }
+            HStack {
+                Image("blue_side_1")
+                Image("blue_side_2")
+                Image("blue_side_3")
+                Image("blue_side_4")
+                Image("blue_side_5")
+                Image("blue_side_6")
+                Image("blue_side_7")
+                Image("blue_side_8")
+            }
+           
             HStack {
                 DiceResultsSummaryView(diceModel: diceModel)
             }
+            
             HStack {
                 RedDiceView(diceModel: diceModel)
                 BlueDiceView(diceModel: diceModel)
                 WhiteDiceView(diceModel: diceModel)
             }
-            .border(Color.black)
+            
             
             Button(action : {
                 self.diceModel.Rolldice()
