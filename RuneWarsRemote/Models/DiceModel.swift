@@ -20,229 +20,75 @@ class DiceModel: ObservableObject {
     
     @Published var rollResult: String = "Snake Eyes"
     @Published var diceResult: DiceResult
+        
+    @Published var whiteDiceList: Array<DieModel> = Array()
+    @Published var redDiceList: Array<DieModel> = Array()
+    @Published var blueDiceList: Array<DieModel> = Array()
     
-    
-    @Published var redDiceCount : Int = 0
-    @Published var blueDiceCount : Int = 0
-    @Published var whiteDiceCount : Int = 0
-    
-    var whiteDice: Array<DiceResult> = Array()
-    var blueDice: Array<DiceResult> = Array()
-    var redDice: Array<DiceResult> = Array()
-
     init() {
-        redDiceCount = 0
-        blueDiceCount = 0
-        whiteDiceCount = 0
         diceResult = DiceResult()
     }
     
-    func ResetResults() {
-        whiteDice = Array()
-        redDice = Array()
-        blueDice = Array()
+    // This constructor is for the preview
+    init(count : Int) {
+        diceResult = DiceResult()
+        AddDie(dieColor: "White", amount: 1)
     }
     
-    func AddRedDie() {
-        redDiceCount+=1
+    func ResetResults() {
+        whiteDiceList = Array()
+        redDiceList = Array()
+        blueDiceList = Array()
     }
-    func AddBlueDie() {
-        blueDiceCount+=1
-    }
-    func AddWhiteDie() {
-        whiteDiceCount+=1
-    }
-    func SubtractRedDie() {
-        if (redDiceCount > 0) {
-            redDiceCount-=1
-        }
-    }
-    func SubtractBlueDie() {
-        if (blueDiceCount > 0) {
-            blueDiceCount-=1
-        }
-    }
-    func SubtractWhiteDie() {
-        if (whiteDiceCount > 0) {
-            whiteDiceCount-=1
-        }
-    }
+    
+
     func AddDie(dieColor : String, amount : Int) {
-        
+   
+        var dieModel = DieModel(dieColor : dieColor)
+
         if dieColor == "White" {
-            whiteDiceCount += amount
-            if whiteDiceCount < 0 {
-                whiteDiceCount = 0
+            if amount > 0 {
+                whiteDiceList.append(dieModel)
+            }
+            if amount < 0 {
+                whiteDiceList.remove(at: 0)
             }
         }
         if dieColor == "Red" {
-            redDiceCount += amount
-            if redDiceCount < 0 {
-                redDiceCount = 0
+            if amount > 0 {
+                redDiceList.append(dieModel)
+            }
+            if amount < 0 {
+                redDiceList.remove(at: 0)
             }
         }
         if dieColor == "Blue" {
-            blueDiceCount += amount
-            if blueDiceCount < 0 {
-                blueDiceCount = 0
+            if amount > 0 {
+                blueDiceList.append(dieModel)
+            }
+            if amount < 0 {
+                blueDiceList.remove(at: 0)
             }
         }
         
     }
     
-    func RollWhiteDie()  {
-        var diceResult : DiceResult = DiceResult()
-        let dieSide = Int(arc4random_uniform(UInt32(12))) + 1
-        
-        switch dieSide {
-        case 1:
-            diceResult.hit = 0
-        case 2:
-            diceResult.hit = 1
-        case 3:
-            diceResult.hit = 1
-            diceResult.lightning = 1
-        case 4:
-            diceResult.hit = 1
-            diceResult.rally = 1
-        case 5:
-            diceResult.mortal = 1
-        case 6:
-            diceResult.hit = 2
-        case 7:
-            diceResult.hit = 1
-        case 8:
-            diceResult.lightning = 2
-        case 9:
-            diceResult.hit = 1
-            diceResult.target = 1
-        case 10:
-            diceResult.rally = 1
-            diceResult.lightning = 1
-        case 11:
-            diceResult.hit = 1
-            diceResult.lightning = 1
-        case 12:
-            diceResult.hit = 1
-        default:
-            diceResult.hit = 0
-        }
-        
-        diceResult.side = dieSide
-
-        whiteDice.append(diceResult)
-        
-    }
-    
-    func RollRedDie() {
-        var diceResult : DiceResult = DiceResult()
-        let dieSide = Int(arc4random_uniform(UInt32(8))) + 1
-        
-        switch dieSide {
-        case 1:
-            diceResult.hit = 0
-        case 2:
-            diceResult.hit = 0
-        case 3:
-            diceResult.hit = 1
-        case 4:
-            diceResult.hit = 1
-        case 5:
-            diceResult.hit = 2
-        case 6:
-            diceResult.rally = 1
-        case 7:
-            diceResult.hit = 1
-            diceResult.rally = 1
-        case 8:
-            diceResult.hit = 1
-            diceResult.lightning = 1
-        default:
-            diceResult.hit = 0
-        }
-        diceResult.side = dieSide
-
-        redDice.append(diceResult)
-    }
-    
-    func RollBlueDie() {
-        var diceResult : DiceResult = DiceResult()
-        let dieSide = Int(arc4random_uniform(UInt32(8))) + 1
-        
-        switch dieSide {
-        case 1:
-            diceResult.hit = 0
-        case 2:
-            diceResult.hit = 1
-        case 3:
-            diceResult.hit = 1
-        case 4:
-            diceResult.hit = 1
-            diceResult.lightning = 1
-        case 5:
-            diceResult.lightning = 2
-        case 6:
-            diceResult.lightning = 1
-        case 7:
-            diceResult.hit = 1
-            diceResult.target = 1
-        case 8:
-            diceResult.target = 1
-            
-        default:
-            diceResult.hit = 0
-        }
-        diceResult.side = dieSide
-        blueDice.append(diceResult)
-    }
-    
-    /**
-     func addDiceResults(_ currentTotal : inout DiceResult, _ addTotal : DiceResult)
-     {
-     currentTotal.hit += addTotal.hit
-     currentTotal.lightning  += addTotal.lightning
-     currentTotal.mortal += addTotal.mortal
-     currentTotal.rally += addTotal.rally
-     }
-     **/
-    
+ 
     func RollWhiteDice() {
-        
-        if whiteDiceCount < 1 {
-            return
+        for die in whiteDiceList {
+            die.rollDie()
         }
-        
-        for _ in 1...whiteDiceCount {
-            //roll a White Dice
-            RollWhiteDie()
-        }
-        
-        
     }
     
     func RollRedDice() {
-        if redDiceCount < 1 {
-            return
+        for die in redDiceList {
+            die.rollDie()
         }
-        for _ in 1...redDiceCount {
-            //roll a White Dice
-            RollRedDie()
-        }
-        
-        
     }
     func RollBlueDice() {
-        
-        if blueDiceCount < 1 {
-            return
+        for die in blueDiceList {
+            die.rollDie()
         }
-        
-        for _ in 1...blueDiceCount {
-            //roll a White Dice
-            RollBlueDie()
-        }
-        
-        
     }
     func SumDice() {
         // blank out dice result first
@@ -253,15 +99,14 @@ class DiceModel: ObservableObject {
         diceResult.side = 0
         diceResult.target = 0
         
-        for whiteDiceResult in whiteDice {
-            AddResult(rollResult : whiteDiceResult)
+        for die in whiteDiceList {
+            AddResult(rollResult : die.dieResult)
         }
-        for redDiceResult in redDice {
-            AddResult(rollResult : redDiceResult)
-            
+        for die in redDiceList {
+            AddResult(rollResult : die.dieResult)
         }
-        for blueDiceResult in blueDice {
-            AddResult(rollResult : blueDiceResult)
+        for die in blueDiceList {
+            AddResult(rollResult : die.dieResult)
         }
     }
     
@@ -276,7 +121,6 @@ class DiceModel: ObservableObject {
     }
     
     func Rolldice() {
-        ResetResults()
         // Roll White Dice
         RollWhiteDice()
         // Roll Red Dice
@@ -292,34 +136,33 @@ class DiceModel: ObservableObject {
     
     func PrintDie()
     {
-        print("White Count: \(whiteDiceCount)")
-        print("Red Count  : \(redDiceCount)")
-        print("Blue Count : \(blueDiceCount)")
+        print("White Count: \(whiteDiceList.count)")
+        print("Red Count  : \(redDiceList.count)")
+        print("Blue Count : \(blueDiceList.count)")
         
-        
-        for whiteDiceResult in whiteDice {
-            print("White     : \(whiteDiceResult.side)")
-            print("  Hit       : \(whiteDiceResult.hit)")
-            print("  Mortal    : \(whiteDiceResult.mortal)")
-            print("  Lightning : \(whiteDiceResult.lightning)")
-            print("  Rally     : \(whiteDiceResult.rally)")
-            print("  Target    : \(whiteDiceResult.target)")
+        for die in whiteDiceList {
+            print("White     : \(die.dieResultSide)")
+            print("  Hit       : \(die.dieResult.hit)")
+            print("  Mortal    : \(die.dieResult.mortal)")
+            print("  Lightning : \(die.dieResult.lightning)")
+            print("  Rally     : \(die.dieResult.rally)")
+            print("  Target    : \(die.dieResult.target)")
         }
-        for redDiceResult in redDice {
-            print("Red       : \(redDiceResult.side)")
-            print("  Hit       : \(redDiceResult.hit)")
-            print("  Mortal    : \(redDiceResult.mortal)")
-            print("  Lightning : \(redDiceResult.lightning)")
-            print("  Rally     : \(redDiceResult.rally)")
-            print("  Target    : \(redDiceResult.target)")
+        for die in redDiceList {
+            print("Red       : \(die.dieResultSide)")
+            print("  Hit       : \(die.dieResult.hit)")
+            print("  Mortal    : \(die.dieResult.mortal)")
+            print("  Lightning : \(die.dieResult.lightning)")
+            print("  Rally     : \(die.dieResult.rally)")
+            print("  Target    : \(die.dieResult.target)")
         }
-        for blueDiceResult in blueDice {
-            print("Blue      : \(blueDiceResult.side)")
-            print("  Hit       : \(blueDiceResult.hit)")
-            print("  Mortal    : \(blueDiceResult.mortal)")
-            print("  Lightning : \(blueDiceResult.lightning)")
-            print("  Rally     : \(blueDiceResult.rally)")
-            print("  Target    : \(blueDiceResult.target)")
+        for die in blueDiceList {
+            print("Blue      : \(die.dieResultSide)")
+            print("  Hit       : \(die.dieResult.hit)")
+            print("  Mortal    : \(die.dieResult.mortal)")
+            print("  Lightning : \(die.dieResult.lightning)")
+            print("  Rally     : \(die.dieResult.rally)")
+            print("  Target    : \(die.dieResult.target)")
         }
 
     }

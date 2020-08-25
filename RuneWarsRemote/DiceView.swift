@@ -100,74 +100,87 @@ struct DiceView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Image("red_side_1")
-                Image("red_side_2")
-                Image("red_side_3")
-                Image("red_side_4")
-                Image("red_side_5")
-                Image("red_side_6")
-                Image("red_side_7")
-                Image("red_side_8")
-            }
-            HStack {
-                Image("white_side_1")
-                Image("white_side_2")
-                Image("white_side_3")
-                Image("white_side_4")
-                Image("white_side_5")
-                Image("white_side_6")
-            }
-            HStack {
-                Image("white_side_7")
-                Image("white_side_8")
-                Image("white_side_9")
-                Image("white_side_10")
-                Image("white_side_11")
-                Image("white_side_12")
-            }
-            HStack {
-                Image("blue_side_1")
-                Image("blue_side_2")
-                Image("blue_side_3")
-                Image("blue_side_4")
-                Image("blue_side_5")
-                Image("blue_side_6")
-                Image("blue_side_7")
-                Image("blue_side_8")
-            }
-           
+            DiceResultView(diceModel: diceModel)
             HStack {
                 DiceResultsSummaryView(diceModel: diceModel)
             }
-            
             HStack {
                 RedDiceView(diceModel: diceModel)
                 BlueDiceView(diceModel: diceModel)
                 WhiteDiceView(diceModel: diceModel)
             }
-            
-            
             Button(action : {
                 self.diceModel.Rolldice()
             }) {
                 Text("Roll")
             }
-            Text(self.diceModel.rollResult)
+            //Text(self.diceModel.rollResult)
         }
         //.border(Color.black)
         .padding()
         .overlay(RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.gray, lineWidth:1))
-        .frame(height:200)
+        .frame(height:300)
         
     }
     
     
 }
+struct DiceResultView: View {
+    @ObservedObject var diceModel: DiceModel
+    
+    var body: some View {
+            VStack {
+                Divider()
+                ScrollView(.horizontal) {
+                    HStack(spacing: 10) {
+                        ForEach(diceModel.whiteDiceList) { dieModel in
+                            DieResultView(dieModel: dieModel, diceModel : diceModel)
+                        }
+                        ForEach(diceModel.redDiceList) { dieModel in
+                            DieResultView(dieModel: dieModel, diceModel : diceModel)
+                        }
+                        ForEach(diceModel.blueDiceList) { dieModel in
+                            DieResultView(dieModel: dieModel, diceModel : diceModel)
+                        }
+                    }.padding()
+                }.frame(height: 150)
+                Divider()
+                Spacer()
+        }
+        .frame(height: 150)
+        .border(Color.red)
+    }
+}
+
+struct DieResultView: View {
+    @ObservedObject var dieModel: DieModel
+    @ObservedObject var diceModel: DiceModel
+    
+    var body: some View {
+        VStack {
+            Image(dieModel.getImageName())
+            Button(action : {
+                // Do nothing right now
+                print("Reroll Die")
+                dieModel.rollDie()
+                diceModel.SumDice()
+            }) {
+                Text("ReRoll")
+            }
+            Button(action : {
+                // Do nothing right now
+                print("Pick Die Face")
+            }) {
+                Text("Pick")
+            }
+        }
+    }
+}
+
 
 struct DiceView_Previews: PreviewProvider {
     static var previews: some View {
-        DiceView(diceModel : DiceModel())
+        DiceView(diceModel : DiceModel(count: 1))
     }
 }
