@@ -131,7 +131,7 @@ let unitData: [Unit] = [
                  order8: UnitOrder(order: "melee", color: OrderColor.red, initiative: 4)
                  ),
               rightDial: CommandDial(
-                 order1: UnitOrder(order: "turn-1", color: OrderColor.blue, initiative: 0),
+                 order1: UnitOrder(order: "turn", color: OrderColor.blue, initiative: 0),
                  order2: UnitOrder(order: "wheel-1", color: OrderColor.blue, initiative: 0),
                  order3: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
                  order4: UnitOrder(order: "charge-turn-1", color: OrderColor.blue, initiative: 0),
@@ -182,7 +182,7 @@ let unitData: [Unit] = [
                  order8: UnitOrder(order: "melee", color: OrderColor.red, initiative: 4)
                  ),
               rightDial: CommandDial(
-                 order1: UnitOrder(order: "turn-1", color: OrderColor.blue, initiative: 0),
+                 order1: UnitOrder(order: "turn", color: OrderColor.blue, initiative: 0),
                  order2: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
                  order3: UnitOrder(order: "defense+1", color: OrderColor.blue, initiative: 0),
                  order4: UnitOrder(order: "march-2", color: OrderColor.green, initiative: 0),
@@ -206,7 +206,7 @@ let unitData: [Unit] = [
                  order8: UnitOrder(order: "melee", color: OrderColor.red, initiative: 4)
                  ),
               rightDial: CommandDial(
-                 order1: UnitOrder(order: "turn-1", color: OrderColor.blue, initiative: 0),
+                 order1: UnitOrder(order: "turn", color: OrderColor.blue, initiative: 0),
                  order2: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
                  order3: UnitOrder(order: "defense+1", color: OrderColor.blue, initiative: 0),
                  order4: UnitOrder(order: "march-2", color: OrderColor.green, initiative: 0),
@@ -215,8 +215,51 @@ let unitData: [Unit] = [
                  order7: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
                  order8: UnitOrder(order: "hit", color: OrderColor.white, initiative: 0)
                  )
-         ), // Baron Zachareth
-
+         ), // Rune Golems
+    Unit(id: 1006, name: "Heavy Crossbowmen", imageName: "heavy_crossbowmen", faction: Unit.Faction.daqan,
+            leftDial: CommandDial(
+               order1: UnitOrder(order: "march-1", color: OrderColor.blue, initiative: 4),
+               order2: UnitOrder(order: "march-2", color: OrderColor.blue, initiative: 5),
+               order3: UnitOrder(order: "rally", color: OrderColor.green, initiative: 3),
+               order4: UnitOrder(order: "reform", color: OrderColor.green, initiative: 4),
+               order5: UnitOrder(order: "shift-1", color: OrderColor.green, initiative: 6),
+               order6: UnitOrder(order: "melee", color: OrderColor.red, initiative: 4),
+               order7: UnitOrder(order: "ranged", color: OrderColor.yellow, initiative: 5),
+               order8: UnitOrder(order: "ranged", color: OrderColor.yellow, initiative: 5)
+               ),
+            rightDial: CommandDial(
+               order1: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
+               order2: UnitOrder(order: "hit", color: OrderColor.red, initiative: 0),
+               order3: UnitOrder(order: "surge", color: OrderColor.yellow, initiative: 0),
+               order4: UnitOrder(order: "march-1", color: OrderColor.white, initiative: 0),
+               order5: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
+               order6: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
+               order7: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
+               order8: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0)
+               )
+       ), // Heavy Crossbowmen
+    Unit(id: 1007, name: "Outland Scouts", imageName: "outland_scouts", faction: Unit.Faction.daqan,
+            leftDial: CommandDial(
+               order1: UnitOrder(order: "march-1", color: OrderColor.blue, initiative: 3),
+               order2: UnitOrder(order: "march-2", color: OrderColor.blue, initiative: 4),
+               order3: UnitOrder(order: "march-3", color: OrderColor.blue, initiative: 6),
+               order4: UnitOrder(order: "shift-2", color: OrderColor.green, initiative: 6),
+               order5: UnitOrder(order: "rally", color: OrderColor.green, initiative: 7),
+               order6: UnitOrder(order: "melee", color: OrderColor.red, initiative: 4),
+               order7: UnitOrder(order: "melee", color: OrderColor.red, initiative: 4),
+               order8: UnitOrder(order: "melee", color: OrderColor.red, initiative: 4)
+               ),
+            rightDial: CommandDial(
+               order1: UnitOrder(order: "turn", color: OrderColor.blue, initiative: 0),
+               order2: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
+               order3: UnitOrder(order: "charge-turn-1", color: OrderColor.blue, initiative: 0),
+               order4: UnitOrder(order: "shift-1", color: OrderColor.green, initiative: 0),
+               order5: UnitOrder(order: "surge", color: OrderColor.red, initiative: 0),
+               order6: UnitOrder(order: "reform", color: OrderColor.white, initiative: 0),
+               order7: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
+               order8: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0)
+               )
+       ), // Rune Golems
 
 
 
