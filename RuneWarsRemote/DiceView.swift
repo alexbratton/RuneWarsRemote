@@ -97,6 +97,7 @@ struct DiceResultsSummaryView: View {
 
 struct DiceView: View {
     @ObservedObject var diceModel: DiceModel
+    @ObservedObject var chatModel: ChatModel
     
     var body: some View {
         VStack {
@@ -110,7 +111,7 @@ struct DiceView: View {
                 WhiteDiceView(diceModel: diceModel)
             }
             Button(action : {
-                self.diceModel.Rolldice()
+                self.diceModel.Rolldice(chatModel: chatModel)
             }) {
                 Text("Roll")
             }
@@ -181,6 +182,6 @@ struct DieResultView: View {
 
 struct DiceView_Previews: PreviewProvider {
     static var previews: some View {
-        DiceView(diceModel : DiceModel(count: 1))
+        DiceView(diceModel : DiceModel(count: 1), chatModel: ChatModel())
     }
 }

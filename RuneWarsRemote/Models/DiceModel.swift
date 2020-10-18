@@ -120,7 +120,8 @@ class DiceModel: ObservableObject {
 
     }
     
-    func Rolldice() {
+    func Rolldice(chatModel: ChatModel) {
+        
         // Roll White Dice
         RollWhiteDice()
         // Roll Red Dice
@@ -132,6 +133,7 @@ class DiceModel: ObservableObject {
         PrintDie()
         
         rollResult = "Results:  Mortal: \(diceResult.mortal) Hit: \(diceResult.hit) Rally: \(diceResult.rally) Lightning: \(diceResult.lightning) Target: \(diceResult.target)"
+        chatModel.sendMessage(newMessage: rollResult)
     }
     
     func PrintDie()

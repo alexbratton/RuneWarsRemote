@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3E2C841C24EB2DEB00B04892 /* DiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C841B24EB2DEB00B04892 /* DiceModel.swift */; };
+		3E7A11EB2506C35D008E8BC3 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A11EA2506C35D008E8BC3 /* ChatModel.swift */; };
 		3E91643624ECB0FF00C26A52 /* red_side_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E91643524ECB0FE00C26A52 /* red_side_4.png */; };
 		3E91643824ECB1B900C26A52 /* red_side_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E91643724ECB1B900C26A52 /* red_side_5.png */; };
 		3E91643A24ECB25200C26A52 /* red_side_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E91643924ECB25200C26A52 /* red_side_1.png */; };
@@ -37,6 +38,9 @@
 		3E91646B24EF3DA800C26A52 /* blue_side_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E91646624EF3DA800C26A52 /* blue_side_5.png */; };
 		3E91646C24EF3DA800C26A52 /* blue_side_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E91646724EF3DA800C26A52 /* blue_side_4.png */; };
 		3E91646E24F07B0000C26A52 /* DieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E91646D24F07B0000C26A52 /* DieModel.swift */; };
+		3E91647024FEF46A00C26A52 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E91646F24FEF46A00C26A52 /* GoogleService-Info.plist */; };
+		6E5B4C6FBC81732CEE8C10EC /* Pods_RuneWarsRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58AAABF23AC02ACC84D44C0B /* Pods_RuneWarsRemote.framework */; };
+		6EE9D6180A14AD20C6BD8DCA /* Pods_RuneWarsRemoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC1C9808A8601F027FF9A86 /* Pods_RuneWarsRemoteTests.framework */; };
 		B600182E24A7CB1B0041EB9D /* GameSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600182D24A7CB1B0041EB9D /* GameSelectView.swift */; };
 		B600183024A7CB5B0041EB9D /* FactionSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600182F24A7CB5B0041EB9D /* FactionSelect.swift */; };
 		B600183524A7CBD70041EB9D /* symbol-latari.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B600183124A7CBD70041EB9D /* symbol-latari.jpg */; };
@@ -160,6 +164,7 @@
 		B6D347F624BA6DF50023B72A /* death_knights.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347DF24BA6DF50023B72A /* death_knights.png */; };
 		B6D347F724BA6DF50023B72A /* unit_lord_vorunthul.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D347E024BA6DF50023B72A /* unit_lord_vorunthul.png */; };
 		B6FB33E124DCD27900B43EAF /* EditUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FB33E024DCD27900B43EAF /* EditUnit.swift */; };
+		E7D8FBABDC0BBDDD4C7B3DDF /* Pods_RuneWarsRemote_RuneWarsRemoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CC4FB1CB936047425B296C /* Pods_RuneWarsRemote_RuneWarsRemoteUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,7 +185,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11564A0E2B56AF90D52D8A0B /* Pods-RuneWarsRemote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuneWarsRemote.debug.xcconfig"; path = "Target Support Files/Pods-RuneWarsRemote/Pods-RuneWarsRemote.debug.xcconfig"; sourceTree = "<group>"; };
+		19CC4FB1CB936047425B296C /* Pods_RuneWarsRemote_RuneWarsRemoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuneWarsRemote_RuneWarsRemoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D573F86ED6DC63780204F8F /* Pods-RuneWarsRemote-RuneWarsRemoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuneWarsRemote-RuneWarsRemoteUITests.release.xcconfig"; path = "Target Support Files/Pods-RuneWarsRemote-RuneWarsRemoteUITests/Pods-RuneWarsRemote-RuneWarsRemoteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E2C841B24EB2DEB00B04892 /* DiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceModel.swift; sourceTree = "<group>"; };
+		3E7A11EA2506C35D008E8BC3 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		3E91643524ECB0FE00C26A52 /* red_side_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_side_4.png; sourceTree = "<group>"; };
 		3E91643724ECB1B900C26A52 /* red_side_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_side_5.png; sourceTree = "<group>"; };
 		3E91643924ECB25200C26A52 /* red_side_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_side_1.png; sourceTree = "<group>"; };
@@ -210,6 +219,12 @@
 		3E91646624EF3DA800C26A52 /* blue_side_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_side_5.png; sourceTree = "<group>"; };
 		3E91646724EF3DA800C26A52 /* blue_side_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_side_4.png; sourceTree = "<group>"; };
 		3E91646D24F07B0000C26A52 /* DieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DieModel.swift; sourceTree = "<group>"; };
+		3E91646F24FEF46A00C26A52 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4EBA0369F9D117E168496037 /* Pods-RuneWarsRemote-RuneWarsRemoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuneWarsRemote-RuneWarsRemoteUITests.debug.xcconfig"; path = "Target Support Files/Pods-RuneWarsRemote-RuneWarsRemoteUITests/Pods-RuneWarsRemote-RuneWarsRemoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		58AAABF23AC02ACC84D44C0B /* Pods_RuneWarsRemote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuneWarsRemote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74151420E750A051E2294B0A /* Pods-RuneWarsRemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuneWarsRemoteTests.release.xcconfig"; path = "Target Support Files/Pods-RuneWarsRemoteTests/Pods-RuneWarsRemoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		7DC1C9808A8601F027FF9A86 /* Pods_RuneWarsRemoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuneWarsRemoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CFF0E4F768CB6EEA5567430 /* Pods-RuneWarsRemote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuneWarsRemote.release.xcconfig"; path = "Target Support Files/Pods-RuneWarsRemote/Pods-RuneWarsRemote.release.xcconfig"; sourceTree = "<group>"; };
 		B600182D24A7CB1B0041EB9D /* GameSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectView.swift; sourceTree = "<group>"; };
 		B600182F24A7CB5B0041EB9D /* FactionSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactionSelect.swift; sourceTree = "<group>"; };
 		B600183124A7CBD70041EB9D /* symbol-latari.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "symbol-latari.jpg"; sourceTree = "<group>"; };
@@ -339,6 +354,7 @@
 		B6D347DF24BA6DF50023B72A /* death_knights.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = death_knights.png; sourceTree = "<group>"; };
 		B6D347E024BA6DF50023B72A /* unit_lord_vorunthul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_lord_vorunthul.png; sourceTree = "<group>"; };
 		B6FB33E024DCD27900B43EAF /* EditUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUnit.swift; sourceTree = "<group>"; };
+		EE903848CB3E7337B0DD01F1 /* Pods-RuneWarsRemoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuneWarsRemoteTests.debug.xcconfig"; path = "Target Support Files/Pods-RuneWarsRemoteTests/Pods-RuneWarsRemoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +362,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5B4C6FBC81732CEE8C10EC /* Pods_RuneWarsRemote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +370,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE9D6180A14AD20C6BD8DCA /* Pods_RuneWarsRemoteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,12 +378,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7D8FBABDC0BBDDD4C7B3DDF /* Pods_RuneWarsRemote_RuneWarsRemoteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30C8DD4503187EE66B0CB0B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58AAABF23AC02ACC84D44C0B /* Pods_RuneWarsRemote.framework */,
+				19CC4FB1CB936047425B296C /* Pods_RuneWarsRemote_RuneWarsRemoteUITests.framework */,
+				7DC1C9808A8601F027FF9A86 /* Pods_RuneWarsRemoteTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3E91642C24EC9B8D00C26A52 /* Dice */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +481,8 @@
 				B69FF9B024A2568E009427D3 /* RuneWarsRemoteTests */,
 				B69FF9BB24A2568E009427D3 /* RuneWarsRemoteUITests */,
 				B69FF99D24A2568D009427D3 /* Products */,
+				DBBDBD3B0114E235565A0B13 /* Pods */,
+				30C8DD4503187EE66B0CB0B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -481,6 +512,7 @@
 				B69A1B8C24A41BDB005CAB3F /* OrderSelector.swift */,
 				B60DCE5D24A38F250055D771 /* OrderView.swift */,
 				B69FFA0324A28D22009427D3 /* UnitRow.swift */,
+				3E91646F24FEF46A00C26A52 /* GoogleService-Info.plist */,
 				B69FFA0124A27234009427D3 /* UnitList.swift */,
 				B6D347C724BA67790023B72A /* GameRoster.swift */,
 				B600183924A7CF0F0041EB9D /* BuildArmyView.swift */,
@@ -554,6 +586,7 @@
 				B6CE543B24C34C0A00B05F24 /* ArmyStore.swift */,
 				3E2C841B24EB2DEB00B04892 /* DiceModel.swift */,
 				3E91646D24F07B0000C26A52 /* DieModel.swift */,
+				3E7A11EA2506C35D008E8BC3 /* ChatModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -619,6 +652,19 @@
 			path = waiqar;
 			sourceTree = "<group>";
 		};
+		DBBDBD3B0114E235565A0B13 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11564A0E2B56AF90D52D8A0B /* Pods-RuneWarsRemote.debug.xcconfig */,
+				8CFF0E4F768CB6EEA5567430 /* Pods-RuneWarsRemote.release.xcconfig */,
+				4EBA0369F9D117E168496037 /* Pods-RuneWarsRemote-RuneWarsRemoteUITests.debug.xcconfig */,
+				1D573F86ED6DC63780204F8F /* Pods-RuneWarsRemote-RuneWarsRemoteUITests.release.xcconfig */,
+				EE903848CB3E7337B0DD01F1 /* Pods-RuneWarsRemoteTests.debug.xcconfig */,
+				74151420E750A051E2294B0A /* Pods-RuneWarsRemoteTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -626,9 +672,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B69FF9C124A2568E009427D3 /* Build configuration list for PBXNativeTarget "RuneWarsRemote" */;
 			buildPhases = (
+				028AEEE87EC8F4E17F58D779 /* [CP] Check Pods Manifest.lock */,
 				B69FF99824A2568D009427D3 /* Sources */,
 				B69FF99924A2568D009427D3 /* Frameworks */,
 				B69FF99A24A2568D009427D3 /* Resources */,
+				1B371FC2619F782D9D249FBD /* [CP] Embed Pods Frameworks */,
+				1CB85993C95BEC7EB4E91E32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -643,6 +692,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B69FF9C424A2568E009427D3 /* Build configuration list for PBXNativeTarget "RuneWarsRemoteTests" */;
 			buildPhases = (
+				9AAF39C60752991A10B0E041 /* [CP] Check Pods Manifest.lock */,
 				B69FF9A924A2568E009427D3 /* Sources */,
 				B69FF9AA24A2568E009427D3 /* Frameworks */,
 				B69FF9AB24A2568E009427D3 /* Resources */,
@@ -661,9 +711,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B69FF9C724A2568E009427D3 /* Build configuration list for PBXNativeTarget "RuneWarsRemoteUITests" */;
 			buildPhases = (
+				A1CE24840C2006BA6B32BAF0 /* [CP] Check Pods Manifest.lock */,
 				B69FF9B424A2568E009427D3 /* Sources */,
 				B69FF9B524A2568E009427D3 /* Frameworks */,
 				B69FF9B624A2568E009427D3 /* Resources */,
+				0EEADF8D9850F54B8612F421 /* [CP] Embed Pods Frameworks */,
+				13CBFB0E1D2374C376824C77 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -799,6 +852,7 @@
 				B600183824A7CBD70041EB9D /* symbol-daqan.jpg in Resources */,
 				B69FF9EA24A2590C009427D3 /* lord_hawthorne_commandtool.png in Resources */,
 				B60DCE9F24A390E50055D771 /* march-4.png in Resources */,
+				3E91647024FEF46A00C26A52 /* GoogleService-Info.plist in Resources */,
 				B69FF9F124A2590C009427D3 /* rune_golems_commandtool.png in Resources */,
 				3E91646A24EF3DA800C26A52 /* blue_side_8.png in Resources */,
 				B69FF9ED24A2590C009427D3 /* baron_zachareth_commandtool.png in Resources */,
@@ -865,6 +919,143 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		028AEEE87EC8F4E17F58D779 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuneWarsRemote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EEADF8D9850F54B8612F421 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote-RuneWarsRemoteUITests/Pods-RuneWarsRemote-RuneWarsRemoteUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote-RuneWarsRemoteUITests/Pods-RuneWarsRemote-RuneWarsRemoteUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote-RuneWarsRemoteUITests/Pods-RuneWarsRemote-RuneWarsRemoteUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13CBFB0E1D2374C376824C77 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote-RuneWarsRemoteUITests/Pods-RuneWarsRemote-RuneWarsRemoteUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote-RuneWarsRemoteUITests/Pods-RuneWarsRemote-RuneWarsRemoteUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote-RuneWarsRemoteUITests/Pods-RuneWarsRemote-RuneWarsRemoteUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B371FC2619F782D9D249FBD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote/Pods-RuneWarsRemote-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote/Pods-RuneWarsRemote-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote/Pods-RuneWarsRemote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1CB85993C95BEC7EB4E91E32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote/Pods-RuneWarsRemote-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote/Pods-RuneWarsRemote-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RuneWarsRemote/Pods-RuneWarsRemote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AAF39C60752991A10B0E041 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuneWarsRemoteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1CE24840C2006BA6B32BAF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuneWarsRemote-RuneWarsRemoteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B69FF99824A2568D009427D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -873,6 +1064,7 @@
 				B60DCE6024A38FE50055D771 /* OrderType.swift in Sources */,
 				B6A3C14524D1D6B9005272D8 /* DiceView.swift in Sources */,
 				B69FFA0424A28D22009427D3 /* UnitRow.swift in Sources */,
+				3E7A11EB2506C35D008E8BC3 /* ChatModel.swift in Sources */,
 				B6A3C14324D1D663005272D8 /* ChatView.swift in Sources */,
 				B600184224A7D8770041EB9D /* ArmyUnitList.swift in Sources */,
 				B60DCE5E24A38F250055D771 /* OrderView.swift in Sources */,
@@ -1050,6 +1242,7 @@
 		};
 		B69FF9C224A2568E009427D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11564A0E2B56AF90D52D8A0B /* Pods-RuneWarsRemote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1072,6 +1265,7 @@
 		};
 		B69FF9C324A2568E009427D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CFF0E4F768CB6EEA5567430 /* Pods-RuneWarsRemote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1094,6 +1288,7 @@
 		};
 		B69FF9C524A2568E009427D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE903848CB3E7337B0DD01F1 /* Pods-RuneWarsRemoteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1116,6 +1311,7 @@
 		};
 		B69FF9C624A2568E009427D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74151420E750A051E2294B0A /* Pods-RuneWarsRemoteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1138,6 +1334,7 @@
 		};
 		B69FF9C824A2568E009427D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EBA0369F9D117E168496037 /* Pods-RuneWarsRemote-RuneWarsRemoteUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1158,6 +1355,7 @@
 		};
 		B69FF9C924A2568E009427D3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D573F86ED6DC63780204F8F /* Pods-RuneWarsRemote-RuneWarsRemoteUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
