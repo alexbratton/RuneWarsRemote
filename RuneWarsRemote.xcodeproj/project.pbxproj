@@ -90,6 +90,7 @@
 		B60DCEAF24A3B66E0055D771 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = B60DCEAE24A3B66E0055D771 /* TODO.txt */; };
 		B613956724E0598A00014273 /* newunit.png in Resources */ = {isa = PBXBuildFile; fileRef = B613956624E0598A00014273 /* newunit.png */; };
 		B643275E24C123AA001E7BF3 /* TurnPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B643275D24C123AA001E7BF3 /* TurnPlan.swift */; };
+		B65D50FB253CE35E001747A3 /* lord_vorunthul.png in Resources */ = {isa = PBXBuildFile; fileRef = B65D50FA253CE35D001747A3 /* lord_vorunthul.png */; };
 		B6605A8524C1CC6F00A89277 /* TurnUnitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6605A8424C1CC6F00A89277 /* TurnUnitRow.swift */; };
 		B6605A8724C1D08100A89277 /* none.png in Resources */ = {isa = PBXBuildFile; fileRef = B6605A8624C1D08100A89277 /* none.png */; };
 		B6622C0124E2C6A1005CB76B /* myArmy.json in Resources */ = {isa = PBXBuildFile; fileRef = B6622C0024E2C6A1005CB76B /* myArmy.json */; };
@@ -262,6 +263,7 @@
 		B60DCEAE24A3B66E0055D771 /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 		B613956624E0598A00014273 /* newunit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newunit.png; sourceTree = "<group>"; };
 		B643275D24C123AA001E7BF3 /* TurnPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnPlan.swift; sourceTree = "<group>"; };
+		B65D50FA253CE35D001747A3 /* lord_vorunthul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lord_vorunthul.png; sourceTree = "<group>"; };
 		B6605A8424C1CC6F00A89277 /* TurnUnitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnUnitRow.swift; sourceTree = "<group>"; };
 		B6605A8624C1D08100A89277 /* none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = none.png; sourceTree = "<group>"; };
 		B6622C0024E2C6A1005CB76B /* myArmy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = myArmy.json; sourceTree = "<group>"; };
@@ -600,6 +602,7 @@
 				B6D347D224BA6DF50023B72A /* unit_death_knights.png */,
 				B6D347D324BA6DF50023B72A /* wraiths.png */,
 				B6D347D424BA6DF50023B72A /* reanimates.png */,
+				B65D50FA253CE35D001747A3 /* lord_vorunthul.png */,
 				B6D347D524BA6DF50023B72A /* wraiths_commandtool.png */,
 				B6D347D624BA6DF50023B72A /* lord_vorunthul_commandtool.png */,
 				B6D347D724BA6DF50023B72A /* unit_ankaur_maro.png */,
@@ -827,6 +830,7 @@
 				3E91645624EF374800C26A52 /* white_side_10.png in Resources */,
 				B60DCEAB24A390E50055D771 /* hit-2.png in Resources */,
 				3E91646C24EF3DA800C26A52 /* blue_side_4.png in Resources */,
+				B65D50FB253CE35E001747A3 /* lord_vorunthul.png in Resources */,
 				B600183724A7CBD70041EB9D /* symbol-uthuk.jpg in Resources */,
 				B60DCEAA24A390E50055D771 /* unstable.png in Resources */,
 				3E91646924EF3DA800C26A52 /* blue_side_6.png in Resources */,
