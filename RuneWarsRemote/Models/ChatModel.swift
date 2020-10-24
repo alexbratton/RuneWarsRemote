@@ -59,10 +59,13 @@ class ChatModel: NSObject, ObservableObject {
     
     
     func configureFirebase()
-    {        
-        configureDatabase()
-        configureStorage()
-        configureRemoteConfig()
+    {
+        if (!firebaseInit) {
+            configureDatabase()
+            configureStorage()
+            configureRemoteConfig()
+            firebaseInit = true
+        }
     }
     
     
