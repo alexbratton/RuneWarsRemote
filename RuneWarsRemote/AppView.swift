@@ -49,7 +49,7 @@ struct AppView: View {
                 {
                     ChatView(info : info)
                     Spacer()
-                    DiceView(diceModel : DiceModel(), chatModel: chatModel)
+                    DiceView(diceModel : DiceModel())
                 }
             }
         }

@@ -97,7 +97,7 @@ struct DiceResultsSummaryView: View {
 
 struct DiceView: View {
     @ObservedObject var diceModel: DiceModel
-    @ObservedObject var chatModel: ChatModel
+    @EnvironmentObject var chatModel: ChatModel
     
     var body: some View {
         VStack {
@@ -182,6 +182,6 @@ struct DieResultView: View {
 
 struct DiceView_Previews: PreviewProvider {
     static var previews: some View {
-        DiceView(diceModel : DiceModel(count: 1), chatModel: ChatModel())
+        DiceView(diceModel : DiceModel(count: 1))
     }
 }
