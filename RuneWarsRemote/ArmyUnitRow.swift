@@ -10,6 +10,8 @@ import SwiftUI
 struct ArmyUnitRow: View {
     var armyIndex: Int
     @EnvironmentObject var store: ArmyStore
+    @EnvironmentObject var chatModel : ChatModel
+
 
 
    // @Binding var armyUnit: ArmyUnit
@@ -100,7 +102,15 @@ struct ArmyUnitRow: View {
                             {
                                 if (!sent)
                                 {
+                                    store.army[armyIndex].leftOrder=leftOrder
+                                    store.army[armyIndex].rightOrder=rightOrder
+                                    chatModel.sendMessage(newMessage : "Init(\(store.army[armyIndex].selectedLeftOrder.initiative)) \(store.army[armyIndex].name)[\(store.army[armyIndex].size)] \(store.army[armyIndex].selectedLeftOrder.order) & \(store.army[armyIndex].selectedRightOrder.order) \(store.army[armyIndex].notes)")
                                     showingAlert=true
+         
+                                    
+                                    
+                                    
+
                                 }
                                 else
                                 {
@@ -113,8 +123,9 @@ struct ArmyUnitRow: View {
                         }
                         .alert(isPresented: $showingAlert)
                         {
-                            Alert(title: Text(store.army[armyIndex].name+" order -> chat"),
-                                  message: Text("Left: \(leftOrder) Right: \(rightOrder)"))
+                            
+                           Alert(title: Text(store.army[armyIndex].name+" order -> chat"),
+                               message: Text("Left: \(leftOrder) Right: \(rightOrder)"))
                         }
                     VStack (alignment: .center, spacing: 0.0)
                     {
