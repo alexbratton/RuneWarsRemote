@@ -16,15 +16,15 @@ struct ChatView: View {
  
     var body: some View {
         VStack {
-            HeaderView(chatModel: chatModel, info : info)
+            HeaderView(info : info)
             Spacer()
-            MessageView(chatModel: chatModel)
+            MessageView()
         }
     }
 }
 
 struct MessageView: View {
-    @ObservedObject var chatModel : ChatModel
+    @EnvironmentObject var chatModel : ChatModel
     
     @State private var newMessage: String = ""
     
@@ -74,7 +74,7 @@ struct MessageView: View {
 }
 
 struct HeaderView: View {
-    @ObservedObject var chatModel : ChatModel
+    @EnvironmentObject var chatModel : ChatModel
     @ObservedObject var info : AppDelegate
     
     @State private var signedIn : Bool = false
