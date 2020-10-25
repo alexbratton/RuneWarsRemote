@@ -1,40 +1,15 @@
 
 TODOLIST
 
-x for the add sheet to appear -- add state of the add sheet at top view level as environment variable
-on sheet save, store environment is NIL?  How is AddUnit not getting the environment variable?
-x sheet sets visible bool as false after cancel or save inside the view
-x TurnPlan -- add button opens AddUnit
-x Put add button into top view, scrollable turnplan below
+- MC auto scroll chat
+- MC fix width of dice window
+- MC dice roller - dice staying visible for re-roll
+- AB send turn messages to chat
+- AB adjust layout of orders/unit image to squish
+- AB Auto save army to json file after each change
+- AB Load army on each foregrounding
+
+FUTURE
+sort order list by initiative -- button to sort the column - for now, can manually call off numbers
 
 
-NEXT
-store.army - doesn't seem to update the view and remove the ArmyUnitRows that were already initialized when we shrink the array.
-Fatal error: Index out of range: file
-
-
-
-Auto save army to json file after each change
-Load army on each foregrounding
-change army list to just store ID of unit object but have a unit: that returns the right object -- make master 4 fields JSON serializable
-
-FUTURE sort order list by initiative -- button to sort the column - for now, can manually call off numbers
-
-
-- for order picker - change foreground overlay?  Opacity or brightness to select item?
-
-- master unit list by Faction
-- detail page for all factions
-- my army builder page
-- turn planning - pick orders per unit
-
-- look at mapping order types and files to command dials -- use lookup function to walk the array and return the desired data blob?
-
-
-- can views go into a picker?
-- assuming we get a selected index back from picker, how to pull the order?  Change to array of orders for the dials?
-
-
-- create linear picker with State variable for the selection
-
--- Setup in GITHUb

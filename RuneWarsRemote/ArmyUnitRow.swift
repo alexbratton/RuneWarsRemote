@@ -93,7 +93,7 @@ struct ArmyUnitRow: View {
                     Image(systemName: "chevron.right.circle")
                         .font(Font.system(.largeTitle))
                         .rotationEffect(.degrees(sent ? 90 : -90))
-                        .foregroundColor((sent || ((leftOrder==0) && (rightOrder==0)) ) ? Color.gray : Color.blue)
+                        .foregroundColor((sent || ((leftOrder==0) || (rightOrder==0)) ) ? Color.gray : Color.blue)
                         .animation(.spring())
                         .onTapGesture {
                             if ((leftOrder>0) && (rightOrder>0))
