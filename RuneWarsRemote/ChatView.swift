@@ -10,8 +10,8 @@ import GoogleSignIn
 
 
 struct ChatView: View {
-    @ObservedObject var chatModel : ChatModel
     @ObservedObject var info : AppDelegate
+    @EnvironmentObject var chatModel : ChatModel
     
  
     var body: some View {
@@ -116,6 +116,6 @@ struct HeaderView: View {
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView(chatModel : ChatModel(), info: AppDelegate())
+        ChatView(info: AppDelegate())
     }
 }
