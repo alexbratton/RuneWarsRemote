@@ -26,6 +26,7 @@ struct RuneWarsRemoteApp: App {
 class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
     
     @Published var email = ""
+    @Published var uid = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -61,7 +62,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
                 return
             }
             self.email = (result?.user.email)!
-            print(self.email)
+            self.uid = (result?.user.description)!
         }    }
     
  

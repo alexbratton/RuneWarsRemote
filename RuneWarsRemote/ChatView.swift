@@ -12,10 +12,11 @@ import GoogleSignIn
 struct ChatView: View {
     @ObservedObject var chatModel : ChatModel
     @ObservedObject var info : AppDelegate
-
+    
+ 
     var body: some View {
         VStack {
-            HeaderView(chatModel: chatModel)
+            HeaderView(chatModel: chatModel, info : info)
             Spacer()
             MessageView(chatModel: chatModel)
         }
@@ -74,18 +75,26 @@ struct MessageView: View {
 
 struct HeaderView: View {
     @ObservedObject var chatModel : ChatModel
+    @ObservedObject var info : AppDelegate
     
+    @State private var signedIn : Bool = false
+    @State private var email : String = ""
+
     var body: some View {
         HStack {
-            Image("white_side_1")
             Spacer()
-            Button(action :{
-                signIn()
-            }) {
-                Text("Sign In")
-                
+            if (self.signedIn) {
+                Text("\(info.uid)")
             }
-            .cornerRadius(10)
+            else {
+                Button(action :{
+                    signIn()
+                }) {
+                    Text("Sign In")
+                
+                }
+                .cornerRadius(10)
+            }
         }
         
     }
@@ -96,7 +105,11 @@ struct HeaderView: View {
         print("Signed In")
         // Now init firebase
         chatModel.configureFirebase()
+        signedIn = true
+       
     }
+    
+
 }
 
 
