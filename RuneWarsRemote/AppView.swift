@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AppView: View {
     @EnvironmentObject var store: ArmyStore
-    @ObservedObject var chatModel: ChatModel
+    @EnvironmentObject var chatModel: ChatModel
     @ObservedObject var info: AppDelegate
     
     var body: some View {
@@ -47,7 +47,7 @@ struct AppView: View {
                 
                 VStack
                 {
-                    ChatView(chatModel : chatModel, info : info)
+                    ChatView(info : info)
                     Spacer()
                     DiceView(diceModel : DiceModel(), chatModel: chatModel)
                 }
@@ -74,7 +74,7 @@ struct AppView: View {
 struct AppView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            AppView(chatModel: ChatModel(), info: AppDelegate())
+            AppView(info: AppDelegate())
                 .environmentObject(ArmyStore())
                 .previewDevice(PreviewDevice(rawValue: "iPad Pro (9.7-inch)"))
         }

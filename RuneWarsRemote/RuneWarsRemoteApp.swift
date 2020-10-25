@@ -13,11 +13,10 @@ import GoogleSignIn
 @main
 struct RuneWarsRemoteApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject private var chatModel = ChatModel()
     
     var body: some Scene {
         WindowGroup {
-            AppView(chatModel: chatModel, info: self.delegate).environmentObject(ArmyStore())
+            AppView( info: self.delegate).environmentObject(ArmyStore()).environmentObject(ChatModel())
         }
     }
  
@@ -26,6 +25,7 @@ struct RuneWarsRemoteApp: App {
 class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
     
     @Published var email = ""
+    @Published var uid = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -61,7 +61,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
                 return
             }
             self.email = (result?.user.email)!
-            print(self.email)
+            self.uid = (result?.user.description)!
         }    }
     
  
@@ -70,7 +70,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, Observabl
 
 struct RuneWarsRemoteApp_Previews: PreviewProvider {
     static var previews: some View {
-        AppView(chatModel: ChatModel(), info: AppDelegate())
+        AppView(info: AppDelegate())
             .environmentObject(ArmyStore())
             .previewDevice(PreviewDevice(rawValue: "iPad Pro (9.7-inch)"))
             //.previewLayout(.fixed(width:1000, height:700))
