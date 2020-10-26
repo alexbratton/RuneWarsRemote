@@ -24,7 +24,7 @@ class ChatModel: NSObject, ObservableObject {
     var msglength: NSNumber = 10
  
     
-    struct ChatMessage: Hashable {
+    struct ChatMessage: Identifiable, Codable,Hashable {
         var id = UUID()
         var uid : String
         var message: String
