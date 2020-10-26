@@ -3,6 +3,7 @@ TODOLIST
 
 - MC auto scroll chat
 - MC filter initial chat messages to last XX (10)
+- MC Add button to re-send Dice roll results (after single dice reroll or pick)
 - AB send turn messages to chat
 - AB adjust layout of orders/unit image to squish
 - AB Auto save army to json file after each change
@@ -15,6 +16,7 @@ sort order list by initiative -- button to sort the column - for now, can manual
 - Add the Turn Indicator, current round in the turn
 -- Add a button to increment the round, sync on all devices
 -- Add a button to increment the turn, sync on all devices
+- Implement the "Pick" feature on Dice
 
 Fixed
 - MC fix width of dice window

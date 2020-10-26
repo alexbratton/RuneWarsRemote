@@ -31,17 +31,29 @@ struct MessageView: View {
     
     var body: some View {
         VStack {
-            ScrollView(.vertical) {
+            ScrollView {
                 ScrollViewReader { scrollView in
-                    LazyVStack {
+                    
+                    //LazyVStack {
                         ForEach(self.chatModel.chatMessages, id: \.id) { chat in
-                            Text("\(chat.uid) : \(chat.message)")
+                            Text("\(chat.uid) : \(chat.message)").id(chat.id)
                         }
                         .onDelete(perform: deleteChat)
+                        
+                        .onChange(of: self.chatModel.chatMessages) { target in
+                            withAnimation {
+                                scrollView.scrollTo(target, anchor: .bottom)
+                            }
+                            print(".onChange chat list")
+                        }
+ 
+                    /*
+                    .onChange(of: self.chatModel.chatMessages) { target in
+                        print(".onChange II chat list \(self.chatModel.chatMessages.endIndex)")
+                        //scrollView.scrollTo(self.chatModel.chatMessages[self.chatModel.chatMessages.endIndex - 1])
+                        scrollView.scrollTo([self.chatModel.chatMessages.endIndex - 1])
                     }
-                    .onAppear {
-                        scrollView.scrollTo(self.chatModel.chatMessages[self.chatModel.chatMessages.endIndex - 1])
-                    }
+ */
                 }
             }
             

@@ -130,7 +130,7 @@ class DiceModel: ObservableObject {
         RollBlueDice()
         
         SumDice()
-        PrintDie()
+        //PrintDie()
         
         rollResult = "Results:  Mortal: \(diceResult.mortal) Hit: \(diceResult.hit) Rally: \(diceResult.rally) Lightning: \(diceResult.lightning) Target: \(diceResult.target)"
         chatModel.sendMessage(newMessage: rollResult)
