@@ -20,6 +20,7 @@ struct ChatView: View {
             Spacer()
             MessageView()
         }
+
     }
 }
 
@@ -30,11 +31,18 @@ struct MessageView: View {
     
     var body: some View {
         VStack {
-            List {
-                ForEach(self.chatModel.chatMessages, id: \.id) { chat in
-                    Text("\(chat.uid) : \(chat.message)")
+            ScrollView(.vertical) {
+                ScrollViewReader { scrollView in
+                    LazyVStack {
+                        ForEach(self.chatModel.chatMessages, id: \.id) { chat in
+                            Text("\(chat.uid) : \(chat.message)")
+                        }
+                        .onDelete(perform: deleteChat)
+                    }
+                    .onAppear {
+                        scrollView.scrollTo(self.chatModel.chatMessages[self.chatModel.chatMessages.endIndex - 1])
+                    }
                 }
-                .onDelete(perform: deleteChat)
             }
             
             
@@ -51,10 +59,7 @@ struct MessageView: View {
             .padding()
             .border(Color.black)
            
-           
-            
         }
-        .frame(width:300)
         .padding()
         .overlay(RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.gray, lineWidth:1))

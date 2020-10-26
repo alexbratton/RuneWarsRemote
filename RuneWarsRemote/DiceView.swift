@@ -96,7 +96,7 @@ struct DiceResultsSummaryView: View {
 }
 
 struct DiceView: View {
-    @State var diceModel: DiceModel = DiceModel(count: 1)
+    @State var diceModel: DiceModel = DiceModel()
     @EnvironmentObject var chatModel: ChatModel
     
     var body: some View {

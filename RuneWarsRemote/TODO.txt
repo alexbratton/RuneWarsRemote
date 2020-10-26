@@ -2,8 +2,7 @@
 TODOLIST
 
 - MC auto scroll chat
-- MC fix width of dice window
-- MC dice roller - dice staying visible for re-roll
+- MC filter initial chat messages to last XX (10)
 - AB send turn messages to chat
 - AB adjust layout of orders/unit image to squish
 - AB Auto save army to json file after each change
@@ -12,4 +11,9 @@ TODOLIST
 FUTURE
 sort order list by initiative -- button to sort the column - for now, can manually call off numbers
 
+
+Fixed
+- MC fix width of dice window
+- MC dice roller - dice staying visible for re-roll
+- MC Set to default to no dice
 
