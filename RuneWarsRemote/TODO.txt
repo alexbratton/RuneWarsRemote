@@ -1,7 +1,7 @@
 
 TODOLIST
 
-- MC auto scroll chat
+
 - MC filter initial chat messages to last XX (10)
 - MC Add button to re-send Dice roll results (after single dice reroll or pick)
 - AB send turn messages to chat
@@ -22,4 +22,4 @@ Fixed
 - MC fix width of dice window
 - MC dice roller - dice staying visible for re-roll
 - MC Set to default to no dice
-
+- MC auto scroll chat
