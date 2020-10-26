@@ -131,9 +131,14 @@ class DiceModel: ObservableObject {
         
         SumDice()
         //PrintDie()
-        
+        sendRollResultToChat(chatModel: chatModel)
+    }
+    
+    func sendRollResultToChat(chatModel: ChatModel)
+    {
         rollResult = "Results:  Mortal: \(diceResult.mortal) Hit: \(diceResult.hit) Rally: \(diceResult.rally) Lightning: \(diceResult.lightning) Target: \(diceResult.target)"
         chatModel.sendMessage(newMessage: rollResult)
+
     }
     
     func PrintDie()

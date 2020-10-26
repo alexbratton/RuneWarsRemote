@@ -3,7 +3,6 @@ TODOLIST
 
 
 - MC filter initial chat messages to last XX (10)
-- MC Add button to re-send Dice roll results (after single dice reroll or pick)
 - AB send turn messages to chat
 - AB adjust layout of orders/unit image to squish
 - AB Auto save army to json file after each change
@@ -23,3 +22,4 @@ Fixed
 - MC dice roller - dice staying visible for re-roll
 - MC Set to default to no dice
 - MC auto scroll chat
+- MC Reroll now re-sends Dice roll results (after single dice reroll or pick)

@@ -69,6 +69,7 @@ struct ChatMessagesView: View {
                 
                 ForEach(self.chatModel.chatMessages, id: \.id) { chat in
                     Text("\(chat.uid) : \(chat.message)").id(chat.id)
+                        .font(.footnote)
                 }
                 .onDelete(perform: deleteChat)
                 .onChange(of: self.chatModel.chatMessages) { target in
