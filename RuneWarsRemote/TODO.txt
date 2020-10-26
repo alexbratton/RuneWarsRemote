@@ -10,7 +10,11 @@ TODOLIST
 
 FUTURE
 sort order list by initiative -- button to sort the column - for now, can manually call off numbers
-
+- Add the ability to roll Magic
+-- Display Magic on all screens, send from the one that rolled, display on all screens
+- Add the Turn Indicator, current round in the turn
+-- Add a button to increment the round, sync on all devices
+-- Add a button to increment the turn, sync on all devices
 
 Fixed
 - MC fix width of dice window
