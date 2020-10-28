@@ -96,7 +96,7 @@ struct DiceResultsSummaryView: View {
 }
 
 struct DiceView: View {
-    @State var diceModel: DiceModel = DiceModel(count: 1)
+    @State var diceModel: DiceModel = DiceModel()
     @EnvironmentObject var chatModel: ChatModel
     
     var body: some View {
@@ -157,21 +157,21 @@ struct DiceResultView: View {
 struct DieResultView: View {
     @ObservedObject var dieModel: DieModel
     @ObservedObject var diceModel: DiceModel
-    
+    @EnvironmentObject var chatModel: ChatModel
+
     var body: some View {
         VStack {
             Image(dieModel.getImageName())
             Button(action : {
-                // Do nothing right now
-                print("Reroll Die")
                 dieModel.rollDie()
                 diceModel.SumDice()
+                diceModel.sendRollResultToChat(chatModel: chatModel)
             }) {
                 Text("ReRoll")
             }
             Button(action : {
                 // Do nothing right now
-                print("Pick Die Face")
+                diceModel.sendRollResultToChat(chatModel: chatModel)
             }) {
                 Text("Pick")
             }

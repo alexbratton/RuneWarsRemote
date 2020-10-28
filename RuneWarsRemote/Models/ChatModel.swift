@@ -24,11 +24,17 @@ class ChatModel: NSObject, ObservableObject {
     var msglength: NSNumber = 10
  
     
-    struct ChatMessage {
+    struct ChatMessage: Identifiable, Codable,Hashable {
         var id = UUID()
         var uid : String
         var message: String
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
     }
+    
+    
     
     struct MessageFields {
         static let name = "name"

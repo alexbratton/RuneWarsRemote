@@ -12,65 +12,78 @@ import GoogleSignIn
 struct ChatView: View {
     @ObservedObject var info : AppDelegate
     @EnvironmentObject var chatModel : ChatModel
-    
- 
+     
     var body: some View {
         VStack {
             HeaderView(info : info)
             Spacer()
-            MessageView()
+            ChatMessageView()
         }
+
     }
 }
 
-struct MessageView: View {
+struct ChatMessageView: View {
+    var body: some View {
+        VStack {
+            ChatMessagesView()
+            Spacer()
+            ChatButtonView()
+        }
+        .padding()
+        .overlay(RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.gray, lineWidth:1))
+    }
+}
+
+struct ChatButtonView: View {
     @EnvironmentObject var chatModel : ChatModel
-    
+
     @State private var newMessage: String = ""
     
     var body: some View {
-        VStack {
-            List {
-                ForEach(self.chatModel.chatMessages, id: \.id) { chat in
-                    Text("\(chat.uid) : \(chat.message)")
-                }
-                .onDelete(perform: deleteChat)
-            }
-            
-            
             HStack {
                 TextField("", text: $newMessage)
                 Button(action :{
                     sendMessage()
                 }) {
                     Text("Send")
-                
                 }
                 .cornerRadius(10)
             }
             .padding()
             .border(Color.black)
-           
-           
-            
-        }
-        .frame(width:300)
-        .padding()
-        .overlay(RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.gray, lineWidth:1))
+    }
+    func sendMessage() {
+        self.chatModel.sendMessage(newMessage : newMessage)
+        newMessage = ""
+    }
+}
 
-        
+struct ChatMessagesView: View {
+    @EnvironmentObject var chatModel : ChatModel
+    
+    var body: some View {
+        ScrollView {
+            ScrollViewReader { scrollView in
+                
+                ForEach(self.chatModel.chatMessages, id: \.id) { chat in
+                    Text("\(chat.uid) : \(chat.message)").id(chat.id)
+                        .font(.footnote)
+                }
+                .onDelete(perform: deleteChat)
+                .onChange(of: self.chatModel.chatMessages) { target in
+                    let index : Int = target.endIndex
+                    let targetMessage : ChatModel.ChatMessage = target[index-1]
+                    scrollView.scrollTo(targetMessage.id, anchor: .bottom)
+                }
+            }
+        }
     }
     
     func deleteChat(at offsets: IndexSet) {
         self.chatModel.chatMessages.remove(atOffsets: offsets)
     }
-    
-    func sendMessage() {
-        self.chatModel.sendMessage(newMessage : newMessage)
-        newMessage = ""
-    }
-
 }
 
 struct HeaderView: View {

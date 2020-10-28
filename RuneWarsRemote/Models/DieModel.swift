@@ -44,8 +44,6 @@ class DieModel: ObservableObject, Identifiable {
         var name : String
         
         name = "\(self.dieColor.lowercased())_side_\(self.dieResultSide)"
-        
-        print("Image Name: \(name)")
         return name
     }
     

@@ -1,9 +1,8 @@
 
 TODOLIST
 
-- MC auto scroll chat
-- MC fix width of dice window
-- MC dice roller - dice staying visible for re-roll
+
+- MC filter initial chat messages to last XX (10)
 - AB send turn messages to chat
 - AB adjust layout of orders/unit image to squish
 - AB Auto save army to json file after each change
@@ -11,5 +10,16 @@ TODOLIST
 
 FUTURE
 sort order list by initiative -- button to sort the column - for now, can manually call off numbers
+- Add the ability to roll Magic
+-- Display Magic on all screens, send from the one that rolled, display on all screens
+- Add the Turn Indicator, current round in the turn
+-- Add a button to increment the round, sync on all devices
+-- Add a button to increment the turn, sync on all devices
+- Implement the "Pick" feature on Dice
 
-
+Fixed
+- MC fix width of dice window
+- MC dice roller - dice staying visible for re-roll
+- MC Set to default to no dice
+- MC auto scroll chat
+- MC Reroll now re-sends Dice roll results (after single dice reroll or pick)
