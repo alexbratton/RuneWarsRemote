@@ -3,8 +3,8 @@ TODOLIST
 
 
 - MC filter initial chat messages to last XX (10)
-- AB send turn messages to chat
-- AB adjust layout of orders/unit image to squish
+X AB send turn messages to chat
+X AB adjust layout of orders/unit image to squish
 - AB Auto save army to json file after each change
 - AB Load army on each foregrounding
 
