@@ -40,27 +40,19 @@ struct ArmyUnitRow: View {
             {
                 HStack (alignment: .top)
                 {
-                    ZStack
-                    {
-                        store.army[armyIndex].unit.image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height:120)
-                        Text("["+store.army[armyIndex].size+"]")
-                            .font(.callout)
-                            .bold()
-                            .background(Color.black)
-                            .foregroundColor(.white)
-                            .offset(x: 0, y:50)
-                    }
+
                     VStack (alignment: .leading)
                     {
                         
                         HStack
                         {
-                            Text(store.army[armyIndex].unit.name)
+                            Text(store.army[armyIndex].name)
                                 .font(.title)
                                 .bold()
+                            Text("-- "+store.army[armyIndex].unit.name)
+                                 .font(.title2)
+                                 .bold()
+                            
                             if (store.army[armyIndex].unitID != 111)
                             {
                             Image(systemName: "info.circle").foregroundColor(.blue)
@@ -82,9 +74,6 @@ struct ArmyUnitRow: View {
                                         .environmentObject(self.store)
                                 }
                         }
-                        Text(store.army[armyIndex].name)
-                            .font(.title2)
-                            .bold()
                         Text(store.army[armyIndex].notes)
                             .font(.footnote)
                     }
@@ -92,6 +81,21 @@ struct ArmyUnitRow: View {
                
                 HStack
                 {
+                    // UNIT IMAGE & SIZE
+                    ZStack
+                    {
+                        store.army[armyIndex].unit.image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height:120)
+                        Text("["+store.army[armyIndex].size+"]")
+                            .font(.callout)
+                            .bold()
+                            .background(Color.black)
+                            .foregroundColor(.white)
+                            .offset(x: 0, y:50)
+                    }
+                    // ORDERS CHEVRON ------------------------------------
                     Image(systemName: "chevron.right.circle")
                         .font(Font.system(.largeTitle))
                         .rotationEffect(.degrees(sent ? 90 : -90))
@@ -104,12 +108,9 @@ struct ArmyUnitRow: View {
                                 {
                                     store.army[armyIndex].leftOrder=leftOrder
                                     store.army[armyIndex].rightOrder=rightOrder
-                                    chatModel.sendMessage(newMessage : "Init(\(store.army[armyIndex].selectedLeftOrder.initiative)) \(store.army[armyIndex].name)[\(store.army[armyIndex].size)] \(store.army[armyIndex].selectedLeftOrder.order) & \(store.army[armyIndex].selectedRightOrder.order) \(store.army[armyIndex].notes)")
+                                    
+                                    chatModel.sendMessage(newMessage : "@\(store.army[armyIndex].selectedLeftOrder.initiative) \(store.army[armyIndex].name)[\(store.army[armyIndex].size)] \(store.army[armyIndex].selectedLeftOrder.order) & \(store.army[armyIndex].selectedRightOrder.order) \(store.army[armyIndex].notes)")
                                     showingAlert=true
-         
-                                    
-                                    
-                                    
 
                                 }
                                 else
@@ -124,9 +125,11 @@ struct ArmyUnitRow: View {
                         .alert(isPresented: $showingAlert)
                         {
                             
-                           Alert(title: Text(store.army[armyIndex].name+" order -> chat"),
-                               message: Text("Left: \(leftOrder) Right: \(rightOrder)"))
+                           Alert(title: Text("Unit Moved"),
+                               message: Text(store.army[armyIndex].name))
                         }
+                    
+                    // ORDER SELECTORS
                     VStack (alignment: .center, spacing: 0.0)
                     {
                         OrderSelector(commandDial: store.army[armyIndex].unit.leftDial, orderSelection: $leftOrder)
