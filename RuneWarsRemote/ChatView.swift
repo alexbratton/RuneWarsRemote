@@ -68,8 +68,8 @@ struct ChatMessagesView: View {
             ScrollViewReader { scrollView in
                 
                 ForEach(self.chatModel.chatMessages, id: \.id) { chat in
-                    Text("\(chat.uid) : \(chat.message)").id(chat.id)
-                        .font(.footnote)
+                    //TODO: Separate my chat and other chat
+                    OtherUserMessageTextView(userName: chat.uid, message: chat.message)
                 }
                 .onDelete(perform: deleteChat)
                 .onChange(of: self.chatModel.chatMessages) { target in
@@ -83,6 +83,51 @@ struct ChatMessagesView: View {
     
     func deleteChat(at offsets: IndexSet) {
         self.chatModel.chatMessages.remove(atOffsets: offsets)
+    }
+}
+
+struct OtherUserMessageTextView: View {
+    var userName : String
+    var message : String
+    
+    var body: some View {
+        HStack {
+            
+            Text("\(userName)").font(.footnote)
+                .foregroundColor(.white)
+                .padding(3.0)
+                .background(RoundedRectangle(cornerRadius: 8).fill(Color.blue))
+            Text("\(message)").font(.footnote)
+                .padding(5.0)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(style: StrokeStyle(lineWidth: 2))
+                )
+            Spacer()
+        }
+    }
+}
+
+struct MyMessageTextView: View {
+    var userName : String
+    var message : String
+    
+    var body: some View {
+        HStack {
+            
+            Text("\(userName)").font(.footnote)
+                .padding(3.0)
+                .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray))
+                .foregroundColor(.white)
+            Text("\(message)").font(.footnote)
+                .padding(5.0)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15)
+                        .stroke(style: StrokeStyle(lineWidth: 2))
+                )
+            Spacer()
+            
+        }
     }
 }
 
