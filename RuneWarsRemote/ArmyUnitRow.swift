@@ -122,12 +122,14 @@ struct ArmyUnitRow: View {
                             }
                             
                         }
+                        /*
                         .alert(isPresented: $showingAlert)
                         {
                             
                            Alert(title: Text("Unit Moved"),
                                message: Text(store.army[armyIndex].name))
                         }
+ */
                     
                     // ORDER SELECTORS
                     VStack (alignment: .center, spacing: 0.0)
