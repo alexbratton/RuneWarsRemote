@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArmyUnit: Hashable, Identifiable, Decodable {
+struct ArmyUnit: Hashable, Identifiable, Decodable, Encodable {
     var id = UUID()
     var unitID: Int = 1000
     var name: String

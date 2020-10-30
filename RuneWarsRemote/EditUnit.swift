@@ -105,7 +105,8 @@ struct EditUnit: View {
         store.army[armyIndex].name = unitName
         store.army[armyIndex].size = unitSize
         store.army[armyIndex].notes = unitNotes
-
+        
+        store.saveArmy()
    //     store.army.append(ArmyUnit(unitID: 1000, name: "New spears", size: "2x2", notes: "From new button"))
         
 

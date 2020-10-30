@@ -25,19 +25,27 @@ struct AppView: View {
                 {
                     HStack
                     {
+                        Text("v1.0.2")
+                            .font(.footnote)
                         Spacer()
 
                         Text("\(store.army.count) Units")
                             .foregroundColor(.secondary)
                         Spacer()
-                        Button("Add", action: addUnit)
-                        Button("LOAD", action: loadArmy)
+                        Image(systemName: "plus.circle")
+                            .font(Font.system(.largeTitle))
+                            .foregroundColor(Color.blue)
+                            .animation(.spring())
+                            .onTapGesture {
+                                addUnit()
+                                store.saveArmy()
+                            }
+                       // Button("Add", action: addUnit)
+                       // Button("LOAD", action: loadArmy)
                     }
 
                     
                     TurnPlan()
-                    Text("version 1.0.1")
-                        .font(.footnote)
                 }
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 20)
@@ -53,7 +61,14 @@ struct AppView: View {
                 }
             }
         }
+        .onAppear(perform: store.loadSavedArmy)
+        .onDisappear(perform: store.saveArmy)
     }
+    
+  
+    
+  
+    
     
     func loadArmy()
     {
@@ -69,6 +84,8 @@ struct AppView: View {
             
         }
     }
+    
+    
 }
 
 struct AppView_Previews: PreviewProvider {
