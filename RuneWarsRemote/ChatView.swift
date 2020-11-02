@@ -140,7 +140,29 @@ struct HeaderView: View {
 
     var body: some View {
         HStack {
+            // Turn
+            Text("Turn: \(chatModel.currentTurn)")
+            Stepper("", onIncrement: {
+                self.chatModel.incrementTurn()
+              
+            }, onDecrement: {
+                self.chatModel.decrementTurn()
+            }
+            )
+            .cornerRadius(8)
+            // Round
+            Text("Round: \(chatModel.currentRound)")
+            Stepper("", onIncrement: {
+                self.chatModel.incrementRound()
+                
+            }, onDecrement: {
+                self.chatModel.decrementRound()
+            }
+            )
+            .cornerRadius(8)
+
             Spacer()
+            // Google Sign-in
             if (self.signedIn) {
                 Text("\(info.uid)")
             }

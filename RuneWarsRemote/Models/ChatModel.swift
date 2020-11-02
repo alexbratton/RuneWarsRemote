@@ -12,7 +12,8 @@ class ChatModel: NSObject, ObservableObject {
     
     @Published var signedIn: Bool = false
     @Published var chatMessages = [ChatMessage(uid : "Mark",message : "Please Sign In"),ChatMessage(uid : "Alex",message : "Please Sign In")]
-    
+    @Published var currentTurn: Int = 1
+    @Published var currentRound: Int = 1
     @Published var firebaseInit : Bool = false
     
     
@@ -39,8 +40,32 @@ class ChatModel: NSObject, ObservableObject {
     struct MessageFields {
         static let name = "name"
         static let text = "text"
+        static let type = "type"
     }
     
+    func incrementTurn()
+    {
+        self.currentTurn = self.currentTurn + 1
+        sendDataMessage(dataMessage: "\(self.currentTurn)", dataType: "turn")
+    }
+    
+    func decrementTurn()
+    {
+        self.currentTurn = self.currentTurn - 1
+        sendDataMessage(dataMessage: "\(self.currentTurn)", dataType: "turn")
+    }
+    func incrementRound()
+    {
+        self.currentRound = self.currentRound + 1
+        sendDataMessage(dataMessage: "\(self.currentRound)", dataType: "round")
+    }
+    
+    func decrementRound()
+    {
+        self.currentRound = self.currentRound - 1
+        sendDataMessage(dataMessage: "\(self.currentRound)", dataType: "round")
+    }
+
     func sendMessage(newMessage: String)
     {
         //chatMessages.append(ChatMessage(uid : "Mark", message : newMessage))
@@ -49,10 +74,20 @@ class ChatModel: NSObject, ObservableObject {
         if (!firebaseInit) {
             configureFirebase()
         }
-        let data = [MessageFields.text: newMessage]
+        let data = [MessageFields.text: newMessage, MessageFields.type: "chat"]
         sendFirebaseMessage(withData: data)
     }
     
+    func sendDataMessage(dataMessage: String, dataType: String)
+    {
+        // Start the firebase/Google integration
+        if (!firebaseInit) {
+            configureFirebase()
+        }
+        let data = [MessageFields.text: dataMessage, MessageFields.type: dataType]
+        sendFirebaseMessage(withData: data)
+    }
+
     
     func sendFirebaseMessage(withData data: [String: String]) {
         var mdata = data
@@ -85,7 +120,25 @@ class ChatModel: NSObject, ObservableObject {
             if let value = snapshot.value as? [String: Any] {
                 let name = value[MessageFields.name] as? String ?? ""
                 let text = value[MessageFields.text] as? String ?? ""
-                strongSelf.chatMessages.append(ChatMessage(uid : name, message : text))
+                let type = value[MessageFields.type] as? String ?? ""
+
+                // If a chat, send to Chat
+                if (type == "chat") {
+                    strongSelf.chatMessages.append(ChatMessage(uid : name, message : text))
+                }
+                if (type == "dice") {
+                    // Do something with the dice
+                }
+                if (type == "turn") {
+                    // Swap the string to an int
+                    let currentTurnIndicator = Int(text) ?? 1
+                    strongSelf.currentTurn = currentTurnIndicator
+                }
+                if (type == "round") {
+                    // Swap the string to an int
+                    let currentRoundIndicator = Int(text) ?? 1
+                    strongSelf.currentRound = currentRoundIndicator
+                }
             }
             
         })

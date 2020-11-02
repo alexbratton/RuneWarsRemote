@@ -138,6 +138,7 @@ class DiceModel: ObservableObject {
     {
         rollResult = "Results:  Mortal: \(diceResult.mortal) Hit: \(diceResult.hit) Rally: \(diceResult.rally) Lightning: \(diceResult.lightning) Target: \(diceResult.target)"
         chatModel.sendMessage(newMessage: rollResult)
+        chatModel.sendDataMessage(dataMessage: rollResult, dataType: "dice")
 
     }
     
