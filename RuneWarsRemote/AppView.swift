@@ -10,6 +10,7 @@ import SwiftUI
 struct AppView: View {
     @EnvironmentObject var store: ArmyStore
     @EnvironmentObject var chatModel: ChatModel
+    @EnvironmentObject var panicDeck: PanicDeck
     @ObservedObject var info: AppDelegate
     
     var body: some View {

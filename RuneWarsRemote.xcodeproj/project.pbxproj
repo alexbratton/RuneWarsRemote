@@ -52,6 +52,8 @@
 		B600183E24A7D6700041EB9D /* ArmyUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600183D24A7D6700041EB9D /* ArmyUnit.swift */; };
 		B600184024A7D6E00041EB9D /* ArmyUnitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600183F24A7D6E00041EB9D /* ArmyUnitRow.swift */; };
 		B600184224A7D8770041EB9D /* ArmyUnitList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B600184124A7D8770041EB9D /* ArmyUnitList.swift */; };
+		B604AAE8255DFA2A003F51D7 /* PanicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604AAE7255DFA2A003F51D7 /* PanicCard.swift */; };
+		B604AAED255DFAA3003F51D7 /* PanicDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = B604AAEC255DFAA3003F51D7 /* PanicDeck.swift */; };
 		B60DCE5E24A38F250055D771 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60DCE5D24A38F250055D771 /* OrderView.swift */; };
 		B60DCE6024A38FE50055D771 /* OrderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60DCE5F24A38FE50055D771 /* OrderType.swift */; };
 		B60DCE6224A390700055D771 /* orderTypeData.json in Resources */ = {isa = PBXBuildFile; fileRef = B60DCE6124A390700055D771 /* orderTypeData.json */; };
@@ -236,6 +238,8 @@
 		B600183D24A7D6700041EB9D /* ArmyUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyUnit.swift; sourceTree = "<group>"; };
 		B600183F24A7D6E00041EB9D /* ArmyUnitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyUnitRow.swift; sourceTree = "<group>"; };
 		B600184124A7D8770041EB9D /* ArmyUnitList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyUnitList.swift; sourceTree = "<group>"; };
+		B604AAE7255DFA2A003F51D7 /* PanicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanicCard.swift; sourceTree = "<group>"; };
+		B604AAEC255DFAA3003F51D7 /* PanicDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanicDeck.swift; sourceTree = "<group>"; };
 		B60DCE5D24A38F250055D771 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		B60DCE5F24A38FE50055D771 /* OrderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderType.swift; sourceTree = "<group>"; };
 		B60DCE6124A390700055D771 /* orderTypeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = orderTypeData.json; sourceTree = "<group>"; };
@@ -581,9 +585,11 @@
 			children = (
 				B69FF9F724A259BA009427D3 /* Unit.swift */,
 				B69FF9FA24A25B07009427D3 /* Data.swift */,
+				B604AAE7255DFA2A003F51D7 /* PanicCard.swift */,
 				B60DCE5F24A38FE50055D771 /* OrderType.swift */,
 				B600183D24A7D6700041EB9D /* ArmyUnit.swift */,
 				B6CE543B24C34C0A00B05F24 /* ArmyStore.swift */,
+				B604AAEC255DFAA3003F51D7 /* PanicDeck.swift */,
 				3E2C841B24EB2DEB00B04892 /* DiceModel.swift */,
 				3E91646D24F07B0000C26A52 /* DieModel.swift */,
 				3E7A11EA2506C35D008E8BC3 /* ChatModel.swift */,
@@ -1063,7 +1069,9 @@
 			files = (
 				B60DCE6024A38FE50055D771 /* OrderType.swift in Sources */,
 				B6A3C14524D1D6B9005272D8 /* DiceView.swift in Sources */,
+				B604AAE8255DFA2A003F51D7 /* PanicCard.swift in Sources */,
 				B69FFA0424A28D22009427D3 /* UnitRow.swift in Sources */,
+				B604AAED255DFAA3003F51D7 /* PanicDeck.swift in Sources */,
 				3E7A11EB2506C35D008E8BC3 /* ChatModel.swift in Sources */,
 				B6A3C14324D1D663005272D8 /* ChatView.swift in Sources */,
 				B600184224A7D8770041EB9D /* ArmyUnitList.swift in Sources */,

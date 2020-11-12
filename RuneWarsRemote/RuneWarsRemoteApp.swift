@@ -17,6 +17,7 @@ struct RuneWarsRemoteApp: App {
     var body: some Scene {
         WindowGroup {
             AppView( info: self.delegate).environmentObject(ArmyStore()).environmentObject(ChatModel())
+                .environmentObject(PanicDeck())
         }
     }
  

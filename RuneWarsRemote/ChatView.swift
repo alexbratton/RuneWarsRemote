@@ -133,6 +133,7 @@ struct MyMessageTextView: View {
 
 struct HeaderView: View {
     @EnvironmentObject var chatModel : ChatModel
+    @EnvironmentObject var panicDeck: PanicDeck
     @ObservedObject var info : AppDelegate
     
     @State private var signedIn : Bool = false
@@ -163,6 +164,16 @@ struct HeaderView: View {
             .cornerRadius(8)
 
             Spacer()
+            
+            ImageStore.shared.image(name: "morale")
+            .onTapGesture
+                {
+                    let cardPick =  Int(arc4random_uniform(UInt32(panicDeck.deck.count)))
+                    let card = panicDeck.deck[cardPick]
+                    chatModel.sendMessage(newMessage : "(\(cardPick)) Panic! - \(card.name) (\(card.type)) -- \(card.description)")
+                }
+            
+            
             // Google Sign-in
             if (self.signedIn) {
                 Text("\(info.uid)")
