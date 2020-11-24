@@ -7,19 +7,17 @@ X AB send turn messages to chat
 X AB adjust layout of orders/unit image to squish
 - AB Auto save army to json file after each change
 - AB Load army on each foregrounding
+- MC Make Roll Window Smaller
+- MC Show the Dial icon (ex, move 2) in chat as an icon
+- MC Show the Roll Results as Icons
+- MC Convert to a REST server
+- MC Write a REST server
 
 FUTURE
 sort order list by initiative -- button to sort the column - for now, can manually call off numbers
 - Add the ability to roll Magic
 -- Display Magic on all screens, send from the one that rolled, display on all screens
 - Implement the "Pick" feature on Dice
+- Add the ability to show tokens on units
 
-Fixed
-- MC fix width of dice window
-- MC dice roller - dice staying visible for re-roll
-- MC Set to default to no dice
-- MC auto scroll chat
-- MC Reroll now re-sends Dice roll results (after single dice reroll or pick)
-- Add the Turn Indicator, current round in the turn
--- Add a button to increment the round, sync on all devices
--- Add a button to increment the turn, sync on all devices
+

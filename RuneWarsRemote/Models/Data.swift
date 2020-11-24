@@ -99,8 +99,8 @@ let unitData: [Unit] = [
               leftDial: CommandDial(
                  order1: UnitOrder(order: "march-1", color: OrderColor.blue, initiative: 3),
                  order2: UnitOrder(order: "march-2", color: OrderColor.blue, initiative: 4),
-                 order3: UnitOrder(order: "march-3", color: OrderColor.green, initiative: 5),
-                 order4: UnitOrder(order: "march-4", color: OrderColor.green, initiative: 7),
+                 order3: UnitOrder(order: "march-3", color: OrderColor.blue, initiative: 5),
+                 order4: UnitOrder(order: "march-4", color: OrderColor.blue, initiative: 7),
                  order5: UnitOrder(order: "rally", color: OrderColor.green, initiative: 3),
                  order6: UnitOrder(order: "reform", color: OrderColor.green, initiative: 8),
                  order7: UnitOrder(order: "melee", color: OrderColor.red, initiative: 7),
@@ -160,8 +160,8 @@ let unitData: [Unit] = [
                  order2: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
                  order3: UnitOrder(order: "charge-turn-1", color: OrderColor.blue, initiative: 0),
                  order4: UnitOrder(order: "march-2", color: OrderColor.blue, initiative: 0),
-                 order5: UnitOrder(order: "defense+1", color: OrderColor.white, initiative: 0),
-                 order6: UnitOrder(order: "rally", color: OrderColor.white, initiative: 0),
+                 order5: UnitOrder(order: "hit", color: OrderColor.red, initiative: 0),
+                 order6: UnitOrder(order: "defense+1", color: OrderColor.white, initiative: 0),
                  order7: UnitOrder(order: "rally", color: OrderColor.white, initiative: 0),
                  order8: UnitOrder(order: "rally", color: OrderColor.white, initiative: 0)
                  )
@@ -196,24 +196,24 @@ let unitData: [Unit] = [
 
       Unit(id: 1005, name: "Rune Golems", imageName: "rune_golems", faction: Unit.Faction.daqan,
               leftDial: CommandDial(
-                 order1: UnitOrder(order: "march-1", color: OrderColor.blue, initiative: 2),
-                 order2: UnitOrder(order: "march-2", color: OrderColor.blue, initiative: 3),
-                 order3: UnitOrder(order: "rally", color: OrderColor.blue, initiative: 4),
-                 order4: UnitOrder(order: "shift-1", color: OrderColor.blue, initiative: 5),
-                 order5: UnitOrder(order: "march-3", color: OrderColor.blue, initiative: 7),
-                 order6: UnitOrder(order: "ranged", color: OrderColor.green, initiative: 5),
-                 order7: UnitOrder(order: "march-2", color: OrderColor.green, initiative: 7),
-                 order8: UnitOrder(order: "melee", color: OrderColor.red, initiative: 4)
+                 order1: UnitOrder(order: "march-unstable", color: OrderColor.blue, initiative: 4),
+                 order2: UnitOrder(order: "march-2", color: OrderColor.blue, initiative: 8),
+                 order3: UnitOrder(order: "shift-1", color: OrderColor.green, initiative: 7),
+                 order4: UnitOrder(order: "skill", color: OrderColor.red, initiative: 3),
+                 order5: UnitOrder(order: "melee", color: OrderColor.red, initiative: 5),
+                 order6: UnitOrder(order: "melee", color: OrderColor.red, initiative: 5),
+                 order7: UnitOrder(order: "melee", color: OrderColor.red, initiative: 5),
+                 order8: UnitOrder(order: "melee", color: OrderColor.red, initiative: 5)
                  ),
               rightDial: CommandDial(
-                 order1: UnitOrder(order: "turn-1", color: OrderColor.blue, initiative: 0),
-                 order2: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
-                 order3: UnitOrder(order: "defense+1", color: OrderColor.blue, initiative: 0),
-                 order4: UnitOrder(order: "march-2", color: OrderColor.green, initiative: 0),
-                 order5: UnitOrder(order: "shift-1", color: OrderColor.green, initiative: 0),
-                 order6: UnitOrder(order: "reform", color: OrderColor.green, initiative: 0),
-                 order7: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
-                 order8: UnitOrder(order: "hit", color: OrderColor.white, initiative: 0)
+                 order1: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
+                 order2: UnitOrder(order: "defense+stable", color: OrderColor.red, initiative: 0),
+                 order3: UnitOrder(order: "rally", color: OrderColor.white, initiative: 0),
+                 order4: UnitOrder(order: "reform", color: OrderColor.white, initiative: 0),
+                 order5: UnitOrder(order: "reform", color: OrderColor.white, initiative: 0),
+                 order6: UnitOrder(order: "reform", color: OrderColor.white, initiative: 0),
+                 order7: UnitOrder(order: "reform", color: OrderColor.white, initiative: 0),
+                 order8: UnitOrder(order: "reform", color: OrderColor.white, initiative: 0)
                  )
          ), // Rune Golems
     
@@ -229,12 +229,12 @@ let unitData: [Unit] = [
                order8: UnitOrder(order: "ranged", color: OrderColor.yellow, initiative: 5)
                ),
             rightDial: CommandDial(
-               order1: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
-               order2: UnitOrder(order: "hit", color: OrderColor.red, initiative: 0),
-               order3: UnitOrder(order: "surge", color: OrderColor.yellow, initiative: 0),
-               order4: UnitOrder(order: "march-1", color: OrderColor.white, initiative: 0),
-               order5: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
-               order6: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
+               order1: UnitOrder(order: "turn", color: OrderColor.blue, initiative: 0),
+               order2: UnitOrder(order: "wheel-1", color: OrderColor.blue, initiative: 0),
+               order3: UnitOrder(order: "charge", color: OrderColor.blue, initiative: 0),
+               order4: UnitOrder(order: "hit", color: OrderColor.red, initiative: 0),
+               order5: UnitOrder(order: "surge", color: OrderColor.yellow, initiative: 0),
+               order6: UnitOrder(order: "march-1", color: OrderColor.white, initiative: 0),
                order7: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
                order8: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0)
                )
@@ -335,9 +335,9 @@ let unitData: [Unit] = [
     
     Unit(id: 2004, name: "Carrion Lancers", imageName: "carrion_lancers", faction: Unit.Faction.waiqar,
          leftDial: CommandDial(
-            order1: UnitOrder(order: "march-1", color: OrderColor.blue, initiative: 4),
-            order2: UnitOrder(order: "march-2", color: OrderColor.blue, initiative: 5),
-            order3: UnitOrder(order: "march-3", color: OrderColor.blue, initiative: 7),
+            order1: UnitOrder(order: "march-2", color: OrderColor.blue, initiative: 4),
+            order2: UnitOrder(order: "march-3", color: OrderColor.blue, initiative: 5),
+            order3: UnitOrder(order: "march-4", color: OrderColor.blue, initiative: 7),
             order4: UnitOrder(order: "reform", color: OrderColor.green, initiative: 3),
             order5: UnitOrder(order: "shift-1", color: OrderColor.green, initiative: 6),
             order6: UnitOrder(order: "melee", color: OrderColor.red, initiative: 5),
@@ -415,7 +415,7 @@ let unitData: [Unit] = [
          rightDial: CommandDial(
             order1: UnitOrder(order: "turn-1", color: OrderColor.blue, initiative: 0),
             order2: UnitOrder(order: "wheel-1", color: OrderColor.blue, initiative: 0),
-            order3: UnitOrder(order: "defense+1", color: OrderColor.green, initiative: 0),
+            order3: UnitOrder(order: "rally", color: OrderColor.green, initiative: 0),
             order4: UnitOrder(order: "surge", color: OrderColor.red, initiative: 0),
             order5: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
             order6: UnitOrder(order: "skill", color: OrderColor.white, initiative: 0),
