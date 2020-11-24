@@ -8,10 +8,10 @@
 import Foundation
 
 struct DiceResult {
-    var lightning = 0
+    var surge = 0
     var hit = 0
     var mortal = 0
-    var rally = 0
+    var panic = 0
     var target = 0
     var side = 0
 }
@@ -93,9 +93,9 @@ class DiceModel: ObservableObject {
     func SumDice() {
         // blank out dice result first
         diceResult.hit = 0
-        diceResult.lightning = 0
+        diceResult.surge = 0
         diceResult.mortal = 0
-        diceResult.rally = 0
+        diceResult.panic = 0
         diceResult.side = 0
         diceResult.target = 0
         
@@ -113,9 +113,9 @@ class DiceModel: ObservableObject {
     func AddResult(rollResult : DiceResult) {
         
         diceResult.hit += rollResult.hit
-        diceResult.lightning += rollResult.lightning
+        diceResult.surge += rollResult.surge
         diceResult.mortal += rollResult.mortal
-        diceResult.rally += rollResult.rally
+        diceResult.panic += rollResult.panic
         diceResult.target += rollResult.target
 
     }
@@ -136,7 +136,7 @@ class DiceModel: ObservableObject {
     
     func sendRollResultToChat(chatModel: ChatModel)
     {
-        rollResult = "Results:  Mortal: \(diceResult.mortal) Hit: \(diceResult.hit) Rally: \(diceResult.rally) Lightning: \(diceResult.lightning) Target: \(diceResult.target)"
+        rollResult = "Results:  Mortal: \(diceResult.mortal) Hit: \(diceResult.hit) Panic: \(diceResult.panic) Surge: \(diceResult.surge) Target: \(diceResult.target)"
         chatModel.sendMessage(newMessage: rollResult)
         chatModel.sendDataMessage(dataMessage: rollResult, dataType: "dice")
 
@@ -152,24 +152,24 @@ class DiceModel: ObservableObject {
             print("White     : \(die.dieResultSide)")
             print("  Hit       : \(die.dieResult.hit)")
             print("  Mortal    : \(die.dieResult.mortal)")
-            print("  Lightning : \(die.dieResult.lightning)")
-            print("  Rally     : \(die.dieResult.rally)")
+            print("  Surge     : \(die.dieResult.surge)")
+            print("  Panic     : \(die.dieResult.panic)")
             print("  Target    : \(die.dieResult.target)")
         }
         for die in redDiceList {
             print("Red       : \(die.dieResultSide)")
             print("  Hit       : \(die.dieResult.hit)")
             print("  Mortal    : \(die.dieResult.mortal)")
-            print("  Lightning : \(die.dieResult.lightning)")
-            print("  Rally     : \(die.dieResult.rally)")
+            print("  Surge     : \(die.dieResult.surge)")
+            print("  Panic     : \(die.dieResult.panic)")
             print("  Target    : \(die.dieResult.target)")
         }
         for die in blueDiceList {
             print("Blue      : \(die.dieResultSide)")
             print("  Hit       : \(die.dieResult.hit)")
             print("  Mortal    : \(die.dieResult.mortal)")
-            print("  Lightning : \(die.dieResult.lightning)")
-            print("  Rally     : \(die.dieResult.rally)")
+            print("  Surge     : \(die.dieResult.surge)")
+            print("  Panic     : \(die.dieResult.panic)")
             print("  Target    : \(die.dieResult.target)")
         }
 

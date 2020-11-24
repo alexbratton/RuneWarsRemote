@@ -72,11 +72,11 @@ class DieModel: ObservableObject, Identifiable {
             diceResult.hit = 1
         case 4:
             diceResult.hit = 1
-            diceResult.lightning = 1
+            diceResult.surge = 1
         case 5:
-            diceResult.lightning = 2
+            diceResult.surge = 2
         case 6:
-            diceResult.lightning = 1
+            diceResult.surge = 1
         case 7:
             diceResult.hit = 1
             diceResult.target = 1
@@ -106,13 +106,13 @@ class DieModel: ObservableObject, Identifiable {
         case 5:
             diceResult.hit = 2
         case 6:
-            diceResult.rally = 1
+            diceResult.panic = 1
         case 7:
             diceResult.hit = 1
-            diceResult.rally = 1
+            diceResult.panic = 1
         case 8:
             diceResult.hit = 1
-            diceResult.lightning = 1
+            diceResult.surge = 1
         default:
             diceResult.hit = 0
         }
@@ -132,10 +132,10 @@ class DieModel: ObservableObject, Identifiable {
             diceResult.hit = 1
         case 3:
             diceResult.hit = 1
-            diceResult.lightning = 1
+            diceResult.surge = 1
         case 4:
             diceResult.hit = 1
-            diceResult.rally = 1
+            diceResult.panic = 1
         case 5:
             diceResult.mortal = 1
         case 6:
@@ -143,16 +143,16 @@ class DieModel: ObservableObject, Identifiable {
         case 7:
             diceResult.hit = 1
         case 8:
-            diceResult.lightning = 2
+            diceResult.surge = 2
         case 9:
             diceResult.hit = 1
             diceResult.target = 1
         case 10:
-            diceResult.rally = 1
-            diceResult.lightning = 1
+            diceResult.panic = 1
+            diceResult.surge = 1
         case 11:
             diceResult.hit = 1
-            diceResult.lightning = 1
+            diceResult.surge = 1
         case 12:
             diceResult.hit = 1
         default:

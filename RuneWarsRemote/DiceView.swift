@@ -84,11 +84,11 @@ struct DiceResultsSummaryView: View {
             orderTypeData[9].image
             Text("\(self.diceModel.diceResult.hit)")
             orderTypeData[26].image
-            Text("\(self.diceModel.diceResult.lightning)")
+            Text("\(self.diceModel.diceResult.surge)")
             orderTypeData[18].image
             Text("\(self.diceModel.diceResult.mortal)")
             orderTypeData[17].image
-            Text("\(self.diceModel.diceResult.rally)")
+            Text("\(self.diceModel.diceResult.panic)")
             orderTypeData[0].image
             Text("\(self.diceModel.diceResult.target)")
         }

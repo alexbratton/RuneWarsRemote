@@ -153,7 +153,7 @@ struct HeaderView: View {
             .cornerRadius(8)
             Spacer()
             // Round
-            Text("Round: \(chatModel.currentRound)")
+            Text("Initiative: \(chatModel.currentRound)")
             Stepper("", onIncrement: {
                 self.chatModel.incrementRound()
                 

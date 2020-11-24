@@ -12,9 +12,6 @@ FUTURE
 sort order list by initiative -- button to sort the column - for now, can manually call off numbers
 - Add the ability to roll Magic
 -- Display Magic on all screens, send from the one that rolled, display on all screens
-- Add the Turn Indicator, current round in the turn
--- Add a button to increment the round, sync on all devices
--- Add a button to increment the turn, sync on all devices
 - Implement the "Pick" feature on Dice
 
 Fixed
@@ -23,3 +20,6 @@ Fixed
 - MC Set to default to no dice
 - MC auto scroll chat
 - MC Reroll now re-sends Dice roll results (after single dice reroll or pick)
+- Add the Turn Indicator, current round in the turn
+-- Add a button to increment the round, sync on all devices
+-- Add a button to increment the turn, sync on all devices
