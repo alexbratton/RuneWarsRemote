@@ -158,5 +158,10 @@
         "name": "Wheel",
         "id": "wheel",
         "imageName": "wheel"
+    },
+    {
+        "name": "Accuracy",
+        "id": "accuracy",
+        "imageName": "accuracy"
     }
 ]

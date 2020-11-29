@@ -17,14 +17,17 @@ struct RedDiceView: View {
     var body: some View {
         HStack {
             Image("red_side_1")
-            Spacer()
+                .resizable()
+                .frame(width: 30, height: 30)
+                .padding(4.0)
             Stepper("", onIncrement: {
                 self.diceModel.AddDie(dieColor : self.colorName,amount: 1)
             }, onDecrement: {
                 self.diceModel.AddDie(dieColor : self.colorName,amount: -1)
             }
             )
-            .background(colorValue)
+            //.background(colorValue)
+            .frame(width: 100)
             .cornerRadius(8)
         }
         
@@ -40,14 +43,19 @@ struct BlueDiceView: View {
     var body: some View {
         HStack {
             Image("blue_side_1")
-            Spacer()
+                .resizable()
+                .frame(width: 30, height: 30)
+                .padding(4.0)
+
         Stepper("", onIncrement: {
             self.diceModel.AddDie(dieColor : self.colorName,amount: 1)
         }, onDecrement: {
             self.diceModel.AddDie(dieColor : self.colorName,amount: -1)
         }
         )
-        .background(colorValue)
+        //.background(colorValue)
+        .cornerRadius(8)
+        .frame(width: 60)
         }
     }
 }
@@ -60,16 +68,20 @@ struct WhiteDiceView: View {
     var body: some View {
         HStack {
             Image("white_side_1")
-            Spacer()
+                .resizable()
+                .frame(width: 30, height: 30)
+                .padding(4.0)
 
+            
         Stepper("", onIncrement: {
             self.diceModel.AddDie(dieColor : self.colorName,amount: 1)
         }, onDecrement: {
             self.diceModel.AddDie(dieColor : self.colorName,amount: -1)
         }
         )
-        .background(colorValue)
+        //.background(colorValue)
         .cornerRadius(8)
+        .frame(width: 60)
         }
         
     }
@@ -89,7 +101,7 @@ struct DiceResultsSummaryView: View {
             Text("\(self.diceModel.diceResult.mortal)")
             orderTypeData[17].image
             Text("\(self.diceModel.diceResult.panic)")
-            orderTypeData[0].image
+            orderTypeData[32].image
             Text("\(self.diceModel.diceResult.target)")
         }
     }
@@ -106,9 +118,14 @@ struct DiceView: View {
                 DiceResultsSummaryView(diceModel: diceModel)
             }
             HStack {
+                Spacer()
                 RedDiceView(diceModel: diceModel)
+                Spacer()
                 BlueDiceView(diceModel: diceModel)
+                Spacer()
                 WhiteDiceView(diceModel: diceModel)
+                Spacer()
+
             }
             Button(action : {
                 self.diceModel.Rolldice(chatModel: chatModel)
@@ -121,7 +138,7 @@ struct DiceView: View {
         .padding()
         .overlay(RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.gray, lineWidth:1))
-        .frame(height:300)
+        //.frame(height:270)
         
     }
     
@@ -132,7 +149,7 @@ struct DiceResultView: View {
     
     var body: some View {
             VStack {
-                Divider()
+               // Divider()
                 ScrollView(.horizontal) {
                     HStack(spacing: 10) {
                         ForEach(diceModel.whiteDiceList) { dieModel in
@@ -145,11 +162,11 @@ struct DiceResultView: View {
                             DieResultView(dieModel: dieModel, diceModel : diceModel)
                         }
                     }.padding()
-                }.frame(height: 150)
-                Divider()
-                Spacer()
+                }.frame(height: 100)
+                //Divider()
+                //Spacer()
         }
-        .frame(height: 150)
+        .frame(height: 110)
         .border(Color.red)
     }
 }
