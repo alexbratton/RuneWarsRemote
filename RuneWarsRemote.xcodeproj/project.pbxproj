@@ -100,6 +100,8 @@
 		B6605A8524C1CC6F00A89277 /* TurnUnitRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6605A8424C1CC6F00A89277 /* TurnUnitRow.swift */; };
 		B6605A8724C1D08100A89277 /* none.png in Resources */ = {isa = PBXBuildFile; fileRef = B6605A8624C1D08100A89277 /* none.png */; };
 		B6622C0124E2C6A1005CB76B /* myArmy.json in Resources */ = {isa = PBXBuildFile; fileRef = B6622C0024E2C6A1005CB76B /* myArmy.json */; };
+		B665B3932573E1D5002B92C1 /* heavy_crossbowmen_commandtool.png in Resources */ = {isa = PBXBuildFile; fileRef = B665B3922573E1D4002B92C1 /* heavy_crossbowmen_commandtool.png */; };
+		B665B3982573E271002B92C1 /* unit_heavy_crossbowmen.png in Resources */ = {isa = PBXBuildFile; fileRef = B665B3972573E271002B92C1 /* unit_heavy_crossbowmen.png */; };
 		B665C0AC24E5682800C87343 /* baron_zachareth.png in Resources */ = {isa = PBXBuildFile; fileRef = B665C0AB24E5682800C87343 /* baron_zachareth.png */; };
 		B69A1B8D24A41BDB005CAB3F /* OrderSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69A1B8C24A41BDB005CAB3F /* OrderSelector.swift */; };
 		B69FF9A024A2568D009427D3 /* RuneWarsRemoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69FF99F24A2568D009427D3 /* RuneWarsRemoteApp.swift */; };
@@ -286,6 +288,9 @@
 		B6605A8424C1CC6F00A89277 /* TurnUnitRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnUnitRow.swift; sourceTree = "<group>"; };
 		B6605A8624C1D08100A89277 /* none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = none.png; sourceTree = "<group>"; };
 		B6622C0024E2C6A1005CB76B /* myArmy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = myArmy.json; sourceTree = "<group>"; };
+		B665B38B257326F3002B92C1 /* RuneWarsRemote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RuneWarsRemote.entitlements; sourceTree = "<group>"; };
+		B665B3922573E1D4002B92C1 /* heavy_crossbowmen_commandtool.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heavy_crossbowmen_commandtool.png; sourceTree = "<group>"; };
+		B665B3972573E271002B92C1 /* unit_heavy_crossbowmen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unit_heavy_crossbowmen.png; sourceTree = "<group>"; };
 		B665C0AB24E5682800C87343 /* baron_zachareth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baron_zachareth.png; sourceTree = "<group>"; };
 		B69A1B8C24A41BDB005CAB3F /* OrderSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSelector.swift; sourceTree = "<group>"; };
 		B69FF99C24A2568D009427D3 /* RuneWarsRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuneWarsRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -503,6 +508,7 @@
 		B69FF99E24A2568D009427D3 /* RuneWarsRemote */ = {
 			isa = PBXGroup;
 			children = (
+				B665B38B257326F3002B92C1 /* RuneWarsRemote.entitlements */,
 				B69FF9F924A259D9009427D3 /* Models */,
 				B69FF9CA24A2585A009427D3 /* Resources */,
 				B69FF99F24A2568D009427D3 /* RuneWarsRemoteApp.swift */,
@@ -603,25 +609,27 @@
 				B613956624E0598A00014273 /* newunit.png */,
 				B665C0AB24E5682800C87343 /* baron_zachareth.png */,
 				B69FF9D924A2590C009427D3 /* baron_zachareth_commandtool.png */,
+				B69FF9CE24A2590B009427D3 /* unit_baron_zachareth.png */,
 				B69FF9DB24A2590C009427D3 /* heavy_crossbowmen.png */,
+				B665B3922573E1D4002B92C1 /* heavy_crossbowmen_commandtool.png */,
+				B665B3972573E271002B92C1 /* unit_heavy_crossbowmen.png */,
 				B69FF9D224A2590B009427D3 /* kari_wraithstalker_commandtool.png */,
 				B69FF9D524A2590B009427D3 /* kari_wraithstalker.png */,
+				B69FF9D324A2590B009427D3 /* unit_kari_wraithstalker.png */,
 				B69FF9D624A2590C009427D3 /* lord_hawthorne_commandtool.png */,
 				B69FF9DA24A2590C009427D3 /* lord_hawthorne.png */,
+				B69FF9DF24A2590C009427D3 /* unit_lord_hawthorne.png */,
 				B69FF9D424A2590B009427D3 /* oathsworn_cavalry_commandtool.png */,
 				B69FF9D124A2590B009427D3 /* oathsworn_cavalry.png */,
+				B69FF9D724A2590C009427D3 /* unit_oathsworn_cavalry.png */,
 				B69FF9D824A2590C009427D3 /* outland_scouts_commandtool.png */,
 				B69FF9DE24A2590C009427D3 /* outland_scouts.png */,
+				B69FF9CD24A2590B009427D3 /* unit_outland_scouts.png */,
 				B69FF9DD24A2590C009427D3 /* rune_golems_commandtool.png */,
 				B69FF9DC24A2590C009427D3 /* rune_golems.png */,
+				B69FF9E024A2590C009427D3 /* unit_rune_golems.png */,
 				B69FF9D024A2590B009427D3 /* spearmen_commandtool.png */,
 				B69FF9CF24A2590B009427D3 /* spearmen.png */,
-				B69FF9CE24A2590B009427D3 /* unit_baron_zachareth.png */,
-				B69FF9D324A2590B009427D3 /* unit_kari_wraithstalker.png */,
-				B69FF9DF24A2590C009427D3 /* unit_lord_hawthorne.png */,
-				B69FF9D724A2590C009427D3 /* unit_oathsworn_cavalry.png */,
-				B69FF9CD24A2590B009427D3 /* unit_outland_scouts.png */,
-				B69FF9E024A2590C009427D3 /* unit_rune_golems.png */,
 				B69FF9CB24A258E1009427D3 /* unit_spearmen.png */,
 			);
 			path = "Daqan images";
@@ -835,9 +843,11 @@
 				B69FF9EE24A2590C009427D3 /* lord_hawthorne.png in Resources */,
 				B60DCE9D24A390E50055D771 /* wheel-2.png in Resources */,
 				3E91646124EF3C0600C26A52 /* blue_side_3.png in Resources */,
+				B665B3932573E1D5002B92C1 /* heavy_crossbowmen_commandtool.png in Resources */,
 				B600183524A7CBD70041EB9D /* symbol-latari.jpg in Resources */,
 				3E91643624ECB0FF00C26A52 /* red_side_4.png in Resources */,
 				B6D347EB24BA6DF50023B72A /* reanimates.png in Resources */,
+				B665B3982573E271002B92C1 /* unit_heavy_crossbowmen.png in Resources */,
 				3E91645B24EF374800C26A52 /* white_side_11.png in Resources */,
 				B69FF9F324A2590C009427D3 /* unit_lord_hawthorne.png in Resources */,
 				B60DCE9124A390E50055D771 /* morale.png in Resources */,
@@ -1254,6 +1264,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RuneWarsRemote/RuneWarsRemote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"RuneWarsRemote/Preview Content\"";
@@ -1267,6 +1278,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eth0.RuneWarsRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1278,6 +1290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RuneWarsRemote/RuneWarsRemote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"RuneWarsRemote/Preview Content\"";
@@ -1291,6 +1304,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.eth0.RuneWarsRemote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

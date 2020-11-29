@@ -141,8 +141,18 @@ struct HeaderView: View {
 
     var body: some View {
         HStack {
+            ImageStore.shared.image(name: "morale")
+                .background(Color.white)
+                .onTapGesture
+                {
+                    let cardPick =  Int(arc4random_uniform(UInt32(panicDeck.deck.count)))
+                    let card = panicDeck.deck[cardPick]
+                    chatModel.sendMessage(newMessage : "(\(cardPick)) Panic! - \(card.name) (\(card.type)) -- \(card.description)")
+                }
+            Spacer()
             // Turn
             Text("Turn: \(chatModel.currentTurn)")
+                .frame(width:80)
             Stepper("", onIncrement: {
                 self.chatModel.incrementTurn()
               
@@ -151,9 +161,12 @@ struct HeaderView: View {
             }
             )
             .cornerRadius(8)
+            .frame(width:60)
+            
             Spacer()
             // Round
             Text("Initiative: \(chatModel.currentRound)")
+                .frame(width:110)
             Stepper("", onIncrement: {
                 self.chatModel.incrementRound()
                 
@@ -162,16 +175,11 @@ struct HeaderView: View {
             }
             )
             .cornerRadius(8)
+            .frame(width:60)
 
             Spacer()
             
-            ImageStore.shared.image(name: "morale")
-            .onTapGesture
-                {
-                    let cardPick =  Int(arc4random_uniform(UInt32(panicDeck.deck.count)))
-                    let card = panicDeck.deck[cardPick]
-                    chatModel.sendMessage(newMessage : "(\(cardPick)) Panic! - \(card.name) (\(card.type)) -- \(card.description)")
-                }
+
             
             
             // Google Sign-in
