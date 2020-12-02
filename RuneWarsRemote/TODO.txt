@@ -1,7 +1,7 @@
 
 TODOLIST
 
-
+- Double check the white dice sides and results, Panic&Surge appeared wrong
 - MC filter initial chat messages to last XX (10)
 X AB send turn messages to chat
 X AB adjust layout of orders/unit image to squish
@@ -9,7 +9,7 @@ X AB adjust layout of orders/unit image to squish
 - AB Load army on each foregrounding
 - MC Make Roll Window Smaller
 - MC Show the Dial icon (ex, move 2) in chat as an icon
-- MC Show the Roll Results as Icons
+- MC Show the Roll Results as Icons showing the Die Sides in Chat
 - MC Convert to a REST server
 - MC Write a REST server
 
@@ -19,5 +19,12 @@ sort order list by initiative -- button to sort the column - for now, can manual
 -- Display Magic on all screens, send from the one that rolled, display on all screens
 - Implement the "Pick" feature on Dice
 - Add the ability to show tokens on units
+- Add the ability to Draw and share victory conditions
+- Add the ability to Draw and share starting locations
+- Add a Flexible timer and share with everyone
+-- Set the time for the timer (1 min, 2 min, etc)
+-- show the timer countdown in a window
+-- Flash the timer aggressively when <15 secs left
+
 
 
