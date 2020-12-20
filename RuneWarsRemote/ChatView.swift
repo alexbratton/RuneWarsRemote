@@ -69,21 +69,17 @@ struct ChatMessagesView: View {
                 
                 ForEach(self.chatModel.chatMessages, id: \.id) { chat in
                     //TODO: Separate my chat and other chat
-                    OtherUserMessageTextView(userName: chat.uid, message: chat.message)
+                    OtherUserMessageTextView(userName: chat.user, message: chat.message)
                 }
-                .onDelete(perform: deleteChat)
                 .onChange(of: self.chatModel.chatMessages) { target in
                     let index : Int = target.endIndex
-                    let targetMessage : ChatModel.ChatMessage = target[index-1]
+                    let targetMessage : ChatModel.ReceivingChatMessage = target[index-1]
                     scrollView.scrollTo(targetMessage.id, anchor: .bottom)
                 }
             }
         }
     }
     
-    func deleteChat(at offsets: IndexSet) {
-        self.chatModel.chatMessages.remove(atOffsets: offsets)
-    }
 }
 
 struct OtherUserMessageTextView: View {
@@ -200,11 +196,13 @@ struct HeaderView: View {
     }
     
     func signIn() {
+        /*
         GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first?.rootViewController
         GIDSignIn.sharedInstance()?.signIn()
         print("Signed In")
         // Now init firebase
         chatModel.configureFirebase()
+        */
         signedIn = true
        
     }

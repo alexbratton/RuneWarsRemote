@@ -1,6 +1,10 @@
 
 TODOLIST
 
+- White_side_8.png is supposed to be a double surge
+- White_side_10.png is supposed to be a panic and surge
+- Fix bug with removed the last die from the collection
+- Put notes on second line  of orders sent to chat
 - Double check the white dice sides and results, Panic&Surge appeared wrong
 - MC filter initial chat messages to last XX (10)
 X AB send turn messages to chat

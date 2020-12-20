@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3E2C841C24EB2DEB00B04892 /* DiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2C841B24EB2DEB00B04892 /* DiceModel.swift */; };
+		3E5B9F082581857F009A9632 /* ChatModel_II.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B9F072581857F009A9632 /* ChatModel_II.swift */; };
+		3E5B9F0D25818FE6009A9632 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B9F0C25818FE6009A9632 /* UserInfo.swift */; };
+		3E5B9F1225819069009A9632 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B9F1125819069009A9632 /* SettingsScreen.swift */; };
 		3E7A11EB2506C35D008E8BC3 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7A11EA2506C35D008E8BC3 /* ChatModel.swift */; };
 		3E91643624ECB0FF00C26A52 /* red_side_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E91643524ECB0FE00C26A52 /* red_side_4.png */; };
 		3E91643824ECB1B900C26A52 /* red_side_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E91643724ECB1B900C26A52 /* red_side_5.png */; };
@@ -193,6 +196,9 @@
 		19CC4FB1CB936047425B296C /* Pods_RuneWarsRemote_RuneWarsRemoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RuneWarsRemote_RuneWarsRemoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D573F86ED6DC63780204F8F /* Pods-RuneWarsRemote-RuneWarsRemoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuneWarsRemote-RuneWarsRemoteUITests.release.xcconfig"; path = "Target Support Files/Pods-RuneWarsRemote-RuneWarsRemoteUITests/Pods-RuneWarsRemote-RuneWarsRemoteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3E2C841B24EB2DEB00B04892 /* DiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceModel.swift; sourceTree = "<group>"; };
+		3E5B9F072581857F009A9632 /* ChatModel_II.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel_II.swift; sourceTree = "<group>"; };
+		3E5B9F0C25818FE6009A9632 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		3E5B9F1125819069009A9632 /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		3E7A11EA2506C35D008E8BC3 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		3E91643524ECB0FE00C26A52 /* red_side_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_side_4.png; sourceTree = "<group>"; };
 		3E91643724ECB1B900C26A52 /* red_side_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_side_5.png; sourceTree = "<group>"; };
@@ -536,6 +542,7 @@
 				B6605A8424C1CC6F00A89277 /* TurnUnitRow.swift */,
 				B69FF9F524A25937009427D3 /* UnitOverview.swift */,
 				B60DCEAE24A3B66E0055D771 /* TODO.txt */,
+				3E5B9F1125819069009A9632 /* SettingsScreen.swift */,
 			);
 			path = RuneWarsRemote;
 			sourceTree = "<group>";
@@ -599,6 +606,8 @@
 				3E2C841B24EB2DEB00B04892 /* DiceModel.swift */,
 				3E91646D24F07B0000C26A52 /* DieModel.swift */,
 				3E7A11EA2506C35D008E8BC3 /* ChatModel.swift */,
+				3E5B9F072581857F009A9632 /* ChatModel_II.swift */,
+				3E5B9F0C25818FE6009A9632 /* UserInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1084,11 +1093,13 @@
 				B604AAED255DFAA3003F51D7 /* PanicDeck.swift in Sources */,
 				3E7A11EB2506C35D008E8BC3 /* ChatModel.swift in Sources */,
 				B6A3C14324D1D663005272D8 /* ChatView.swift in Sources */,
+				3E5B9F1225819069009A9632 /* SettingsScreen.swift in Sources */,
 				B600184224A7D8770041EB9D /* ArmyUnitList.swift in Sources */,
 				B60DCE5E24A38F250055D771 /* OrderView.swift in Sources */,
 				B6A3C14124D1D608005272D8 /* AppView.swift in Sources */,
 				B69FF9F624A25937009427D3 /* UnitOverview.swift in Sources */,
 				B69FF9FB24A25B07009427D3 /* Data.swift in Sources */,
+				3E5B9F082581857F009A9632 /* ChatModel_II.swift in Sources */,
 				B69A1B8D24A41BDB005CAB3F /* OrderSelector.swift in Sources */,
 				B6D347C624BA62420023B72A /* FactionView.swift in Sources */,
 				B600183E24A7D6700041EB9D /* ArmyUnit.swift in Sources */,
@@ -1096,6 +1107,7 @@
 				B600183024A7CB5B0041EB9D /* FactionSelect.swift in Sources */,
 				B69FF9F824A259BA009427D3 /* Unit.swift in Sources */,
 				B600184024A7D6E00041EB9D /* ArmyUnitRow.swift in Sources */,
+				3E5B9F0D25818FE6009A9632 /* UserInfo.swift in Sources */,
 				B6CE543C24C34C0A00B05F24 /* ArmyStore.swift in Sources */,
 				B6D347C824BA67790023B72A /* GameRoster.swift in Sources */,
 				B600182E24A7CB1B0041EB9D /* GameSelectView.swift in Sources */,

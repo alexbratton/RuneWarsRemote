@@ -77,7 +77,7 @@ let unitData: [Unit] = [
                  order2: UnitOrder(order: "march-3", color: OrderColor.blue, initiative: 5),
                  order3: UnitOrder(order: "rally", color: OrderColor.green, initiative: 3),
                  order4: UnitOrder(order: "reform", color: OrderColor.green, initiative: 4),
-                 order5: UnitOrder(order: "shift-1", color: OrderColor.green, initiative: 3),
+                 order5: UnitOrder(order: "shift-1", color: OrderColor.green, initiative: 6),
                  order6: UnitOrder(order: "melee", color: OrderColor.yellow, initiative: 3),
                  order7: UnitOrder(order: "melee", color: OrderColor.red, initiative: 7),
                  order8: UnitOrder(order: "march-4", color: OrderColor.yellow, initiative: 8)

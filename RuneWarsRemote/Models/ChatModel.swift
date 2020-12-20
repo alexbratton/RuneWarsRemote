@@ -8,7 +8,7 @@
 import Foundation
 import Firebase
 
-class ChatModel: NSObject, ObservableObject {
+class ChatModelOld: NSObject, ObservableObject {
     
     @Published var signedIn: Bool = false
     @Published var chatMessages = [ChatMessage(uid : "Mark",message : "Please Sign In"),ChatMessage(uid : "Alex",message : "Please Sign In")]
