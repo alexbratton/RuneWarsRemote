@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-import Firebase
-import FirebaseAuth
-import GoogleSignIn
 
 @main
 struct RuneWarsRemoteApp: App {
@@ -23,49 +20,17 @@ struct RuneWarsRemoteApp: App {
  
 }
 
-class AppDelegate: NSObject, UIApplicationDelegate, GIDSignInDelegate, ObservableObject {
+class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
     
     @Published var email = ""
     @Published var uid = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
-        // Initializeing Firebase
-        FirebaseApp.configure()
-        
-        // Initializing Google
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
-        
+                
         return true
 
     }
     
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        
-        print(error.localizedDescription)
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        
-        guard let user = user else{
-            print(error.localizedDescription)
-            return}
-        
-        let credential = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
-        
-        // Firebase Signin
-        
-        Auth.auth().signIn(with: credential) { (result,err) in
-            if err != nil {
-                print((err?.localizedDescription)!)
-                return
-            }
-            self.email = (result?.user.email)!
-            self.uid = (result?.user.displayName)!
-        }    }
-    
- 
     
 }
 

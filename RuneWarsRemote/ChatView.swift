@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import GoogleSignIn
-
 
 struct ChatView: View {
     @ObservedObject var info : AppDelegate
@@ -134,6 +132,15 @@ struct HeaderView: View {
     
     @State private var signedIn : Bool = false
     @State private var email : String = ""
+    @State private var showActionSheet : Bool = false
+    
+    var settingActionSheet: ActionSheet {
+        ActionSheet(title: Text("Settings"), message: Text("Choose Option"), buttons: [
+            .default(Text("Username")),
+            .default(Text("Server")),
+            .destructive(Text("Cancel"))
+        ])
+    }
 
     var body: some View {
         HStack {
@@ -184,32 +191,28 @@ struct HeaderView: View {
             }
             else {
                 Button(action :{
+                    self.showActionSheet.toggle()
                     signIn()
                 }) {
                     Text("Sign In")
                 
                 }
                 .cornerRadius(10)
+                .actionSheet(isPresented: $showActionSheet, content: {
+                    self.settingActionSheet
+                })
+                
             }
         }
         
     }
     
     func signIn() {
-        /*
-        GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first?.rootViewController
-        GIDSignIn.sharedInstance()?.signIn()
-        print("Signed In")
-        // Now init firebase
-        chatModel.configureFirebase()
-        */
         signedIn = true
-       
     }
     
 
 }
-
 
 
 struct ChatView_Previews: PreviewProvider {
