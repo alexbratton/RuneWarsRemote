@@ -15,7 +15,7 @@ class ChatModel: NSObject, ObservableObject {
     @Published var firebaseInit : Bool = false
  
     var serverURL: String = "ws://192.168.1.14:8080/user"
-    var echoURL: String = "ws:echo.websocket.org"
+    var echoURL: String = "ws://echo.websocket.org"
 
     var msglength: NSNumber = 10
     var urlSession: URLSession!
@@ -113,7 +113,9 @@ class ChatModel: NSObject, ObservableObject {
         self.username = username
         self.userID = userID
         
-        let url = URL(string: echoURL)!
+        
+        let settingsURL = UserDefaults.standard.string(forKey: "settings_server_url") ?? echoURL
+        let url = URL(string: settingsURL)!
         urlSession = URLSession(configuration: .default)
         webSocketTask = urlSession.webSocketTask(with: url)
         webSocketTask.receive(completionHandler: onReceive) // 5

@@ -130,17 +130,7 @@ struct HeaderView: View {
     @EnvironmentObject var panicDeck: PanicDeck
     @ObservedObject var info : AppDelegate
     
-    @State private var signedIn : Bool = false
-    @State private var email : String = ""
-    @State private var showActionSheet : Bool = false
-    
-    var settingActionSheet: ActionSheet {
-        ActionSheet(title: Text("Settings"), message: Text("Choose Option"), buttons: [
-            .default(Text("Username")),
-            .default(Text("Server")),
-            .destructive(Text("Cancel"))
-        ])
-    }
+    @State private var userName : String = UserDefaults.standard.string(forKey: "name_preference") ?? "NoName"
 
     var body: some View {
         HStack {
@@ -179,39 +169,12 @@ struct HeaderView: View {
             )
             .cornerRadius(8)
             .frame(width:60)
-
             Spacer()
-            
+            Text("\(self.userName)")
 
-            
-            
-            // Google Sign-in
-            if (self.signedIn) {
-                Text("\(info.uid)")
-            }
-            else {
-                Button(action :{
-                    self.showActionSheet.toggle()
-                    signIn()
-                }) {
-                    Text("Sign In")
-                
-                }
-                .cornerRadius(10)
-                .actionSheet(isPresented: $showActionSheet, content: {
-                    self.settingActionSheet
-                })
-                
-            }
         }
         
     }
-    
-    func signIn() {
-        signedIn = true
-    }
-    
-
 }
 
 
