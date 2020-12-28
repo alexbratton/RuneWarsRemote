@@ -67,7 +67,12 @@ struct ChatMessagesView: View {
                 
                 ForEach(self.chatModel.chatMessages, id: \.id) { chat in
                     //TODO: Separate my chat and other chat
-                    OtherUserMessageTextView(userName: chat.user, message: chat.message)
+                    if (chat.type == "chat") {
+                         OtherUserMessageTextView(userName: chat.user, message: chat.message, chatType: chat.type)
+                    }
+                    if (chat.type == "dice") {
+                        ChatDiceView(userName: chat.user,iconList: chat.data)
+                    }
                 }
                 .onChange(of: self.chatModel.chatMessages) { target in
                     let index : Int = target.endIndex
@@ -79,10 +84,29 @@ struct ChatMessagesView: View {
     }
     
 }
+struct ChatDiceView: View {
+    var userName: String
+    var iconList: [String]
+    
+    var body: some View {
+        HStack {
+            Text("\(userName)").font(.footnote)
+                .foregroundColor(.white)
+                .padding(3.0)
+                .background(RoundedRectangle(cornerRadius: 8).fill(Color.blue))
+            ForEach(iconList, id: \.self) { iconName in
+                Image("\(iconName)")
+               
+            }
+            Spacer()
+        }
+    }
+}
 
 struct OtherUserMessageTextView: View {
     var userName : String
     var message : String
+    var chatType : String
     
     var body: some View {
         HStack {

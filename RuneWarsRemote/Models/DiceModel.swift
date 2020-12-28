@@ -14,6 +14,7 @@ struct DiceResult {
     var panic = 0
     var target = 0
     var side = 0
+    var iconList : [String] = []
 }
 
 class DiceModel: ObservableObject {
@@ -98,6 +99,8 @@ class DiceModel: ObservableObject {
         diceResult.panic = 0
         diceResult.side = 0
         diceResult.target = 0
+        // Reset Icon List
+        diceResult.iconList = []
         
         for die in whiteDiceList {
             AddResult(rollResult : die.dieResult)
@@ -117,10 +120,13 @@ class DiceModel: ObservableObject {
         diceResult.mortal += rollResult.mortal
         diceResult.panic += rollResult.panic
         diceResult.target += rollResult.target
-
+        
+        diceResult.iconList.append(contentsOf: rollResult.iconList)
     }
     
     func Rolldice(chatModel: ChatModel) {
+        
+
         
         // Roll White Dice
         RollWhiteDice()
@@ -138,7 +144,19 @@ class DiceModel: ObservableObject {
     {
         rollResult = "Results:  Mortal: \(diceResult.mortal) Hit: \(diceResult.hit) Panic: \(diceResult.panic) Surge: \(diceResult.surge) Target: \(diceResult.target)"
         chatModel.sendMessage(newMessage: rollResult)
-        chatModel.sendDataMessage(dataMessage: rollResult, dataType: "dice")
+        
+        // Put the results in a format that can be parsed out for icons
+        var dataRollResult = ""
+        // convert the array to a string
+        for iconName in diceResult.iconList {
+            if dataRollResult.isEmpty {
+                dataRollResult = "\(iconName)"
+            }
+            else{
+                dataRollResult = "\(dataRollResult)|\(iconName)"
+            }
+        }
+        chatModel.sendDataMessage(dataMessage: dataRollResult, dataType: "dice", dataArray: diceResult.iconList)
 
     }
     

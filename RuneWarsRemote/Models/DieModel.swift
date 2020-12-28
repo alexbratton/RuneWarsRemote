@@ -88,6 +88,7 @@ class DieModel: ObservableObject, Identifiable {
         }
         self.dieResultSide = dieSide
         self.dieResult = diceResult
+        self.dieResult.iconList.append("blue_side_\(dieSide)")
 
     }
     func RollRedDie() {
@@ -118,6 +119,7 @@ class DieModel: ObservableObject, Identifiable {
         }
         self.dieResultSide = dieSide
         self.dieResult = diceResult
+        self.dieResult.iconList.append("red_side_\(dieSide)")
 
     }
     
@@ -161,6 +163,8 @@ class DieModel: ObservableObject, Identifiable {
         
         self.dieResultSide = dieSide
         self.dieResult = diceResult
+        
+        self.dieResult.iconList.append("white_side_\(dieSide)")
         
     }
 

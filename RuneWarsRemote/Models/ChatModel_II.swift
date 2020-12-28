@@ -14,7 +14,7 @@ class ChatModel: NSObject, ObservableObject {
     @Published var currentRound: Int = 1
     @Published var firebaseInit : Bool = false
  
-    var serverURL: String = "ws://192.168.1.14:8080/user"
+    var serverURL: String = "ws://192.168.1.10:8080/user"
     var echoURL: String = "ws://echo.websocket.org"
 
     var msglength: NSNumber = 10
@@ -39,6 +39,7 @@ class ChatModel: NSObject, ObservableObject {
         let user: String
         let type: String
         let userID: UUID
+        let data: [String]
     }
     
     struct ReceivingChatMessage: Identifiable, Decodable, Equatable {
@@ -48,6 +49,7 @@ class ChatModel: NSObject, ObservableObject {
         let user: String
         let userID: UUID?
         let type: String
+        var data: [String]
     }
     
     
@@ -101,12 +103,20 @@ class ChatModel: NSObject, ObservableObject {
         }
         transmitMessage(text: dataMessage, messageType: dataType)
     }
+    
+    func sendDataMessage(dataMessage: String, dataType: String, dataArray: [String])
+    {
+        // Start the firebase/Google integration
+        if (!firebaseInit) {
+            configureWebSocket()
+        }
+        transmitMessage(text: dataMessage, messageType: dataType, dataArray: dataArray)
+    }
 
 
     func configureWebSocket() {
         firebaseInit = true
         connect(username: username, userID: userID)
-        print("configureWebSocket complete")
     }
     
     func connect(username: String, userID: UUID) { // 2
@@ -145,6 +155,7 @@ class ChatModel: NSObject, ObservableObject {
             guard let data = text.data(using: .utf8),
                   let chatMessage = try? JSONDecoder().decode(ReceivingChatMessage.self, from: data)
             else {
+                print("Failed to decode message")
                 return
             }
             
@@ -156,6 +167,10 @@ class ChatModel: NSObject, ObservableObject {
             }
             if (chatMessage.type == "dice") {
                 // Do something with the dice
+                
+                DispatchQueue.main.async {
+                    self.chatMessages.append(chatMessage)
+                }
             }
             if (chatMessage.type == "turn") {
                 // Swap the string to an int
@@ -179,10 +194,11 @@ class ChatModel: NSObject, ObservableObject {
         disconnect()
     }
     
-    func transmitMessage(text: String, messageType: String) {
+    
+    func transmitMessage(text: String, messageType: String, dataArray: [String] = []) {
         print("sendChatMessage \(text)")
 
-        let message = SubmittedChatMessage(message: text,user: self.username, type: messageType, userID: self.userID) // 1
+        let message = SubmittedChatMessage(message: text,user: self.username, type: messageType, userID: self.userID, data: dataArray) // 1
         guard let json = try? JSONEncoder().encode(message), // 2
               let jsonString = String(data: json, encoding: .utf8)
         else {
