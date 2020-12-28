@@ -37,7 +37,6 @@ struct EditUnit: View {
             }
             .pickerStyle(WheelPickerStyle())
             
-            
             HStack
             {
                 Text("Name").bold()

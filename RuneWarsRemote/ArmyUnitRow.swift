@@ -109,7 +109,7 @@ struct ArmyUnitRow: View {
                                     store.army[armyIndex].leftOrder=leftOrder
                                     store.army[armyIndex].rightOrder=rightOrder
                                     
-                                    chatModel.sendMessage(newMessage : "@\(store.army[armyIndex].selectedLeftOrder.initiative) \(store.army[armyIndex].name)[\(store.army[armyIndex].size)] \(store.army[armyIndex].selectedLeftOrder.order) & \(store.army[armyIndex].selectedRightOrder.order) \(store.army[armyIndex].notes)")
+                                    chatModel.sendMessage(newMessage : "@\(store.army[armyIndex].selectedLeftOrder.initiative) \(store.army[armyIndex].name)[\(store.army[armyIndex].unit.name) - \(store.army[armyIndex].size)]   ORDERS: \(store.army[armyIndex].selectedLeftOrder.order) & \(store.army[armyIndex].selectedRightOrder.order)   NOTES: \"\(store.army[armyIndex].notes)\"")
                                     showingAlert=true
 
                                 }
