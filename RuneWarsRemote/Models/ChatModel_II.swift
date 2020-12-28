@@ -20,7 +20,7 @@ class ChatModel: NSObject, ObservableObject {
     var msglength: NSNumber = 10
     var urlSession: URLSession!
     private var webSocketTask: URLSessionWebSocketTask! // 1
-    var username: String = "NoUser"
+    var username: String = UserDefaults.standard.string(forKey: "name_preference") ?? "NoName"
     var userID: UUID = UUID()
     
 
