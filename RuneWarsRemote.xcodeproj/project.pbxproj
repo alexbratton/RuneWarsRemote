@@ -471,7 +471,6 @@
 				B69FF9B024A2568E009427D3 /* RuneWarsRemoteTests */,
 				B69FF9BB24A2568E009427D3 /* RuneWarsRemoteUITests */,
 				B69FF99D24A2568D009427D3 /* Products */,
-				DBBDBD3B0114E235565A0B13 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -647,13 +646,6 @@
 				B6D347E024BA6DF50023B72A /* unit_lord_vorunthul.png */,
 			);
 			path = waiqar;
-			sourceTree = "<group>";
-		};
-		DBBDBD3B0114E235565A0B13 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

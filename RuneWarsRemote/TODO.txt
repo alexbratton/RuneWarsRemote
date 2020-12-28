@@ -5,17 +5,12 @@ TODOLIST
 - White_side_10.png is supposed to be a panic and surge
 - Fix bug with removed the last die from the collection
 - Put notes on second line  of orders sent to chat
-- Double check the white dice sides and results, Panic&Surge appeared wrong
-- MC filter initial chat messages to last XX (10)
-X AB send turn messages to chat
-X AB adjust layout of orders/unit image to squish
 - AB Auto save army to json file after each change
 - AB Load army on each foregrounding
 - MC Make Roll Window Smaller
 - MC Show the Dial icon (ex, move 2) in chat as an icon
 - MC Show the Roll Results as Icons showing the Die Sides in Chat
-- MC Convert to a REST server
-- MC Write a REST server
+
 
 FUTURE
 sort order list by initiative -- button to sort the column - for now, can manually call off numbers
