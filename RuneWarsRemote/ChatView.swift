@@ -73,6 +73,10 @@ struct ChatMessagesView: View {
                     if (chat.type == "dice") {
                         ChatDiceView(userName: chat.user,iconList: chat.data)
                     }
+                    
+                    if(chat.type == "orders") {
+                        ChatOrderView(userName: chat.user,iconList: chat.data)
+                    }
                 }
                 .onChange(of: self.chatModel.chatMessages) { target in
                     let index : Int = target.endIndex
@@ -84,6 +88,30 @@ struct ChatMessagesView: View {
     }
     
 }
+
+// TODO map in order elements
+struct ChatOrderView: View {
+    var userName: String
+    var iconList: [String]
+    
+    var body: some View {
+        HStack {
+            Text("\(userName)").font(.footnote)
+                .foregroundColor(.white)
+                .padding(3.0)
+                .background(RoundedRectangle(cornerRadius: 8).fill(Color.blue))
+            ForEach(iconList, id: \.self) { iconName in
+                ImageStore.shared.image(name: iconName)
+
+                //Image("\(iconName)")
+               
+            }
+            Spacer()
+        }
+    }
+}
+
+
 struct ChatDiceView: View {
     var userName: String
     var iconList: [String]

@@ -165,6 +165,13 @@ class ChatModel: NSObject, ObservableObject {
                     self.chatMessages.append(chatMessage)
                 }
             }
+            if (chatMessage.type == "orders") {
+                // Do something with the dice
+                print(chatMessage)
+                DispatchQueue.main.async {
+                    self.chatMessages.append(chatMessage)
+                }
+            }
             if (chatMessage.type == "dice") {
                 // Do something with the dice
                 

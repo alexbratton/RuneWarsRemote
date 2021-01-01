@@ -110,6 +110,13 @@ struct ArmyUnitRow: View {
                                     store.army[armyIndex].rightOrder=rightOrder
                                     
                                     chatModel.sendMessage(newMessage : "@\(store.army[armyIndex].selectedLeftOrder.initiative) \(store.army[armyIndex].name)[\(store.army[armyIndex].unit.name) - \(store.army[armyIndex].size)]   ORDERS: \(store.army[armyIndex].selectedLeftOrder.order) & \(store.army[armyIndex].selectedRightOrder.order)   NOTES: \"\(store.army[armyIndex].notes)\"")
+
+                                    let orderResult = "\(store.army[armyIndex].selectedLeftOrder.order)|\(store.army[armyIndex].selectedRightOrder.order)"
+
+                                    let orderArray: [String] = [store.army[armyIndex].selectedLeftOrder.order, store.army[armyIndex].selectedRightOrder.order]
+                                    
+                                   chatModel.sendDataMessage(dataMessage: orderResult, dataType: "orders", dataArray: orderArray)
+
                                     showingAlert=true
 
                                 }
