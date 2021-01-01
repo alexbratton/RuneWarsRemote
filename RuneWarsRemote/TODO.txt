@@ -1,15 +1,14 @@
 
 TODOLIST
 
-X White_side_8.png is supposed to be a double surge
-X White_side_10.png is supposed to be a panic and surge
+- Chat messages from web server dont make it to ipad client
 - Fix bug with removed the last die from the collection
 - Put notes on second line  of orders sent to chat
 - AB Auto save army to json file after each change
 - AB Load army on each foregrounding
 - MC Make Roll Window Smaller
 - MC Show the Dial icon (ex, move 2) in chat as an icon
-- MC Show the Roll Results as Icons showing the Die Sides in Chat
+X MC Show the Roll Results as Icons showing the Die Sides in Chat
 
 
 FUTURE
