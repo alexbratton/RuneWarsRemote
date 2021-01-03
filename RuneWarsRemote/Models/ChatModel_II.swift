@@ -136,15 +136,33 @@ class ChatModel: NSObject, ObservableObject {
         webSocketTask.cancel(with: .normalClosure, reason: nil) // 8
     }
     
+    private func disconnectEverything()
+    {
+        self.disconnect()
+        DispatchQueue.main.async {
+            self.firebaseInit = false
+        }
+    }
+    
+    private func reconnectEverything()
+    {
+        DispatchQueue.main.async {
+            self.disconnect()
+            self.firebaseInit = false
+            self.sendMessage(newMessage: "Reconnecting to server")
+        }
+    }
     private func onReceive(incoming: Result<URLSessionWebSocketTask.Message, Error>) {
         print("onReceive")
         
         // Nothing yet...
+
         webSocketTask.receive(completionHandler: onReceive) // 1
         if case .success(let message) = incoming { // 2
             onMessage(message: message)
         }
         else if case .failure(let error) = incoming { // 3
+            self.reconnectEverything()
             print("Error", error)
         }
     }
@@ -215,6 +233,9 @@ class ChatModel: NSObject, ObservableObject {
         webSocketTask.send(.string(jsonString)) { error in
             if let error = error {
                 print("Error sending message", error)
+                self.reconnectEverything()
+
+                // TODO - disconnect, reconnect??
             }
         }
     }

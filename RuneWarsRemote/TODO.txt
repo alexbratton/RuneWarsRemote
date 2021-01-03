@@ -1,28 +1,32 @@
 
 TODOLIST
 
-- Chat messages from web server dont make it to ipad client
+
 - Fix bug with removed the last die from the collection
-- Put notes on second line  of orders sent to chat
-- AB Auto save army to json file after each change
-- AB Load army on each foregrounding
+- Chat - send message on 'return' key
 - MC Make Roll Window Smaller
-- MC Show the Dial icon (ex, move 2) in chat as an icon
-X MC Show the Roll Results as Icons showing the Die Sides in Chat
-
-
-FUTURE
-sort order list by initiative -- button to sort the column - for now, can manually call off numbers
 - Add the ability to roll Magic
 -- Display Magic on all screens, send from the one that rolled, display on all screens
-- Implement the "Pick" feature on Dice
-- Add the ability to show tokens on units
-- Add the ability to Draw and share victory conditions
-- Add the ability to Draw and share starting locations
+- iPhone version with tabs - army, chat, dice
+
+- adding tokens to units
+- cards on units - clickable in chat to show whole card
+- track what cards are tapped
+
+
 - Add a Flexible timer and share with everyone
 -- Set the time for the timer (1 min, 2 min, etc)
 -- show the timer countdown in a window
 -- Flash the timer aggressively when <15 secs left
+
+- Chat messages from web server dont make it to ipad client
+
+FUTURE
+sort order list by initiative -- button to sort the column - for now, can manually call off numbers
+- Implement the "Pick" feature on Dice
+- Add the ability to Draw and share victory conditions
+- Add the ability to Draw and share starting locations
+
 
 
 
