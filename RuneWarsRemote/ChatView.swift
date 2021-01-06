@@ -41,7 +41,13 @@ struct ChatButtonView: View {
     
     var body: some View {
             HStack {
-                TextField("", text: $newMessage)
+                TextField("", text: $newMessage,
+                          onCommit: {
+                            sendMessage()
+                            self.newMessage = ""
+                          }
+                )
+                Spacer()
                 Button(action :{
                     sendMessage()
                 }) {

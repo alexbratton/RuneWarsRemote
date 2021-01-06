@@ -2,8 +2,8 @@
 TODOLIST
 
 
-- Fix bug with removed the last die from the collection
-- Chat - send message on 'return' key
+- (Done) Fix bug with removed the last die from the collection
+- (Done) Chat - send message on 'return' key
 - MC Make Roll Window Smaller
 - Add the ability to roll Magic
 -- Display Magic on all screens, send from the one that rolled, display on all screens
