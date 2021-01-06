@@ -52,7 +52,9 @@ class DiceModel: ObservableObject {
                 whiteDiceList.append(dieModel)
             }
             if amount < 0 {
-                whiteDiceList.remove(at: 0)
+                if !whiteDiceList.isEmpty {
+                    whiteDiceList.remove(at: 0)
+                }
             }
         }
         if dieColor == "Red" {
@@ -60,7 +62,9 @@ class DiceModel: ObservableObject {
                 redDiceList.append(dieModel)
             }
             if amount < 0 {
+                if !redDiceList.isEmpty {
                 redDiceList.remove(at: 0)
+                }
             }
         }
         if dieColor == "Blue" {
@@ -68,7 +72,9 @@ class DiceModel: ObservableObject {
                 blueDiceList.append(dieModel)
             }
             if amount < 0 {
+                if !blueDiceList.isEmpty {
                 blueDiceList.remove(at: 0)
+                }
             }
         }
         
