@@ -13,8 +13,8 @@ struct ChatView: View {
      
     var body: some View {
         VStack {
-            HeaderView(info : info)
-            Spacer()
+            //HeaderViewOld(info : info)
+            //Spacer()
             ChatMessageView()
         }
 
@@ -183,7 +183,7 @@ struct MyMessageTextView: View {
     }
 }
 
-struct HeaderView: View {
+struct HeaderViewOld: View {
     @EnvironmentObject var chatModel : ChatModel
     @EnvironmentObject var panicDeck: PanicDeck
     @ObservedObject var info : AppDelegate
