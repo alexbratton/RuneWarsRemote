@@ -44,7 +44,7 @@ struct EditUnit: View {
                 Divider()
                 TextField("Unit Name", text: $unitName)
             }
-            .frame(height:60)
+            .frame(height:40)
 
             
             HStack
@@ -54,7 +54,7 @@ struct EditUnit: View {
                 Divider()
                 TextField("2x2", text: $unitSize)
             }
-            .frame(height:60)
+            .frame(height:40)
 
             
             HStack
@@ -64,7 +64,7 @@ struct EditUnit: View {
                 Divider()
                 TextField("Notes", text: $unitNotes)
             }
-            .frame(height:60)
+            .frame(height:40)
 
             HStack
             {
