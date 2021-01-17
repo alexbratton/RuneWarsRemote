@@ -125,6 +125,7 @@ class ChatModel: NSObject, ObservableObject {
         
         
         let settingsURL = UserDefaults.standard.string(forKey: "settings_server_url") ?? echoURL
+        print("Connecting to URL: \(settingsURL)")
         let url = URL(string: settingsURL)!
         urlSession = URLSession(configuration: .default)
         webSocketTask = urlSession.webSocketTask(with: url)

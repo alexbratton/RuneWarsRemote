@@ -125,21 +125,16 @@ struct DiceView: View {
                 Spacer()
                 WhiteDiceView(diceModel: diceModel)
                 Spacer()
-
+                Button(action : {
+                    self.diceModel.Rolldice(chatModel: chatModel)
+                }) {
+                    Text("Roll")
+                }
             }
-            Button(action : {
-                self.diceModel.Rolldice(chatModel: chatModel)
-            }) {
-                Text("Roll")
-            }
-            //Text(self.diceModel.rollResult)
         }
-        //.border(Color.black)
         .padding()
         .overlay(RoundedRectangle(cornerRadius: 20)
                     .stroke(Color.gray, lineWidth:1))
-        //.frame(height:270)
-        
     }
     
     

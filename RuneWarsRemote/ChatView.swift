@@ -13,8 +13,6 @@ struct ChatView: View {
      
     var body: some View {
         VStack {
-            //HeaderViewOld(info : info)
-            //Spacer()
             ChatMessageView()
         }
 

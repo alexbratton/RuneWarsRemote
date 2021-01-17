@@ -14,28 +14,43 @@ struct AppView: View {
     
     var body: some View {
         VStack {
-            Image("runewars-banner-thin")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            HeaderView(info: info)
+            if verticalSizeClass == .compact || horizontalSizeClass == .compact {
+                HeaderView(info: info)
+            }
+            else {
+                Image("runewars-banner-thin")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                HeaderView(info: info)
+            }
             
-        TabView {
-            AllView(info: info)
-                .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Home")
-                }
-            ArmyTabView(info: info)
-                .tabItem {
-                    Image(systemName: "list.number")
-                    Text("Army")
-                }
-            ChatDiceTabView(info: info)
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("ChatDice")
-                }
-        }
+            TabView {
+                AllView(info: info)
+                    .tabItem {
+                        Image(systemName: "house.fill")
+                        Text("Home")
+                    }
+                ArmyTabView(info: info)
+                    .tabItem {
+                        Image(systemName: "list.number")
+                        Text("Army")
+                    }
+                ChatDiceTabView(info: info)
+                    .tabItem {
+                        Image(systemName: "message")
+                        Text("ChatDice")
+                    }
+                DiceTabView(info: info)
+                    .tabItem {
+                        Image(systemName: "message")
+                        Text("Dice")
+                    }
+                ChatTabView(info: info)
+                    .tabItem {
+                        Image(systemName: "message")
+                        Text("Chat")
+                    }
+            }
         }
     }
 }
@@ -52,7 +67,20 @@ struct ChatDiceTabView: View {
         }
     }
 }
-
+struct DiceTabView: View {
+    @ObservedObject var info: AppDelegate
+    
+    var body: some View {
+        DiceView()
+    }
+}
+struct ChatTabView: View {
+    @ObservedObject var info: AppDelegate
+    
+    var body: some View {
+        ChatView(info: info)
+    }
+}
 struct ArmyTabView: View {
     @EnvironmentObject var store: ArmyStore
     
@@ -127,14 +155,6 @@ struct AllView: View {
         .onAppear(perform: store.loadSavedArmy)
         .onDisappear(perform: store.saveArmy)
     }
-    
-  
-    
-  
-    
-    
-
-    
     
 }
 
